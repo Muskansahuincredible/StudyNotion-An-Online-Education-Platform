@@ -1,2 +1,19 @@
-/node_modules
-/server/node_modules
+# Dependency directories
+node_modules/
+client/node_modules/
+server/node_modules/
+
+# Environment variables
+.env
+
+# Build files
+build/
+dist/
+*.log
+
+# IDE/Editor specific files
+.vscode/
+.idea/
+
+# OS specific files
+.DS_Store
