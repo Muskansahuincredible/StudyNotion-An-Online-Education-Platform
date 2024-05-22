@@ -28,6 +28,8 @@ import CourseDetails from "./pages/CourseDetails";
 import ViewCourse from "./pages/ViewCourse";
 import VideoDetails from "./components/core/ViewCourse/VideoDetails";
 import Instructor from "./components/core/Dashboard/InstructorDashboard/Instructor";
+import GoToTop from "./components/GoToTop";
+
 
 function App() {
 
@@ -161,7 +163,7 @@ function App() {
 
 
     </Routes>
-
+    <GoToTop/>
    </div>
   );
 }
