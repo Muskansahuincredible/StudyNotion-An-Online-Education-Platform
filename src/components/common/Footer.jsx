@@ -173,6 +173,11 @@ const Footer = () => {
           </div>
 
           <div className="text-center">Made with ❤️ CodeHelp © 2023 Studynotion</div>
+          <div class="text-center">Made with ❤️ CodeHelp © 
+                <script>
+                    document.write(new Date().getFullYear());
+                </script>Studynotion
+          </div>
         </div>
       </div>
     </div>
