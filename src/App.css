@@ -5,6 +5,7 @@
 html,
 body {
   overflow-x: hidden;
+  margin-top: 50px;
 }
 
 /* ===== Scrollbar CSS ===== */
@@ -245,5 +246,5 @@ details > summary::-webkit-details-marker {
   @apply text-2xl font-bold text-richblack-5 lg:text-4xl;
 }
 .navbarContainer {	
-  @apply fixed top-0 left-0 right-0 z-50 bg-black; 
+  @apply fixed top-0 left-0 right-0 z-50 bg-richblack-800; 
 }
