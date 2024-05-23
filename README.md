@@ -210,3 +210,65 @@ requests and responses provided above illustrate how each endpoint will function
 what kind of data it will accept or return. With this API design, StudyNotion will be able to
 provide a smooth user experience while ensuring security and stability.
 
+
+### Installation and Setup Guide
+
+To get started with StudyNotion on your local machine, follow these steps:
+
+#### Prerequisites
+
+Before you begin, ensure you have the following prerequisites installed:
+
+- Node.js (version X.X.X) ⚙️
+- MongoDB (version X.X.X) 📦
+- Git 📂
+
+#### Installation Steps
+
+1. **Clone the Repository:**
+
+   ```bash
+   git clone https://github.com/yourusername/studynotion.git
+   ```
+
+2. **Navigate to the Project Directory:**
+
+   ```bash
+   cd studynotion
+   ```
+
+3. **Install Dependencies:**
+
+   ```bash
+   npm install
+   ```
+
+4. **Set Environment Variables:**
+
+   Create a `.env` file in the root directory and add the following environment variables:
+
+   ```plaintext
+   PORT=3000
+   MONGODB_URI=mongodb://localhost:27017/studynotion
+   JWT_SECRET=your_jwt_secret_key
+   ```
+
+5. **Start the Server:**
+
+   ```bash
+   npm start
+   ```
+
+6. **Access the Application:**
+
+   Open your web browser and visit `http://localhost:3000` to access the StudyNotion platform.
+
+#### Additional Configuration
+
+- Configure email SMTP settings for features like OTP verification and forgot password functionality. 📧
+
+#### Database Setup
+
+- Ensure MongoDB is running on your system. If not, start the MongoDB service using the appropriate command for your operating system. 🚀
+
+Follow these steps, and you'll have StudyNotion up and running on your local machine in no time! Adjust the instructions according to your specific setup and requirements.
