@@ -228,13 +228,13 @@ Before you begin, ensure you have the following prerequisites installed:
 1. **Clone the Repository:**
 
    ```bash
-   git clone https://github.com/yourusername/studynotion.git
+   git clone https://github.com/yourusername/StudyNotion-An-Online-Education-Platform.git
    ```
 
 2. **Navigate to the Project Directory:**
 
    ```bash
-   cd studynotion
+   cd StudyNotion-An-Online-Education-Platform
    ```
 
 3. **Install Dependencies:**
