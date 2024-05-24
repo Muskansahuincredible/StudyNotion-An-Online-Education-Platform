@@ -1,0 +1,28 @@
+name: Other
+description: Use this for any other question or issue. Do not create blank issues
+title: "[OTHER]<title>"
+labels: ["status: awaiting triage"]
+body:
+  - type: textarea
+    id: issue-description
+    attributes:
+      label: What is your issue or question?
+      description: A clear and concise explanation of the issue.
+    validations:
+      required: true
+  - type: checkboxes
+    id: no-duplicate-issues
+    attributes:
+      label: "Checklist"
+      options:
+        - label: "I have checked the existing issues."
+          required: true
+
+        - label: "I have read the Contribution Guidelines."
+          required: true
+
+        - label: "I have read the Code Of Conduct."
+          required: true
+       
+        - label: "The changes don't break the code."
+          required: true
