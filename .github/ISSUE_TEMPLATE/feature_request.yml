@@ -1,0 +1,35 @@
+name: 💡 Feature Request
+description: Suggest an interesting feature idea for this project
+title: "💡[FEATURE] <title>"
+labels: ["enhancement", "goal: addition"]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: A clear and concise description of features you want to add.
+    validations:
+      required: true
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots
+      description: Include relevant screenshots if applicable
+    validations:
+      required: false
+  - type: checkboxes
+    id: no-duplicate-issues
+    attributes:
+      label: "Checklist"
+      options:
+        - label: "I have checked the existing issues."
+          required: true
+
+        - label: "I have read the Contributing Guidelines"
+          required: true
+
+        - label: "I have read the Code Of Conduct"
+          required: true
+        
+        - label: "The changes don't break the code"
+          required: true
