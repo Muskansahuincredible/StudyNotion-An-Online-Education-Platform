@@ -1,6 +1,13 @@
-# StudyNotion Online Education Platform (MERN App) [Website Link](https://studynotion-frontend.vercel.app/)
+<div align="center">
+  <h1>StudyNotion</h1>
+  <h2> Online Education Platform for You </h2>
+  <h3> Check out at https://studynotion-frontend.vercel.app/</h3>
+</div>
 
-![Main Page](images/mainpage.png)
+<br>
+
+![s1](https://github.com/Muskansahuincredible/StudyNotion-An-Online-Education-Platform/assets/133582566/749ced9e-269c-4ab4-aae5-f7ba098da825)
+
 
 ## Project Description
 
@@ -36,6 +43,20 @@ showcase their expertise. In the following sections, we will delve into the tech
 of the platform, which will provide a comprehensive understanding of the platform's
 features and functionalities.
 
+![s2](https://github.com/Muskansahuincredible/StudyNotion-An-Online-Education-Platform/assets/133582566/489b151f-10a9-4e57-b4e7-1d1843518ab6)
+
+
+<hr>
+
+## 📌 Tech Stack Used
+
+- **MongoDB**: A NoSQL database that provides high performance, high availability, and easy scalability. It stores data in flexible, JSON-like documents.
+- **Express.js**: A minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications.
+- **React.js**: A JavaScript library for building user interfaces. It allows developers to create large web applications that can update and render efficiently in response to data changes.
+- **Node.js**: A JavaScript runtime built on Chrome's V8 JavaScript engine, enabling server-side scripting and running scripts server-side to produce dynamic web page content.
+
+<hr>
+
 ## System Architecture
 
 The StudyNotion ed-tech platform consists of three main components: the front end, the
@@ -70,6 +91,8 @@ Here is a high-level diagram that illustrates the architecture of the StudyNotio
 platform:
 
 ![Architecture](images/architecture.png)
+
+<hr>
 
 ## Front End
 
@@ -116,6 +139,8 @@ styling frameworks that help make the user interface look good and responsive.
 To manage the state of the application, we use Redux, which is a popular state management
 library for React. 
 
+<hr>
+
 ## Back End
 
 Description of the Back-end Architecture: 
@@ -153,6 +178,8 @@ data.
 6. Mongoose: Mongoose is used as an Object Data Modeling (ODM) library, providing a
 way to interact with MongoDB using JavaScript
 
+<hr>
+
 ### Data Models and Database Schema: 
 The back end of StudyNotion uses a range of data models and database schemas to
 manage data, including:
@@ -169,6 +196,8 @@ right frameworks, libraries, and tools, we can ensure that the platform function
 and provides an optimal user experience for all its users.
 
 ![Database Schema](images/schema.png)
+
+<hr>
 
 ## API Design
 
@@ -210,8 +239,17 @@ requests and responses provided above illustrate how each endpoint will function
 what kind of data it will accept or return. With this API design, StudyNotion will be able to
 provide a smooth user experience while ensuring security and stability.
 
+<hr>
 
-### Installation and Setup Guide
+<div>
+  <h2> How to Contribute ? </h2>
+</div
+
+<div>
+  <h3> Installation and Setup Guide </h3>
+</div
+
+<br>
 
 To get started with StudyNotion on your local machine, follow these steps:
 
@@ -272,3 +310,49 @@ Before you begin, ensure you have the following prerequisites installed:
 - Ensure MongoDB is running on your system. If not, start the MongoDB service using the appropriate command for your operating system. 🚀
 
 Follow these steps, and you'll have StudyNotion up and running on your local machine in no time! Adjust the instructions according to your specific setup and requirements.
+
+<hr>
+
+<!-- Open Source Programs -->
+  <div>
+    <h2><img src="https://github.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/blob/master/Emojis/Hand%20gestures/Flexed%20Biceps.png?raw=true" width="35" height="35" > Open Source Programs</h2>
+  </div>
+
+  <table border="1" cellpadding="10">
+        <tr>
+            <td rowspan="2">
+                <img src="https://github.com/Meetjain1/wanderlust/assets/133582566/21b2bc42-bdd5-487a-a083-1b262c2f6d9b" alt="GSSOC Logo" width="100" height="55">
+            </td>
+            <td>
+                <strong>GSSOC 2024</strong>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              This project is part of GirlScript Summer of Code. We enthusiastically invite contributions from the community to help elevate StudyNotion to new heights.
+            </td>
+        </tr>
+    </table>
+
+<hr>
+
+<!-- Code of conduct -->
+<div>
+<h2><img src = "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Hand%20gestures/Handshake.png" width="35" height="35"> Code of Conduct</h2>
+</div>
+
+Please note that this project is released with a [Contributor Code of Conduct](./CODE_OF_CONDUCT.md). By participating in this project you agree to abide by its terms.
+
+<hr>
+ <!-- Cotributors -->
+<div>
+  <h2><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Red%20Heart.png" width="35" height="35"> Contributors</h2>
+</div>
+
+Thank you for your invaluable contributions to our project! Your support is immensely appreciated in enhancing StudyNotion. 😊
+
+<center>
+<a href="https://github.com/Muskansahuincredible/StudyNotion-An-Online-Education-Platform/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Muskansahuincredible/StudyNotion-An-Online-Education-Platform" />
+</a>
+</center>
