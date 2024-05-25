@@ -1,0 +1,37 @@
+name: ​Task Request
+description: This is Only For Project Admins and Mentors.
+title: " <write a small description here>"
+labels: ["priority: high"]
+body:
+  - type: textarea
+    attributes:
+      label: Description
+      description: A brief description of the issue or bug you are facing, also include what you tried and what didn't work.
+    validations:
+      required: false
+  - type: textarea
+    attributes:
+      label: Screenshots
+      description: Please include screenshots if required
+    validations:
+      required: false
+  - type: textarea
+    attributes:
+      label: Any additional Details?
+      description: Please Provide Key Details, if required (Goals and objectives,Deliverables,Dependencies)
+    validations:
+      required: false
+  - type: textarea
+    attributes:
+      label: Deadline
+      description: Specify the task deadline
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: "Stay you can start working on it by taking latest pull from main branch
+      
+  Please read the contributors guidelines Contributing Guidelines.
+      
+   Please follow the code of conduct Code Of Conduct."
