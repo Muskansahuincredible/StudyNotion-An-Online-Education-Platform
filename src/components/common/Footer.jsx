@@ -6,7 +6,8 @@ import { Link } from "react-router-dom";
 import Logo from "../../assets/Logo/Logo-Full-Light.png";
 
 // Icons
-import { FaFacebook, FaGoogle, FaTwitter, FaYoutube } from "react-icons/fa";
+import { FaFacebook, FaGoogle, FaYoutube, FaXTwitter } from "react-icons/fa6";
+
 
 const BottomFooter = ["Privacy Policy", "Cookie Policy", "Terms"];
 const Resources = [
@@ -49,10 +50,10 @@ const Footer = () => {
                 })}
               </div>
               <div className="flex gap-3 text-lg">
-                <FaFacebook />
-                <FaGoogle />
-                <FaTwitter />
-                <FaYoutube />
+                <FaFacebook className="facebook"/>
+                <FaGoogle className="google"/>
+                <FaXTwitter className="twitter"/>
+                <FaYoutube className="youtube"/>
               </div>
               <div></div>
             </div>
