@@ -42,7 +42,9 @@ const Footer = () => {
                       key={i}
                       className="text-[14px] cursor-pointer hover:text-richblack-50 transition-all duration-200"
                     >
-                      <Link to={ele.toLowerCase()}>{ele}</Link>
+                      {/*<Link to={ele.toLowerCase()}>{ele}</Link>*/}
+                      <a href={ele.toLowerCase()}>{ele}</a>
+                      {/*<Link to={ele.toLowerCase()}>{ele}</Link>*/}
                     </div>
                   );
                 })}
