@@ -50,10 +50,18 @@ const Footer = () => {
                 })}
               </div>
               <div className="flex gap-3 text-lg">
-                <FaFacebook className="facebook"/>
-                <FaGoogle className="google"/>
-                <FaXTwitter className="twitter"/>
-                <FaYoutube className="youtube"/>
+                <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+                  <FaFacebook className="facebook" />
+                </a>
+                <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">
+                  <FaGoogle className="google" />
+                </a>
+                <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
+                  <FaXTwitter className="twitter" />
+                </a>
+                <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
+                  <FaYoutube className="youtube" />
+                </a>
               </div>
               <div></div>
             </div>
