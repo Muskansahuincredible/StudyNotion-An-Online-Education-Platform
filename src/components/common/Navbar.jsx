@@ -110,10 +110,10 @@ function Navbar() {
             {!token && (
               <div className="flex flex-col md:flex-row items-center md:items-start gap-y-4 md:gap-y-0 md:gap-x-4">
                 <Link to="/login" onClick={closeMobileMenu}>
-                  <button className="rounded-[8px] border border-richblack-800 bg-richblack-800 px-4 py-2 text-richblack-25 hover:bg-yellow-100 hover:text-black transition-colors duration-300">Log in</button>
+                  <button className="rounded-[8px] px-4 py-2 bg-blue-500 text-white  transition duration-300 hover:bg-blue-700 hover:text-gray-200">Log in</button>
                 </Link>
                 <Link to="/signup" onClick={closeMobileMenu}>
-                  <button className="rounded-[8px] border border-richblack-800 bg-richblack-800 px-4 py-2 text-richblack-25 hover:bg-yellow-100 hover:text-black transition-colors duration-300">Sign up</button>
+                  <button className="rounded-[8px] px-4 py-2 bg-blue-500 text-white transition duration-300 hover:bg-blue-700 hover:text-gray-200">Sign up</button>
                 </Link>
               </div>
             )}
