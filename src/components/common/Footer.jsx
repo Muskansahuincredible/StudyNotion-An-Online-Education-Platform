@@ -50,16 +50,16 @@ const Footer = () => {
                 })}
               </div>
               <div className="flex gap-3 text-lg">
-                <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" class="social-icon transition duration-300 hover:opacity-75">
                   <FaFacebook className="facebook" />
                 </a>
-                <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.google.com" target="_blank" rel="noopener noreferrer" class="social-icon transition duration-300 hover:opacity-75">
                   <FaGoogle className="google" />
                 </a>
-                <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" class="social-icon transition duration-300 hover:opacity-75">
                   <FaXTwitter className="twitter" />
                 </a>
-                <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" class="social-icon transition duration-300 hover:opacity-75">
                   <FaYoutube className="youtube" />
                 </a>
               </div>
