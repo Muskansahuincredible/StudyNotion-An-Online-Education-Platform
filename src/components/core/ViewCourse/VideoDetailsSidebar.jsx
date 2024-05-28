@@ -80,7 +80,7 @@ export default function VideoDetailsSidebar({ setReviewModal }) {
                 </div>
                 <div className="flex items-center gap-3">
                   {/* <span className="text-[12px] font-medium">
-                    Lession {course?.subSection.length}
+                    Lesson {course?.subSection.length}
                   </span> */}
                   <span
                     className={`${
