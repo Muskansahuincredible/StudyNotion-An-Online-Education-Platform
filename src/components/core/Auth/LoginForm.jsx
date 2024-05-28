@@ -2,9 +2,9 @@ import { useState } from "react"
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai"
 import { useDispatch } from "react-redux"
 import { Link, useNavigate } from "react-router-dom"
-
+import { SiGmail } from "react-icons/si";
+import { FaLock } from "react-icons/fa";
 import { login } from "../../../services/operations/authAPI"
-
 function LoginForm() {
   const navigate = useNavigate()
   const dispatch = useDispatch()
@@ -34,10 +34,11 @@ function LoginForm() {
       onSubmit={handleOnSubmit}
       className="mt-6 flex w-full flex-col gap-y-4"
     >
-      <label className="w-full">
+      <label className="w-full" style={{position:"relative"}}>
         <p className="mb-1 text-[0.875rem] leading-[1.375rem] text-richblack-5">
           Email Address <sup className="text-pink-200">*</sup>
         </p>
+        <SiGmail style={{color:"grey",position:"absolute",top:"calc(49%)",left:"1.65%",fontSize:"20px"}}/>
         <input
           required
           type="text"
@@ -45,16 +46,20 @@ function LoginForm() {
           value={email}
           onChange={handleOnChange}
           placeholder="Enter email address"
+          
           style={{
-            boxShadow: "inset 0px -1px 0px rgba(255, 255, 255, 0.18)",
+            boxShadow: "inset 0px -1px 0px rgba(255, 255, 255, 0.18)", paddingLeft:"35px"
           }}
           className="w-full rounded-[0.5rem] bg-richblack-800 p-[12px] text-richblack-5"
         />
+       
       </label>
-      <label className="relative">
+      <label className="relative" >
+      <FaLock style={{color:"grey",position:"absolute",top:"calc(42%)",left:"1.65%",fontSize:"20px"}}/>
         <p className="mb-1 text-[0.875rem] leading-[1.375rem] text-richblack-5">
           Password <sup className="text-pink-200">*</sup>
         </p>
+       
         <input
           required
           type={showPassword ? "text" : "password"}
@@ -63,7 +68,7 @@ function LoginForm() {
           onChange={handleOnChange}
           placeholder="Enter Password"
           style={{
-            boxShadow: "inset 0px -1px 0px rgba(255, 255, 255, 0.18)",
+            boxShadow: "inset 0px -1px 0px rgba(255, 255, 255, 0.18)",paddingLeft:"35px"
           }}
           className="w-full rounded-[0.5rem] bg-richblack-800 p-[12px] pr-12 text-richblack-5"
         />
