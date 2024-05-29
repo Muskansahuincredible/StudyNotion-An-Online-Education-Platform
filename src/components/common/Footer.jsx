@@ -42,16 +42,26 @@ const Footer = () => {
                       key={i}
                       className="text-[14px] cursor-pointer hover:text-richblack-50 transition-all duration-200"
                     >
-                      <Link to={ele.toLowerCase()}>{ele}</Link>
+                      {/*<Link to={ele.toLowerCase()}>{ele}</Link>*/}
+                      <a href={ele.toLowerCase()}>{ele}</a>
+                      {/*<Link to={ele.toLowerCase()}>{ele}</Link>*/}
                     </div>
                   );
                 })}
               </div>
               <div className="flex gap-3 text-lg">
-                <FaFacebook className="facebook"/>
-                <FaGoogle className="google"/>
-                <FaXTwitter className="twitter"/>
-                <FaYoutube className="youtube"/>
+                <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" class="social-icon transition duration-300 hover:opacity-75">
+                  <FaFacebook className="facebook" />
+                </a>
+                <a href="https://www.google.com" target="_blank" rel="noopener noreferrer" class="social-icon transition duration-300 hover:opacity-75">
+                  <FaGoogle className="google" />
+                </a>
+                <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" class="social-icon transition duration-300 hover:opacity-75">
+                  <FaXTwitter className="twitter" />
+                </a>
+                <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" class="social-icon transition duration-300 hover:opacity-75">
+                  <FaYoutube className="youtube" />
+                </a>
               </div>
               <div></div>
             </div>

@@ -7,6 +7,9 @@ body {
   overflow-x: hidden;
   margin-top: 50px;
 }
+.icon{
+  top:calc(25%);
+}
 
 /* ===== Scrollbar CSS ===== */
 /* Firefox */
