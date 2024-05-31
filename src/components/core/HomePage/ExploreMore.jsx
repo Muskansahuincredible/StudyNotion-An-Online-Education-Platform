@@ -43,11 +43,10 @@ const ExploreMore = () => {
         {tabsName.map((ele, index) => {
           return (
             <div
-              className={` text-[16px] flex flex-row items-center gap-2 ${
-                currentTab === ele
+              className={`text-[16px] flex flex-row items-center gap-2 ${currentTab === ele
                   ? "bg-richblack-900 text-richblack-5 font-medium"
                   : "text-richblack-200"
-              } px-7 py-[7px] rounded-full transition-all duration-200 cursor-pointer hover:bg-richblack-900 hover:text-richblack-5`}
+                } px-7 py-[7px] rounded-full transition-all duration-200 cursor-pointer hover:bg-white hover:text-richblack-900 hover:drop-shadow-[0_1.5px_rgba(255,255,255,0.25)]`}
               key={index}
               onClick={() => setMyCards(ele)}
             >
@@ -56,6 +55,7 @@ const ExploreMore = () => {
           );
         })}
       </div>
+
       <div className="hidden lg:block lg:h-[200px]"></div>
 
       {/* Cards Group */}
