@@ -1,39 +1,77 @@
-import React, { useEffect, useState } from "react"
-import ReactStars from "react-rating-stars-component"
+import React, { useEffect, useState } from "react";
+import ReactStars from "react-rating-stars-component";
 // Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react"
+import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
-import "swiper/css"
-import "swiper/css/free-mode"
-import "swiper/css/pagination"
-import "../../App.css"
+import "swiper/css";
+import "swiper/css/free-mode";
+import "swiper/css/pagination";
+import "../../App.css";
 // Icons
-import { FaStar } from "react-icons/fa"
+import { FaStar } from "react-icons/fa";
 // Import required modules
-import { Autoplay, FreeMode, Pagination } from "swiper"
-
-// Get apiFunction and the endpoint
-import { apiConnector } from "../../services/apiconnector"
-import { ratingsEndpoints } from "../../services/apis"
+import { Autoplay, FreeMode, Pagination } from "swiper";
 
 function ReviewSlider() {
-  const [reviews, setReviews] = useState([])
-  const truncateWords = 15
+  const [reviews, setReviews] = useState([]);
+  const truncateWords = 15;
 
   useEffect(() => {
-    ;(async () => {
-      const { data } = await apiConnector(
-        "GET",
-        ratingsEndpoints.REVIEWS_DETAILS_API
-      )
-      if (data?.success) {
-        setReviews(data?.data)
-      }
-    })()
-  }, [])
+    // Sample data
+    const sampleData = [
+      {
+        user: {
+          firstName: "John",
+          lastName: "Doe",
+          image: "",
+        },
+        course: {
+          courseName: "React for Beginners",
+        },
+        review: "This is an amazing course! It helped me understand the basics of React in a very simple and efficient way.",
+        rating: 4.5,
+      },
+      {
+        user: {
+          firstName: "Jane",
+          lastName: "Smith",
+          image: "",
+        },
+        course: {
+          courseName: "Advanced JavaScript",
+        },
+        review: "I loved this course. The examples were very clear and the instructor was great at explaining complex topics.",
+        rating: 5,
+      },
+      {
+        user: {
+          firstName: "Alice",
+          lastName: "Johnson",
+          image: "",
+        },
+        course: {
+          courseName: "CSS Flexbox and Grid",
+        },
+        review: "A must-take course for anyone looking to improve their CSS skills. Highly recommend!",
+        rating: 4,
+      },
+      {
+        user: {
+          firstName: "Bob",
+          lastName: "Brown",
+          image: "",
+        },
+        course: {
+          courseName: "Fullstack Development",
+        },
+        review: "Great course covering both frontend and backend development. The projects were very practical.",
+        rating: 4.8,
+      },
+    ];
 
-  // console.log(reviews)
+    setReviews(sampleData);
+  }, []);
 
   return (
     <div className="text-white">
@@ -48,12 +86,12 @@ function ReviewSlider() {
             disableOnInteraction: false,
           }}
           modules={[FreeMode, Pagination, Autoplay]}
-          className="w-full "
+          className="w-full"
         >
           {reviews.map((review, i) => {
             return (
               <SwiperSlide key={i}>
-                <div className="flex flex-col gap-3 bg-richblack-800 p-3 text-[14px] text-richblack-25">
+                <div className="flex flex-col gap-3 bg-richblack-800 p-3 text-[14px] text-richblack-25 h-[250px]">
                   <div className="flex items-center gap-4">
                     <img
                       src={
@@ -79,7 +117,7 @@ function ReviewSlider() {
                           .join(" ")} ...`
                       : `${review?.review}`}
                   </p>
-                  <div className="flex items-center gap-2 ">
+                  <div className="flex items-center gap-2">
                     <h3 className="font-semibold text-yellow-100">
                       {review.rating.toFixed(1)}
                     </h3>
@@ -95,13 +133,12 @@ function ReviewSlider() {
                   </div>
                 </div>
               </SwiperSlide>
-            )
+            );
           })}
-          {/* <SwiperSlide>Slide 1</SwiperSlide> */}
         </Swiper>
       </div>
     </div>
-  )
+  );
 }
 
-export default ReviewSlider
+export default ReviewSlider;
