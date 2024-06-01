@@ -60,7 +60,8 @@ const userSchema = new mongoose.Schema(
 		},
 		image: {
 			type: String,
-			required: true,
+			//at registration image cannot be uploaded
+			// required: true,
 		},
 		courseProgress: [
 			{

@@ -20,6 +20,7 @@ const PORT = process.env.PORT || 4000;
 database.connect();
 //middlewares
 app.use(express.json());
+app.use(express.urlencoded({extended: true}))//for using postman
 app.use(cookieParser());
 app.use(
 	cors({
