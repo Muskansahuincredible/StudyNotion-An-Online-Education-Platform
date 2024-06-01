@@ -158,7 +158,7 @@ function Home() {
             </div>
             <div className="flex flex-col items-start gap-10 lg:w-[40%]">
               <div className="text-[16px]">
-                The modern StudyNotion is the dictates its own terms. Today, to
+                The modern StudyNotion dictates its own terms. Today, to
                 be a competitive specialist requires more than professional
                 skills.
               </div>
