@@ -1,3 +1,4 @@
+<div id="top"></div>
 <div align="center">
   <h1>StudyNotion</h1>
   <h2> Online Education Platform for You </h2>
@@ -8,9 +9,27 @@
 
 ![s1](https://github.com/Muskansahuincredible/StudyNotion-An-Online-Education-Platform/assets/133582566/749ced9e-269c-4ab4-aae5-f7ba098da825)
 
+<h2>Table of Contents</h2>
+
+- [Project Description](#project-description)
+- [Technology Used](#tech-stack)
+  - [Frontend](#frontend)
+  - [Backend](#backend)
+- [System Architecture](#system-architecture)
+  - [Front-end](#front-end)
+  - [Back-end](#back-end)
+  - [Database](#database)
+  - [Architecture Diagram](#architecture-diagram)
+- [Front End Technology](#front-end-technology)
+  - [For Students](#for-students)
+  - [For Instructors](#for-instructors)
+- [Back End Technology](#back-end-technology)
+  - [Data Models and Database Schema](#data-models-and-database-schema)
+- [API Design](#api-design)
+- [How to Contribute](#how-to-contribute)
 
 ## Project Description
-
+<a name="project-description"></a>
 StudyNotion is a fully functional ed-tech platform that enables users to create, consume,
 and rate educational content. The platform is built using the MERN stack, which includes
 ReactJS, NodeJS, MongoDB, and ExpressJS.
@@ -47,30 +66,53 @@ features and functionalities.
 
 
 <hr>
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-## 📌 Tech Stack Used
+## 📌 Technology Used
+<a name="tech-stack"></a>
+
+### Frontend
+<a F="frontend"></a>
+<p>
+  <a href="https://www.w3schools.com/html/"> <img src="https://img.icons8.com/color/70/000000/html-5--v1.png" alt="HTML" /></a>
+  <a href="https://www.w3schools.com/css/"> <img src="https://img.icons8.com/color/70/000000/css3.png" alt="CSS" /></a>
+  <a href="https://www.w3schools.com/js/"><img src="https://img.icons8.com/color/70/000000/javascript--v1.png" alt="JS" /></a>
+  <a href="https://www.w3schools.com/REACT/DEFAULT.ASP"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png" alt="React.js" width="50" height="50" /></a>
+  </p>
+
+- **HTML**:HTML (HyperText Markup Language) is a skeleton of a website, structuring content with tags and elements.
+- **CSS**:CSS is a style sheet language used to style web pages.It enables the application of different styles based on media types and user preferences, enhancing user accessibility and readability
+- **JavaScript**:JavaScript is a programming language used to add interactivity to websites.
+- **React.js**:A JavaScript library for building user interfaces. It allows developers to create large web applications that can update and render efficiently in response to data changes.
+
+### Backend
+<a m="backend"></a>
+<p>
+<a href="https://www.w3schools.com/nodejs/"><img src="https://e7.pngegg.com/pngimages/247/558/png-clipart-node-js-javascript-express-js-npm-react-github-angle-text.png" alt="Node.js" width="50" height="50" /></a>
+<a href="https://www.javatpoint.com/expressjs-tutorial"><img src="https://cdn.icon-icons.com/icons2/2699/PNG/512/expressjs_logo_icon_169185.png" alt="expressjs" width="50" height="50" /></a>
+<a href="https://www.mongodb.com/docs/"><img src="https://w7.pngwing.com/pngs/956/695/png-transparent-mongodb-original-wordmark-logo-icon-thumbnail.png" alt="MongoDB" width="50" height="50" /></a>
+</p>
 
 - **MongoDB**: A NoSQL database that provides high performance, high availability, and easy scalability. It stores data in flexible, JSON-like documents.
 - **Express.js**: A minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications.
-- **React.js**: A JavaScript library for building user interfaces. It allows developers to create large web applications that can update and render efficiently in response to data changes.
 - **Node.js**: A JavaScript runtime built on Chrome's V8 JavaScript engine, enabling server-side scripting and running scripts server-side to produce dynamic web page content.
 
-<hr>
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 ## System Architecture
-
+<a g="system-architecture"></a>
 The StudyNotion ed-tech platform consists of three main components: the front end, the
 back end, and the database. The platform follows a client-server architecture, with the
 front end serving as the client and the back end and database serving as the server.
 
 ### Front-end 
-
+<a h="front-end"></a>
 The front end of the platform is built using ReactJS, ReactJS allows for the creation of dynamic and responsive user
 interfaces, which are critical for providing an engaging learning experience to the students.
 The front end communicates with the back end using RESTful API calls
 
 ### Back-end 
-
+<a i="bront-end"></a>
 The back end of the platform is built using NodeJS and ExpressJS,. The back end
 provides APIs for the front end to consume, which include functionalities such as user
 authentication, course creation, and course consumption. The back end also handles the
@@ -78,7 +120,7 @@ logic for processing and storing the course content and user data.
 
 
 ### Database
-
+<a j="database"></a>
 The database for the platform is built using MongoDB, which is a NoSQL database that
 provides a flexible and scalable data storage solution. MongoDB allows for the storage of
 unstructured and semi-structured data. The database stores the course content, user data, and other
@@ -86,20 +128,23 @@ relevant information related to the platform.
 
 
 ### Architecture Diagram
-
+<a i="architecture-diagram"></a>
 Here is a high-level diagram that illustrates the architecture of the StudyNotion ed-tech
 platform:
 
 ![Architecture](images/architecture.png)
 
 <hr>
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-## Front End
+## Front End Technology
+<a k="front-end-technology"></a>
 
 The front end of StudyNotion has all the necessary pages that an ed-tech platform should
 have. Some of these pages are:
 
 ### For Students:
+<a k="for-students"></a>
 * Homepage: This page will have a brief introduction to the platform, as well as links
 to the course list and user details.
 * Course List: This page will have a list of all the courses available on the platform,
@@ -115,6 +160,7 @@ their name, email, and other relevant information.
 
 
 ### For Instructors:
+<a k="for-instructors"></a>
 * Dashboard: This page will have an overview of the instructor's courses, as well as
 the ratings and feedback for each course.
 * Insights: This page will have detailed insights into the instructor's courses,
@@ -140,8 +186,10 @@ To manage the state of the application, we use Redux, which is a popular state m
 library for React. 
 
 <hr>
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-## Back End
+## Back End Technology
+<a k="back-end-technology"></a>
 
 Description of the Back-end Architecture: 
 StudyNotion uses a monolithic architecture, with the backend built using Node.js and
@@ -180,7 +228,8 @@ way to interact with MongoDB using JavaScript
 
 <hr>
 
-### Data Models and Database Schema: 
+### Data Models and Database Schema:
+<a k="data-models-and-database-schema"></a>
 The back end of StudyNotion uses a range of data models and database schemas to
 manage data, including:
 1. Student schema: Includes fields such as name, email, password, and course details
@@ -198,8 +247,10 @@ and provides an optimal user experience for all its users.
 ![Database Schema](images/schema.png)
 
 <hr>
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 ## API Design
+<a k="api-design"></a>
 
 The StudyNotion platform's API is designed following the REST architectural style. The
 API is implemented using Node.js and Express.js. It uses JSON for data exchange and
@@ -240,11 +291,10 @@ what kind of data it will accept or return. With this API design, StudyNotion wi
 provide a smooth user experience while ensuring security and stability.
 
 <hr>
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-<div>
-  <h2> How to Contribute ? </h2>
-</div
-
+## How to Contribute?
+<a k="how-to-contribute"></a>
 <div>
   <h3> Installation and Setup Guide </h3>
 </div
@@ -255,11 +305,14 @@ To get started with StudyNotion on your local machine, follow these steps:
 
 #### Prerequisites
 
+
 Before you begin, ensure you have the following prerequisites installed:
 
 - Node.js (version X.X.X) ⚙️
 - MongoDB (version X.X.X) 📦
 - Git 📂
+
+  <p align="right">(<a href="#top">back to top</a>)</p>
 
 #### Installation Steps
 
@@ -312,7 +365,7 @@ Before you begin, ensure you have the following prerequisites installed:
 Follow these steps, and you'll have StudyNotion up and running on your local machine in no time! Adjust the instructions according to your specific setup and requirements.
 
 <hr>
-
+<p align="right">(<a href="#top">back to top</a>)</p>
 <!-- Open Source Programs -->
   <div>
     <h2><img src="https://github.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/blob/master/Emojis/Hand%20gestures/Flexed%20Biceps.png?raw=true" width="35" height="35" > Open Source Programs</h2>
@@ -344,7 +397,7 @@ Follow these steps, and you'll have StudyNotion up and running on your local mac
 Please note that this project is released with a [Contributor Code of Conduct](./CODE_OF_CONDUCT.md). By participating in this project you agree to abide by its terms.
 
 <hr>
- <!-- Cotributors -->
+ <!-- Contributors -->
 <div>
   <h2><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Red%20Heart.png" width="35" height="35"> Contributors</h2>
 </div>
@@ -356,3 +409,4 @@ Thank you for your invaluable contributions to our project! Your support is imme
   <img src="https://contrib.rocks/image?repo=Muskansahuincredible/StudyNotion-An-Online-Education-Platform" />
 </a>
 </center>
+<p align="right">(<a href="#top">back to top</a>)</p>
