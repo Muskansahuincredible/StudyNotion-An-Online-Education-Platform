@@ -9,6 +9,14 @@ Please note we have a [code of conduct](CODE_OF_CONDUCT.md)  please follow it in
 
 <br>
 
+## Important point to keep in mind before starting ✅
+
+- If anything is missing or if you find something that needs to be enhanced/fixed/modified in the project, please feel free to [create an issue.](https://github.com/Muskansahuincredible/StudyNotion-An-Online-Education-Platform/issues/new/choose)
+- Ask to get the issue assigned to you before working on the issue & making a PR.
+- Don't create a PR until the issue is not assigned to you.
+- Mention the issue number in the PRs and describe all the changes that you have made briefly in the PR(if possible attach a screen recording showing the changes you made).
+
+
 ## **Creating a new issue process**
 
 1. Go to the project's issues.
@@ -74,5 +82,50 @@ in case you are stuck:
 3. Submit your PR by giving the necesarry information in PR template and wait for PA to review it.
 
 <br>
+
+### Commit Message Guidelines using Commitlint
+
+We follow a standardized commit message format using Commitlint to ensure consistency and clarity in our commit history. Each commit message should adhere to the following guidelines:
+
+1. **Type**: The commit type must be one of the following:
+
+   - `feat`: A new feature or enhancement.
+   - `fix`: A bug fix.
+   - `docs`: Documentation changes.
+   - `style`: Code style changes (e.g., formatting, semicolons).
+   - `refactor`: Code refactorings with no feature changes or bug fixes.
+   - `test`: Adding or improving tests.
+   - `chore`: General maintenance tasks, build changes, etc.
+
+2. **Scope** (Optional): The scope provides context for the commit, indicating the specific part of the project being affected. Use a short description in lowercase (e.g., `auth`, `navbar`, `README`).
+
+3. **Description**: A brief and meaningful description of the changes made. Start with a capital letter and use the imperative mood (e.g., "Add new feature" instead of "Added new feature").
+
+4. **Issue reference** (Optional): Include the issue number associated with the commit (e.g., `#123`).
+
+### Examples:
+
+#### Valid Commit Messages:
+
+- `feat: Add user authentication feature`
+- `fix(auth): Resolve login page redirect issue`
+- `docs: Update installation instructions`
+- `style: Format code according to project guidelines`
+- `refactor(navbar): Improve responsiveness`
+- `test: Add unit tests for API endpoints`
+- `chore: Update dependencies to latest versions`
+- `fix: Handle edge case in data processing (#456)`
+
+#### Invalid Commit Messages:
+
+- `Added new stuff`
+- `Fixed a bug`
+- `Updated code`
+- `auth feature update`
+- `chore: fixed some stuff`
+
+
+By following these guidelines, we can maintain a clean commit history that is easy to understand and helps us effectively track changes. If you have any questions or need further assistance, feel free to ask! Happy contributing!
+
 
 **Thank you** for your interest in contributing to **StudyNotion-an-online-education-platform**
