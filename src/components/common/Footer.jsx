@@ -23,9 +23,14 @@ const Resources = [
 const Plans = ["Paid memberships", "For students", "Business solutions"];
 const Community = ["Forums", "Chapters", "Events"];
 
+const scrollToTop = () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
 const Footer = () => {
   return (
     <div className="bg-richblack-800">
+
       <div className="flex lg:flex-row gap-8 items-center justify-between w-11/12 max-w-maxContent text-richblack-400 leading-6 mx-auto relative py-14">
         <div className="border-b w-[100%] flex flex-col lg:flex-row pb-5 border-richblack-700">
           {/* Section 1 */}
@@ -159,6 +164,7 @@ const Footer = () => {
             })}
           </div>
         </div>
+
       </div>
 
       <div className="flex flex-row items-center justify-between w-11/12 max-w-maxContent text-richblack-400 mx-auto  pb-14 text-sm">
@@ -183,11 +189,26 @@ const Footer = () => {
             })}
           </div>
 
+         
+          <button className=" flex justify-center items-center mb-2 h-12 w-40 rounded-3xl bg-richblack-900 text-richblack-50
+            
+            hover:border hover:border-richblack-200
+
+            " onClick={scrollToTop}>
+              
+              <h2 className="mx-1"> Back To Top </h2>
+              
+              <img src="arrow.png" alt="" className="mx-1"/>
+
+          </button>
+          
+
           <div className="text-center">Made with ❤️ CodeHelp © 
           {(new Date().getFullYear())} Studynotion</div>
           
         </div>
       </div>
+
     </div>
   );
 };
