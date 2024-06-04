@@ -421,7 +421,11 @@ Follow these steps, and you'll have StudyNotion up and running on your local mac
 <h2><img src = "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Hand%20gestures/Handshake.png" width="35" height="35"> Code of Conduct</h2>
 </div>
 
-Please note that this project is released with a [Contributor Code of Conduct](./CODE_OF_CONDUCT.md). By participating in this project you agree to abide by its terms.
+Please note that this project is released with a [Contributor Code of Conduct](./CODE_OF_CONDUCT.md). By participating in this project you agree to abide by its terms.<br>
+
+<hr>
+
+This project is part of GirlScript Summer of Code. We enthusiastically invite contributions from the community to help elevate StudyNotion to new heights.<br>
 
 <hr>
  <!-- Contributors -->
