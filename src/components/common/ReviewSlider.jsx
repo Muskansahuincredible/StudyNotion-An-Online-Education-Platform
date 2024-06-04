@@ -1,13 +1,16 @@
 import React, { useEffect, useState } from "react";
 import ReactStars from "react-rating-stars-component";
+import { Autoplay, FreeMode, Pagination, Navigation } from "swiper/modules"; // Import Navigation module
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
+import "swiper/css/autoplay";
 import "swiper/css/navigation"; // Import navigation styles
 import "../../App.css";
 import { FaStar } from "react-icons/fa";
-import { Autoplay, FreeMode, Pagination, Navigation } from "swiper"; // Import Navigation module
+
 
 function ReviewSlider() {
   const [reviews, setReviews] = useState([]);
