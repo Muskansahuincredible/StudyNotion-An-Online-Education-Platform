@@ -7,7 +7,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation"; // Import navigation styles
 import "../../App.css";
 import { FaStar } from "react-icons/fa";
-import { Autoplay, FreeMode, Pagination, Navigation } from "swiper"; // Import Navigation module
+import { Autoplay, FreeMode, Pagination, Navigation } from "swiper/modules"; // Import Swiper modules from swiper/modules
 
 function ReviewSlider() {
   const [reviews, setReviews] = useState([]);
@@ -74,8 +74,8 @@ function ReviewSlider() {
 
   return (
     <div className="text-white">
-      <div className="my-[50px] h-[184px]  max-w-maxContentTab lg:max-w-maxContent">
-        <Swiper 
+      <div className="my-[50px] h-[184px] max-w-maxContentTab lg:max-w-maxContent">
+        <Swiper
           slidesPerView={3}
           spaceBetween={30}
           loop={true}
