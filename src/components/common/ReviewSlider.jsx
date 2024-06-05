@@ -4,10 +4,10 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
-import "swiper/css/navigation"; // Import navigation styles
+import "swiper/css/navigation";
 import "../../App.css";
 import { FaStar } from "react-icons/fa";
-import { Autoplay, FreeMode, Pagination, Navigation } from "swiper"; // Import Navigation module
+import { Autoplay, FreeMode, Pagination, Navigation } from "swiper/modules"; // Correct import path
 
 function ReviewSlider() {
   const [reviews, setReviews] = useState([]);
