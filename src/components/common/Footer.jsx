@@ -50,19 +50,96 @@ const Footer = () => {
                 })}
               </div>
               <div className="flex gap-3 text-lg">
-                <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" class="social-icon transition duration-300 hover:opacity-75">
+                <a
+                  href="https://www.facebook.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="social-icon"
+                  style={{
+                    transition: "transform 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease",
+                    opacity: 0.85,
+                    boxShadow: "0 4px 15px rgba(0, 0, 0, 0.2)",
+                  }}
+                  // Hover effect
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.transform = "scale(1.2)";
+                    e.currentTarget.style.color = "#4267B2"; // New color on hover
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.transform = "scale(1)";
+                    e.currentTarget.style.color = "#666"; // Restore original color
+                  }}
+                >
                   <FaFacebook className="facebook" />
                 </a>
-                <a href="https://www.google.com" target="_blank" rel="noopener noreferrer" class="social-icon transition duration-300 hover:opacity-75">
+                <a
+                  href="https://www.google.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="social-icon"
+                  style={{
+                    transition: "transform 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease",
+                    opacity: 0.85,
+                    boxShadow: "0 4px 15px rgba(0, 0, 0, 0.2)",
+                  }}
+                  // Hover effect
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.transform = "scale(1.2)";
+                    e.currentTarget.style.color = "#DB4437"; // New color on hover
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.transform = "scale(1)";
+                    e.currentTarget.style.color = "#666"; // Restore original color
+                  }}
+                >
                   <FaGoogle className="google" />
                 </a>
-                <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" class="social-icon transition duration-300 hover:opacity-75">
+                <a
+                  href="https://www.twitter.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="social-icon"
+                  style={{
+                    transition: "transform 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease",
+                    opacity: 0.85,
+                    boxShadow: "0 4px 15px rgba(0, 0, 0, 0.2)",
+                  }}
+                  // Hover effect
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.transform = "scale(1.2)";
+                    e.currentTarget.style.color = "#1DA1F2"; // New color on hover
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.transform = "scale(1)";
+                    e.currentTarget.style.color = "#666"; // Restore original color
+                  }}
+                >
                   <FaXTwitter className="twitter" />
                 </a>
-                <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" class="social-icon transition duration-300 hover:opacity-75">
+                <a
+                  href="https://www.youtube.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="social-icon"
+                  style={{
+                    transition: "transform 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease",
+                    opacity: 0.85,
+                    boxShadow: "0 4px 15px rgba(0, 0, 0, 0.2)",
+                  }}
+                  // Hover effect
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.transform = "scale(1.2)";
+                    e.currentTarget.style.color = "#FF0000"; // New color on hover
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.transform = "scale(1)";
+                    e.currentTarget.style.color = "#666"; // Restore original color
+                  }}
+                >
                   <FaYoutube className="youtube" />
                 </a>
               </div>
+
               <div></div>
             </div>
 
@@ -169,11 +246,10 @@ const Footer = () => {
               return (
                 <div
                   key={i}
-                  className={` ${
-                    BottomFooter.length - 1 === i
-                      ? ""
-                      : "border-r border-richblack-700 cursor-pointer hover:text-richblack-50 transition-all duration-200"
-                  } px-3 `}
+                  className={` ${BottomFooter.length - 1 === i
+                    ? ""
+                    : "border-r border-richblack-700 cursor-pointer hover:text-richblack-50 transition-all duration-200"
+                    } px-3 `}
                 >
                   <Link to={ele.split(" ").join("-").toLocaleLowerCase()}>
                     {ele}
@@ -183,9 +259,9 @@ const Footer = () => {
             })}
           </div>
 
-          <div className="text-center">Made with ❤️ CodeHelp © 
-          {(new Date().getFullYear())} Studynotion</div>
-          
+          <div className="text-center">Made with ❤️ CodeHelp ©
+            {(new Date().getFullYear())} Studynotion</div>
+
         </div>
       </div>
     </div>
