@@ -9,6 +9,7 @@ function Login() {
       description2="Education to future-proof your career."
       image={loginImg}
       formType="login"
+      
     />
   )
 }

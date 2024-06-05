@@ -251,3 +251,27 @@ details > summary::-webkit-details-marker {
 .navbarContainer {	
   @apply fixed top-0 left-0 right-0 z-50 bg-richblack-800; 
 }
+/* Custom Scrollbar Styles */
+::-webkit-scrollbar {
+  width: 12px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Color of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888; /* Color of the scrollbar handle */
+  border-radius: 6px; /* Round the corners of the scrollbar handle */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Color of the scrollbar handle on hover */
+}
+.text-color{
+  color:burlywood;
+}
+.text-color2{
+  color:black;
+}
+

@@ -1,0 +1,10 @@
+.toggle-icon{
+    width:50px;
+    cursor:pointer;
+    margin-left: 40px;
+
+}
+.dark .navbar{
+    background: #000;
+    color:#fff;
+}
