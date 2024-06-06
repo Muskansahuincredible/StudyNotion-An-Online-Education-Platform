@@ -3,10 +3,12 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/free-mode';
 import 'swiper/css/pagination';
-import 'swiper/css/navigation'; // Import navigation styles
-import { Autoplay, FreeMode, Pagination, Navigation } from 'swiper/modules'; // Correct import path
+import 'swiper/css/navigation';
+import 'swiper/css/autoplay';
+import { Autoplay, FreeMode, Pagination, Navigation } from 'swiper/modules';
 
 import CourseCard from './Course_Card';
+
 
 const CourseSlider = ({ Courses }) => {
   return (
