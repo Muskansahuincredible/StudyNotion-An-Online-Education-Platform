@@ -3,12 +3,12 @@ import {Route, Routes, useNavigate } from "react-router-dom";
 import Home from "./pages/Home"
 import Navbar from "./components/common/Navbar"
 import OpenRoute from "./components/core/Auth/OpenRoute"
-
 import Login from "./pages/Login"
 import Signup from "./pages/Signup"
 import ForgotPassword from "./pages/ForgotPassword";
 import UpdatePassword from "./pages/UpdatePassword";
 import VerifyEmail from "./pages/VerifyEmail";
+import Rateus from "./pages/Rateus";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import MyProfile from "./components/core/Dashboard/MyProfile";
@@ -31,21 +31,16 @@ import Instructor from "./components/core/Dashboard/InstructorDashboard/Instruct
 import BackToTop from "./components/common/BackToTop.jsx";
 
 function App() {
-
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  
   const { user } = useSelector((state) => state.profile)
-
-
   return (
    <div className="w-screen min-h-screen bg-richblack-900 flex flex-col font-inter">
     <Navbar/>
     <Routes>
       <Route path="/" element={<Home/>} />
       <Route path="catalog/:catalogName" element={<Catalog/>} />
-      <Route path="courses/:courseId" element={<CourseDetails/>} />
-      
+      <Route path="courses/:courseId" element={<CourseDetails/>} /> 
       <Route
           path="signup"
           element={
@@ -99,7 +94,7 @@ function App() {
           }
         />
     <Route path="/contact" element={<Contact />} />
-
+    <Route path="/rateus" element={<Rateus />} />
     <Route 
       element={
         <PrivateRoute>
