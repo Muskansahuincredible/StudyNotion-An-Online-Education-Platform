@@ -46,9 +46,7 @@ const Footer = () => {
                       key={i}
                       className="text-[14px] cursor-pointer hover:text-richblack-50 transition-all duration-200"
                     >
-                      {/*<Link to={ele.toLowerCase()}>{ele}</Link>*/}
-                      <a href={ele.toLowerCase()}>{ele}</a>
-                      {/*<Link to={ele.toLowerCase()}>{ele}</Link>*/}
+                      <Link to={`/${ele.toLowerCase()}`}>{ele}</Link>
                     </div>
                   );
                 })}
@@ -169,7 +167,7 @@ const Footer = () => {
                       key={index}
                       className="text-[14px] cursor-pointer hover:text-richblack-50 transition-all duration-200"
                     >
-                      <Link to={ele.split(" ").join("-").toLowerCase()}>
+                      <Link to={`/${ele.split(" ").join("-").toLowerCase()}`}>
                         {ele}
                       </Link>
                     </div>
@@ -181,7 +179,7 @@ const Footer = () => {
                 Support
               </h1>
               <div className="text-[14px] cursor-pointer hover:text-richblack-50 transition-all duration-200 mt-2">
-                <Link to={"/help-center"}>Help Center</Link>
+                <Link to="/help-center">Help Center</Link>
               </div>
             </div>
 
@@ -197,7 +195,7 @@ const Footer = () => {
                       key={index}
                       className="text-[14px] cursor-pointer hover:text-richblack-50 transition-all duration-200"
                     >
-                      <Link to={ele.split(" ").join("-").toLowerCase()}>
+                      <Link to={`/${ele.split(" ").join("-").toLowerCase()}`}>
                         {ele}
                       </Link>
                     </div>
@@ -226,9 +224,23 @@ const Footer = () => {
                       ) : (
                         <Link to={ele.link}>{ele.name}</Link>
                       )}
+
+                      <Link to={`/${ele.split(" ").join("-").toLowerCase()}`}>
+                        {ele}
+                      </Link>
                     </div>
                   );
                 })}
+              </div>
+
+              <h1 className="text-richblack-50 font-semibold text-[16px] mt-7">
+                Legal
+              </h1>
+              <div className="text-[14px] cursor-pointer hover:text-richblack-50 transition-all duration-200 mt-2">
+                <Link to="/privacy-policy">Privacy Policy</Link>
+              </div>
+              <div className="text-[14px] cursor-pointer hover:text-richblack-50 transition-all duration-200 mt-2">
+                <Link to="/termsandconditions">Terms and Conditions</Link>
               </div>
             </div>
           </div>
@@ -273,7 +285,7 @@ const Footer = () => {
                     : "border-r border-richblack-700 cursor-pointer hover:text-richblack-50 transition-all duration-200"
                     } px-3 `}
                 >
-                  <Link to={ele.split(" ").join("-").toLocaleLowerCase()}>
+                  <Link to={`/${ele.split(" ").join("-").toLocaleLowerCase()}`}>
                     {ele}
                   </Link>
                 </div>
