@@ -8,6 +8,7 @@ import Signup from "./pages/Signup";
 import ForgotPassword from "./pages/ForgotPassword";
 import UpdatePassword from "./pages/UpdatePassword";
 import VerifyEmail from "./pages/VerifyEmail";
+import Rateus from "./pages/Rateus";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import MyProfile from "./components/core/Dashboard/MyProfile";
@@ -28,13 +29,12 @@ import ViewCourse from "./pages/ViewCourse";
 import VideoDetails from "./components/core/ViewCourse/VideoDetails";
 import Instructor from "./components/core/Dashboard/InstructorDashboard/Instructor";
 import BackToTop from "./components/common/BackToTop";
-import PrivacyPolicy from "./pages/privacypolicy";
-import TermsAndConditions from "./pages/terms and conditions";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsAndConditions from "./pages/TermsAndConditions";
 
 function App() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-
   const { user } = useSelector((state) => state.profile);
 
   return (
@@ -44,7 +44,6 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="catalog/:catalogName" element={<Catalog />} />
         <Route path="courses/:courseId" element={<CourseDetails />} />
-
         <Route
           path="signup"
           element={
@@ -61,7 +60,6 @@ function App() {
             </OpenRoute>
           }
         />
-
         <Route
           path="forgot-password"
           element={
@@ -70,7 +68,6 @@ function App() {
             </OpenRoute>
           }
         />
-
         <Route
           path="verify-email"
           element={
@@ -79,7 +76,6 @@ function App() {
             </OpenRoute>
           }
         />
-
         <Route
           path="update-password/:id"
           element={
@@ -88,12 +84,11 @@ function App() {
             </OpenRoute>
           }
         />
-
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/rateus" element={<Rateus />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/termsandconditions" element={<TermsAndConditions />} />
-
         <Route
           element={
             <PrivateRoute>
@@ -103,14 +98,12 @@ function App() {
         >
           <Route path="dashboard/my-profile" element={<MyProfile />} />
           <Route path="dashboard/settings" element={<Settings />} />
-
           {user?.accountType === ACCOUNT_TYPE.STUDENT && (
             <>
               <Route path="dashboard/cart" element={<Cart />} />
               <Route path="dashboard/enrolled-courses" element={<EnrolledCourses />} />
             </>
           )}
-
           {user?.accountType === ACCOUNT_TYPE.INSTRUCTOR && (
             <>
               <Route path="dashboard/instructor" element={<Instructor />} />
@@ -120,7 +113,6 @@ function App() {
             </>
           )}
         </Route>
-
         <Route
           element={
             <PrivateRoute>
@@ -137,10 +129,8 @@ function App() {
             </>
           )}
         </Route>
-
         <Route path="*" element={<Error />} />
       </Routes>
-
       <BackToTop />
     </div>
   );
