@@ -15,7 +15,6 @@ function RateUsComponent({ previousContent }) {
   };
 
   const handleSubmit = () => {
-    // Reset the state after submitting
     setRating(0);
     setFeedback("");
     setShowModal(false); 
