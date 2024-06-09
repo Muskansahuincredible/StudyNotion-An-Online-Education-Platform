@@ -18,7 +18,7 @@ function RateUsComponent({ previousContent }) {
     // Reset the state after submitting
     setRating(0);
     setFeedback("");
-    setShowModal(false); // Hide the modal after submitting
+    setShowModal(false); 
   };
 
   return (
