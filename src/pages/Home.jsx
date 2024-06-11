@@ -14,6 +14,7 @@ import HighlightText from "../components/core/HomePage/HighlightText"
 import InstructorSection from "../components/core/HomePage/InstructorSection"
 import LearningLanguageSection from "../components/core/HomePage/LearningLanguageSection"
 import TimelineSection from "../components/core/HomePage/TimelineSection"
+import FAQ from "../components/common/FAQ"
 
 function Home() {
   return (
@@ -188,6 +189,7 @@ function Home() {
         <ReviewSlider />
       </div>
 
+      <FAQ />
       {/* Footer */}
       <Footer />
     </div>
