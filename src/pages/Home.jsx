@@ -1,20 +1,24 @@
 
+// Icons Import
+import { FaArrowRight } from "react-icons/fa"
+import { Link } from "react-router-dom"
 
-import { FaArrowRight } from "react-icons/fa";
-import { Link } from "react-router-dom";
+// Image and Video Import
+import Banner from "../assets/Images/banner.mp4"
+// Component Imports
+import Footer from "../components/common/Footer"
+import ReviewSlider from "../components/common/ReviewSlider"
+import CTAButton from "../components/core/HomePage/Button"
+import CodeBlocks from "../components/core/HomePage/CodeBlocks"
+import ExploreMore from "../components/core/HomePage/ExploreMore"
+import HighlightText from "../components/core/HomePage/HighlightText"
+import InstructorSection from "../components/core/HomePage/InstructorSection"
+import LearningLanguageSection from "../components/core/HomePage/LearningLanguageSection"
+import TimelineSection from "../components/core/HomePage/TimelineSection"
+import FAQ from "../components/common/FAQ"
 
-import Banner from "../assets/Images/banner.mp4";
-import Footer from "../components/common/Footer";
-import ReviewSlider from "../components/common/ReviewSlider";
-import CTAButton from "../components/core/HomePage/Button";
-import CodeBlocks from "../components/core/HomePage/CodeBlocks";
-import ExploreMore from "../components/core/HomePage/ExploreMore";
-import HighlightText from "../components/core/HomePage/HighlightText";
-import InstructorSection from "../components/core/HomePage/InstructorSection";
-import LearningLanguageSection from "../components/core/HomePage/LearningLanguageSection";
-import TimelineSection from "../components/core/HomePage/TimelineSection";
+function Home({theme}) {
 
-function Home({ theme }) {
   return (
     <div>
       <div className="relative mx-auto flex w-11/12 max-w-maxContent flex-col items-center justify-between gap-8 text-white">
@@ -145,7 +149,7 @@ function Home({ theme }) {
             </div>
             <div className="flex flex-col items-start gap-10 lg:w-[40%]">
               <div className="text-[16px]">
-                The modern StudyNotion is the dictates its own terms. Today, to
+                The modern StudyNotion dictates its own terms. Today, to
                 be a competitive specialist requires more than professional
                 skills.
               </div>
@@ -161,7 +165,9 @@ function Home({ theme }) {
         </div>
       </div>
 
+
       <div className="relative mx-auto my-20 flex w-11/12 max-w-maxContent flex-col items-center justify-between gap-8 bg-richblack-900 text-white">
+
         <InstructorSection />
 
         <h1 className="text-center text-4xl font-semibold mt-8">
@@ -170,6 +176,10 @@ function Home({ theme }) {
         <ReviewSlider />
       </div>
 
+
+
+      <FAQ />
+      
       <Footer />
     </div>
   );

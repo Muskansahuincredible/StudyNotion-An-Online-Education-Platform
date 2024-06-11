@@ -1,9 +1,6 @@
-
-
 import { useEffect, useState } from 'react';
-import { Route, Routes, useNavigate } from 'react-router-dom';
 import Home from './pages/Home';
-import Navbar from './components/common/Navbar';
+import Navbar from "./components/common/Navbar";
 import OpenRoute from './components/core/Auth/OpenRoute';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
@@ -29,6 +26,11 @@ import CourseDetails from './pages/CourseDetails';
 import ViewCourse from './pages/ViewCourse';
 import VideoDetails from './components/core/ViewCourse/VideoDetails';
 import Instructor from './components/core/Dashboard/InstructorDashboard/Instructor';
+import BackToTop from "./components/common/BackToTop";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsAndConditions from "./pages/TermsAndConditions";
+import Rateus from "./pages/Rateus";
+import { Route, Routes, useNavigate } from "react-router-dom";
 import './App.css';
 
 function App() {
@@ -61,6 +63,7 @@ function App() {
         <Route element={<PrivateRoute><Dashboard /></PrivateRoute>}>
           <Route path="dashboard/my-profile" element={<MyProfile />} />
           <Route path="dashboard/Settings" element={<Settings />} />
+
           {user?.accountType === ACCOUNT_TYPE.STUDENT && (
             <>
               <Route path="dashboard/cart" element={<Cart />} />
@@ -76,13 +79,29 @@ function App() {
             </>
           )}
         </Route>
-        <Route element={<PrivateRoute><ViewCourse /></PrivateRoute>}>
+
+        <Route
+          element={
+            <PrivateRoute>
+              <ViewCourse />
+            </PrivateRoute>
+          }
+        >
           {user?.accountType === ACCOUNT_TYPE.STUDENT && (
-            <Route path="view-course/:courseId/section/:sectionId/sub-section/:subSectionId" element={<VideoDetails />} />
+            <>
+              <Route
+                path="view-course/:courseId/section/:sectionId/sub-section/:subSectionId"
+                element={<VideoDetails />}
+              />
+            </>
+
           )}
         </Route>
         <Route path="*" element={<Error />} />
       </Routes>
+
+      <BackToTop />
+
     </div>
   );
 }

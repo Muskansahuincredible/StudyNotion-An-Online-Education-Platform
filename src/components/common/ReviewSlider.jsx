@@ -1,24 +1,22 @@
 import React, { useEffect, useState } from "react";
 import ReactStars from "react-rating-stars-component";
-// Import Swiper React components
+import { Autoplay, FreeMode, Pagination, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
+import "swiper/css/autoplay";
+import "swiper/css/navigation";
 import "../../App.css";
-// Icons
 import { FaStar } from "react-icons/fa";
-// Import required modules
-import { Autoplay, FreeMode, Pagination } from "swiper";
+import { Autoplay, FreeMode, Pagination, Navigation } from "swiper/modules"; // Import Swiper modules from swiper/modules
+
 
 function ReviewSlider() {
   const [reviews, setReviews] = useState([]);
   const truncateWords = 15;
 
   useEffect(() => {
-    // Sample data
     const sampleData = [
       {
         user: {
@@ -29,7 +27,8 @@ function ReviewSlider() {
         course: {
           courseName: "React for Beginners",
         },
-        review: "This is an amazing course! It helped me understand the basics of React in a very simple and efficient way.",
+        review:
+          "This is an amazing course! It helped me understand the basics of React in a very simple and efficient way.",
         rating: 4.5,
       },
       {
@@ -41,7 +40,8 @@ function ReviewSlider() {
         course: {
           courseName: "Advanced JavaScript",
         },
-        review: "I loved this course. The examples were very clear and the instructor was great at explaining complex topics.",
+        review:
+          "I loved this course. The examples were very clear and the instructor was great at explaining complex topics.",
         rating: 5,
       },
       {
@@ -53,7 +53,8 @@ function ReviewSlider() {
         course: {
           courseName: "CSS Flexbox and Grid",
         },
-        review: "A must-take course for anyone looking to improve their CSS skills. Highly recommend!",
+        review:
+          "A must-take course for anyone looking to improve their CSS skills. Highly recommend!",
         rating: 4,
       },
       {
@@ -65,7 +66,8 @@ function ReviewSlider() {
         course: {
           courseName: "Fullstack Development",
         },
-        review: "Great course covering both frontend and backend development. The projects were very practical.",
+        review:
+          "Great course covering both frontend and backend development. The projects were very practical.",
         rating: 4.8,
       },
     ];
@@ -77,22 +79,23 @@ function ReviewSlider() {
     <div className="text-white">
       <div className="my-[50px] h-[184px] max-w-maxContentTab lg:max-w-maxContent">
         <Swiper
-          slidesPerView={4}
-          spaceBetween={25}
+          slidesPerView={3}
+          spaceBetween={30}
           loop={true}
           freeMode={true}
           autoplay={{
             delay: 2500,
             disableOnInteraction: false,
           }}
-          modules={[FreeMode, Pagination, Autoplay]}
+          modules={[FreeMode, Pagination, Autoplay, Navigation]} // Include Navigation module
+          navigation={true} // Enable navigation
           className="w-full"
         >
           {reviews.map((review, i) => {
             return (
               <SwiperSlide key={i}>
-                <div className="flex flex-col gap-3 bg-richblack-800 p-3 text-[14px] text-richblack-25 h-[200px]">
-                  <div className="flex items-center gap-4">
+                <div className="flex flex-col gap-20 bg-richblack-800 p-3 text-[14px] text-richblack-25 h-[200px]">
+                  <div className="flex items-center gap-10">
                     <img
                       src={
                         review?.user?.image

@@ -8,7 +8,6 @@ import Logo from "../../assets/Logo/Logo-Full-Light.png";
 // Icons
 import { FaFacebook, FaGoogle, FaYoutube, FaXTwitter } from "react-icons/fa6";
 
-
 const BottomFooter = ["Privacy Policy", "Cookie Policy", "Terms"];
 const Resources = [
   "Articles",
@@ -21,7 +20,12 @@ const Resources = [
   "Workspaces",
 ];
 const Plans = ["Paid memberships", "For students", "Business solutions"];
-const Community = ["Forums", "Chapters", "Events"];
+const Community = [
+  { name: "Forums", link: "forums" },
+  { name: "Chapters", link: "chapters" },
+  { name: "Events", link: "events" },
+  { name: "Contribute", link: "https://github.com/Muskansahuincredible/StudyNotion-An-Online-Education-Platform", external: true },
+];
 
 const Footer = () => {
   return (
@@ -42,27 +46,112 @@ const Footer = () => {
                       key={i}
                       className="text-[14px] cursor-pointer hover:text-richblack-50 transition-all duration-200"
                     >
-                      {/*<Link to={ele.toLowerCase()}>{ele}</Link>*/}
-                      <a href={ele.toLowerCase()}>{ele}</a>
-                      {/*<Link to={ele.toLowerCase()}>{ele}</Link>*/}
+                      <Link to={`/${ele.toLowerCase()}`}>{ele}</Link>
                     </div>
                   );
                 })}
               </div>
               <div className="flex gap-3 text-lg">
-                <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" class="social-icon transition duration-300 hover:opacity-75">
+                <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="social-icon transition duration-300 hover:opacity-75">
                   <FaFacebook className="facebook" />
                 </a>
-                <a href="https://www.google.com" target="_blank" rel="noopener noreferrer" class="social-icon transition duration-300 hover:opacity-75">
+                <a href="https://www.google.com" target="_blank" rel="noopener noreferrer" className="social-icon transition duration-300 hover:opacity-75">
                   <FaGoogle className="google" />
                 </a>
-                <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" class="social-icon transition duration-300 hover:opacity-75">
+                <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" className="social-icon transition duration-300 hover:opacity-75">
                   <FaXTwitter className="twitter" />
                 </a>
-                <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" class="social-icon transition duration-300 hover:opacity-75">
+                <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" className="social-icon transition duration-300 hover:opacity-75">
+                <a
+                  href="https://www.facebook.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="social-icon"
+                  style={{
+                    transition: "transform 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease",
+                    opacity: 0.85,
+                    boxShadow: "0 4px 15px rgba(0, 0, 0, 0.2)",
+                  }}
+                  // Hover effect
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.transform = "scale(1.2)";
+                    e.currentTarget.style.color = "#4267B2"; // New color on hover
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.transform = "scale(1)";
+                    e.currentTarget.style.color = "#666"; // Restore original color
+                  }}
+                >
+                  <FaFacebook className="facebook" />
+                </a>
+                <a
+                  href="https://www.google.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="social-icon"
+                  style={{
+                    transition: "transform 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease",
+                    opacity: 0.85,
+                    boxShadow: "0 4px 15px rgba(0, 0, 0, 0.2)",
+                  }}
+                  // Hover effect
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.transform = "scale(1.2)";
+                    e.currentTarget.style.color = "#DB4437"; // New color on hover
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.transform = "scale(1)";
+                    e.currentTarget.style.color = "#666"; // Restore original color
+                  }}
+                >
+                  <FaGoogle className="google" />
+                </a>
+                <a
+                  href="https://www.twitter.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="social-icon"
+                  style={{
+                    transition: "transform 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease",
+                    opacity: 0.85,
+                    boxShadow: "0 4px 15px rgba(0, 0, 0, 0.2)",
+                  }}
+                  // Hover effect
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.transform = "scale(1.2)";
+                    e.currentTarget.style.color = "#1DA1F2"; // New color on hover
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.transform = "scale(1)";
+                    e.currentTarget.style.color = "#666"; // Restore original color
+                  }}
+                >
+                  <FaXTwitter className="twitter" />
+                </a>
+                <a
+                  href="https://www.youtube.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="social-icon"
+                  style={{
+                    transition: "transform 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease",
+                    opacity: 0.85,
+                    boxShadow: "0 4px 15px rgba(0, 0, 0, 0.2)",
+                  }}
+                  // Hover effect
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.transform = "scale(1.2)";
+                    e.currentTarget.style.color = "#FF0000"; // New color on hover
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.transform = "scale(1)";
+                    e.currentTarget.style.color = "#666"; // Restore original color
+                  }}
+                >
                   <FaYoutube className="youtube" />
                 </a>
               </div>
+
               <div></div>
             </div>
 
@@ -78,7 +167,7 @@ const Footer = () => {
                       key={index}
                       className="text-[14px] cursor-pointer hover:text-richblack-50 transition-all duration-200"
                     >
-                      <Link to={ele.split(" ").join("-").toLowerCase()}>
+                      <Link to={`/${ele.split(" ").join("-").toLowerCase()}`}>
                         {ele}
                       </Link>
                     </div>
@@ -90,7 +179,7 @@ const Footer = () => {
                 Support
               </h1>
               <div className="text-[14px] cursor-pointer hover:text-richblack-50 transition-all duration-200 mt-2">
-                <Link to={"/help-center"}>Help Center</Link>
+                <Link to="/help-center">Help Center</Link>
               </div>
             </div>
 
@@ -106,7 +195,7 @@ const Footer = () => {
                       key={index}
                       className="text-[14px] cursor-pointer hover:text-richblack-50 transition-all duration-200"
                     >
-                      <Link to={ele.split(" ").join("-").toLowerCase()}>
+                      <Link to={`/${ele.split(" ").join("-").toLowerCase()}`}>
                         {ele}
                       </Link>
                     </div>
@@ -124,12 +213,34 @@ const Footer = () => {
                       key={index}
                       className="text-[14px] cursor-pointer hover:text-richblack-50 transition-all duration-200"
                     >
-                      <Link to={ele.split(" ").join("-").toLowerCase()}>
+                      {ele.external ? (
+                        <a
+                          href={ele.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {ele.name}
+                        </a>
+                      ) : (
+                        <Link to={ele.link}>{ele.name}</Link>
+                      )}
+
+                      <Link to={`/${ele.split(" ").join("-").toLowerCase()}`}>
                         {ele}
                       </Link>
                     </div>
                   );
                 })}
+              </div>
+
+              <h1 className="text-richblack-50 font-semibold text-[16px] mt-7">
+                Legal
+              </h1>
+              <div className="text-[14px] cursor-pointer hover:text-richblack-50 transition-all duration-200 mt-2">
+                <Link to="/privacy-policy">Privacy Policy</Link>
+              </div>
+              <div className="text-[14px] cursor-pointer hover:text-richblack-50 transition-all duration-200 mt-2">
+                <Link to="/termsandconditions">Terms and Conditions</Link>
               </div>
             </div>
           </div>
@@ -169,13 +280,12 @@ const Footer = () => {
               return (
                 <div
                   key={i}
-                  className={` ${
-                    BottomFooter.length - 1 === i
-                      ? ""
-                      : "border-r border-richblack-700 cursor-pointer hover:text-richblack-50 transition-all duration-200"
-                  } px-3 `}
+                  className={` ${BottomFooter.length - 1 === i
+                    ? ""
+                    : "border-r border-richblack-700 cursor-pointer hover:text-richblack-50 transition-all duration-200"
+                    } px-3 `}
                 >
-                  <Link to={ele.split(" ").join("-").toLocaleLowerCase()}>
+                  <Link to={`/${ele.split(" ").join("-").toLocaleLowerCase()}`}>
                     {ele}
                   </Link>
                 </div>
@@ -183,9 +293,9 @@ const Footer = () => {
             })}
           </div>
 
-          <div className="text-center">Made with ❤️ CodeHelp © 
-          {(new Date().getFullYear())} Studynotion</div>
-          
+          <div className="text-center">Made with ❤️ CodeHelp ©
+            {(new Date().getFullYear())} Studynotion</div>
+
         </div>
       </div>
     </div>
