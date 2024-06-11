@@ -7,11 +7,9 @@ function RateUsComponent({ previousContent }) {
   const [rating, setRating] = useState(0);
   const [feedback, setFeedback] = useState("");
   const [showModal, setShowModal] = useState(false);
-
   const handleStarClick = (star) => {
     setRating(star);
   };
-
   const handleFeedbackChange = (e) => {
     setFeedback(e.target.value);
   };
