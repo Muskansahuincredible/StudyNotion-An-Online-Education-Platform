@@ -15,19 +15,20 @@ function RateUsComponent({ previousContent }) {
   };
 
   const handleSubmit = () => {
-    setRating(0);
-    setFeedback("");
-    setShowModal(false); 
+    if (rating > 0 && feedback.trim()) {
+      setRating(0);
+      setFeedback("");
+      setShowModal(false); 
+    }
   };
 
   return (
     <>
       <div className="rate-us-page">
-  <div className="rate-us-container">
-    <h2 className="rate-us-heading">Rate Our Website</h2>
-    <div className="star-rating">
-      {/* Stars go here */}
-      {[1, 2, 3, 4, 5].map((star) => (
+        <div className="rate-us-container">
+          <h2 className="rate-us-heading">Rate Our Website</h2>
+          <div className="star-rating">
+            {[1, 2, 3, 4, 5].map((star) => (
               <span
                 key={star}
                 className={star <= rating ? "star filled" : "star"}
@@ -36,21 +37,20 @@ function RateUsComponent({ previousContent }) {
                 ★
               </span>
             ))}
-    </div>
-    <textarea
-      className="feedback-textarea"
-      placeholder="Write your feedback here..."
-      value={feedback}
-      onChange={handleFeedbackChange}
-    ></textarea>
-    <div className="submit-container">
-      <button className="submit-button" onClick={handleSubmit}>
-        Submit
-      </button>
-    </div>
-  </div>
-</div>
-
+          </div>
+          <textarea
+            className="feedback-textarea"
+            placeholder="Write your feedback here..."
+            value={feedback}
+            onChange={handleFeedbackChange}
+          ></textarea>
+          <div className="submit-container">
+            <button className="submit-button" onClick={handleSubmit}>
+              Submit
+            </button>
+          </div>
+        </div>
+      </div>
     </>
   );
 }
