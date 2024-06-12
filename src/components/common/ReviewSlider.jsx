@@ -9,7 +9,6 @@ import "swiper/css/autoplay";
 import "swiper/css/navigation";
 import "../../App.css";
 import { FaStar } from "react-icons/fa";
-import { Autoplay, FreeMode, Pagination, Navigation } from "swiper/modules"; // Import Swiper modules from swiper/modules
 
 
 function ReviewSlider() {
