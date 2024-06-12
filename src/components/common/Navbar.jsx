@@ -2,13 +2,21 @@ import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { AiOutlineMenu, AiOutlineShoppingCart } from "react-icons/ai";
-import { BsChevronDown } from "react-icons/bs";
+import { BsChevronDown, BsFillGridFill, BsFillHouseDoorFill, BsFillPersonFill, BsFillStarFill } from "react-icons/bs";
+import { RiUserFill } from "react-icons/ri"; // Add contact icon
 import logo from "../../assets/Logo/Logo-Full-Light.png";
-import { NavbarLinks } from "../../data/navbar-links";
 import { apiConnector } from "../../services/apiconnector";
 import { categories } from "../../services/apis";
 import { ACCOUNT_TYPE } from "../../utils/constants";
 import ProfileDropdown from "../core/Auth/ProfileDropDown";
+
+const NavbarLinks = [
+  { title: "Home", path: "/", icon: <BsFillHouseDoorFill /> },
+  { title: "Catalog", path: "/catalog", icon: <BsFillGridFill /> },
+  { title: "Profile", path: "/profile", icon: <BsFillPersonFill /> },
+  { title: "Contact", path: "/contact", icon: <RiUserFill /> },// Add contact page link with the icon
+  { title: "Rate Us", path: "/rateus", icon: <BsFillStarFill /> }
+];
 
 function Navbar() {
   const { token } = useSelector((state) => state.auth);
@@ -63,17 +71,19 @@ function Navbar() {
           </div>
           <nav className={`${mobileMenuOpen ? "block" : "hidden"} md:block mt-4 md:mt-0`}>
             <ul className="flex flex-col md:flex-row w-full max-w-maxContent items-center justify-between px-4 py-2 gap-y-4 md:gap-y-0 md:gap-x-6">
-              {NavbarLinks.map(({ title, path }, index) => (
-                <li key={index} className="mb-2 md:mb-0"> {/* Add margin bottom for vertical spacing on mobile */}
+              {NavbarLinks.map(({ title, path, icon }, index) => (
+                <li key={index} className="mb-2 md:mb-0 flex items-center"> {/* Add margin bottom for vertical spacing on mobile */}
                   {title === "Catalog" ? (
                     <>
                       <div className={`group relative flex cursor-pointer items-center gap-1 ${matchRoute("/catalog/:catalogName") ? "text-yellow-100" : "text-richblack-25"}`}>
+                        <span>{icon}</span>
                         <p>{title}</p>
                         <BsChevronDown />
                         <div className="invisible absolute left-[50%] top-[50%] z-[1000] flex w-[200px] translate-x-[-50%] translate-y-[3em] flex-col rounded-lg bg-richblack-5 p-4 text-richblack-900 opacity-0 transition-all duration-150 group-hover:visible group-hover:translate-y-[1.65em] group-hover:opacity-100 lg:w-[300px]">
                           <div className="absolute left-[50%] top-0 -z-10 h-6 w-6 translate-x-[80%] translate-y-[-40%] rotate-45 select-none rounded bg-richblack-5"></div>
                           {loading ? (
-                            <p className="text-center">Loading...</p>
+                            <p className
+                              ="text-center">Loading...</p>
                           ) : (subLinks && subLinks.length) ? (
                             <>
                               {subLinks.filter(subLink => subLink?.courses?.length > 0)?.map((subLink, i) => (
@@ -90,17 +100,14 @@ function Navbar() {
                     </>
                   ) : (
                     <Link to={path} onClick={closeMobileMenu}>
-                      <p className={`${matchRoute(path) ? "text-yellow-25" : "text-richblack-25"} hover:text-yellow-25`}>{title}</p>
+                      <div className="flex items-center">
+                        <span className={`${matchRoute(path) ? "text-yellow-25" : "text-richblack-25"} hover:text-yellow-25`}>{icon}</span>
+                        <p className={`${matchRoute(path) ? "text-yellow-25" : "text-richblack-25"} hover:text-yellow-25 ml-2`}>{title}</p>
+                      </div>
                     </Link>
                   )}
                 </li>
               ))}
-              {/* Add Rate Us link */}
-              <li>
-              <Link to="/rateus" onClick={closeMobileMenu}>
-  <p style={{ color: "white" }}>Rate Us</p>
-</Link>
-              </li>
             </ul>
           </nav>
           <div className={`${mobileMenuOpen ? "block" : "hidden"} md:block mt-2 md:mt-0`}>
