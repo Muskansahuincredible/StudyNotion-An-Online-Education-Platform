@@ -296,6 +296,6 @@ details > summary::-webkit-details-marker {
 }
 
 #coursecard:hover{
-    border-radius: 10%;
-    opacity: 0.8;
+  border-radius: 10%;
+  opacity: 0.8;
 }
