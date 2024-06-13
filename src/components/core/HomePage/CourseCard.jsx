@@ -7,14 +7,15 @@ import { ImTree } from "react-icons/im";
 const CourseCard = ({cardData, currentCard, setCurrentCard}) => {
   return (
     <div
-      className={`w-[360px] lg:w-[30%] ${
+      itemID="coursecard"
+      className={`w-[360px] lg:w-[30%]  ${
         currentCard === cardData?.heading
           ? "bg-white shadow-[12px_12px_0_0] shadow-yellow-50"
           : "bg-richblack-800"
       }  text-richblack-25 h-[300px] box-border cursor-pointer hover:shadow-xl hover:border-brown-50 hover:scale-[1.07] transition-all ease-in-out`}
       onClick={() => setCurrentCard(cardData?.heading)}
     >
-      <div className="border-b-[2px] border-richblack-400 border-dashed h-[80%] p-6 flex flex-col gap-3">
+      <div itemID="coursecard" className="border-b-[2px] border-richblack-400 border-dashed h-[80%] p-6 flex flex-col gap-3">
         <div
           className={` ${
             currentCard === cardData?.heading && "text-richblack-800"

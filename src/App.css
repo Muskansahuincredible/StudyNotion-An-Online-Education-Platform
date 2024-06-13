@@ -294,3 +294,8 @@ details > summary::-webkit-details-marker {
 .back-to-top i {
   font-size: 20px; /* Adjust size as needed */
 }
+
+#coursecard:hover{
+    border-radius: 10%;
+    opacity: 0.9;
+}
