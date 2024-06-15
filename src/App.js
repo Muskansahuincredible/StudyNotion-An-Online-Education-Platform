@@ -1,4 +1,5 @@
 import "./App.css";
+import React, { useState, useEffect } from "react";
 import { Route, Routes, useNavigate } from "react-router-dom";
 import Home from "./pages/Home";
 import Navbar from "./components/common/Navbar";
@@ -31,12 +32,27 @@ import Instructor from "./components/core/Dashboard/InstructorDashboard/Instruct
 import BackToTop from "./components/common/BackToTop";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsAndConditions from "./pages/TermsAndConditions";
+import Loading from "./components/common/Loading"
 
 function App() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const { user } = useSelector((state) => state.profile);
+  const [loading, setLoading] = useState(true);
 
+  useEffect(() => {
+    // Simulate a loading time for demonstration
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000); // Adjust the time as needed
+  }, []);
+  if(loading){
+     return (
+      <div>
+        <Loading />
+      </div>
+     )
+  }
   return (
     <div className="w-screen min-h-screen bg-richblack-900 flex flex-col font-inter">
       <Navbar />
@@ -133,6 +149,7 @@ function App() {
       </Routes>
       <BackToTop />
     </div>
+  
   );
 }
 
