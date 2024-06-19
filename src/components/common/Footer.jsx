@@ -30,27 +30,54 @@ const Footer = () => {
         <div className="border-b w-[100%] flex flex-col lg:flex-row pb-5 border-richblack-700">
           <div className="lg:w-[50%] flex flex-wrap flex-row justify-between lg:border-r lg:border-richblack-700 pl-3 lg:pr-5 gap-3">
             <div className="w-[30%] flex flex-col gap-3 lg:w-[30%] mb-7 lg:pl-0">
-              <img src={Logo} alt="" className="object-contain" />
-              <h1 className="text-richblack-50 font-semibold text-[16px]">Company</h1>
+              <img src={Logo} alt="Logo" className="object-contain" />
+              <h1 className="text-richblack-50 font-semibold text-[16px]">
+                Company
+              </h1>
               <div className="flex flex-col gap-2">
-                {["About", "Careers", "Affiliates"].map((ele, i) => (
-                  <div key={i} className="text-[14px] cursor-pointer hover:text-richblack-50 transition-all duration-200">
-                    <Link to={`/${ele.toLowerCase()}`}>{ele}</Link>
-                  </div>
-                ))}
+                {["About", "Careers", "Affiliates"].map((ele, i) => {
+                  return (
+                    <div
+                      key={i}
+                      className="text-[14px] cursor-pointer hover:text-richblack-50 transition-all duration-200"
+                    >
+                      <a href={ele.toLowerCase()}>{ele}</a>
+                    </div>
+                  );
+                })}
               </div>
               <div className="flex gap-3 text-lg">
-                <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="social-icon transition duration-300 hover:opacity-75">
-                  <FaFacebook className="facebook" />
+                <a
+                  href="https://www.facebook.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-2 rounded-full transition duration-300 hover:bg-blue-600"
+                >
+                  <FaFacebook className="text-white" />
                 </a>
-                <a href="https://www.google.com" target="_blank" rel="noopener noreferrer" className="social-icon transition duration-300 hover:opacity-75">
-                  <FaGoogle className="google" />
+                <a
+                  href="https://www.google.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-2 rounded-full transition duration-300 hover:bg-blue-600"
+                >
+                  <FaGoogle className="text-white" />
                 </a>
-                <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" className="social-icon transition duration-300 hover:opacity-75">
-                  <FaXTwitter className="twitter" />
+                <a
+                  href="https://www.twitter.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-2 rounded-full transition duration-300 hover:bg-blue-600"
+                >
+                  <FaXTwitter className="text-white" />
                 </a>
-                <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" className="social-icon transition duration-300 hover:opacity-75">
-                  <FaYoutube className="youtube" />
+                <a
+                  href="https://www.youtube.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-2 rounded-full transition duration-300 hover:bg-blue-600"
+                >
+                  <FaYoutube className="text-white" />
                 </a>
               </div>
             </div>
