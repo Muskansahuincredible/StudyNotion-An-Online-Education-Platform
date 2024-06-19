@@ -118,7 +118,7 @@ function SignupForm() {
       <form onSubmit={handleOnSubmit} className="flex w-full flex-col gap-y-4">
         <div className="flex gap-x-4">
           <label style={{position:"relative"}}>
-            <p className="mb-1 text-[0.875rem] leading-[1.375rem] text-richblack-5">
+            <p className="mb-1 text-[0.875rem] leading-[1.375rem] text-color2">
               First Name <sup className="text-pink-200">*</sup>
             </p>
             <FaUser style={{color:"grey",position:"absolute",top:"calc(49%)",left:"2.85%",fontSize:"20px"}}/>
@@ -136,7 +136,7 @@ function SignupForm() {
             />
           </label>
           <label style={{position:"relative"}}>
-            <p className="mb-1 text-[0.875rem] leading-[1.375rem] text-richblack-5">
+            <p className="mb-1 text-[0.875rem] leading-[1.375rem] text-color2">
               Last Name <sup className="text-pink-200">*</sup>
             </p>
             <FaUser style={{color:"grey",position:"absolute",top:"calc(49%)",left:"2.85%",fontSize:"20px"}}/>
@@ -155,7 +155,7 @@ function SignupForm() {
           </label>
         </div>
         <label className="w-full" style={{position:"relative"}}>
-          <p className="mb-1 text-[0.875rem] leading-[1.375rem] text-richblack-5">
+          <p className="mb-1 text-[0.875rem] leading-[1.375rem] text-color2">
             Email Address <sup className="text-pink-200">*</sup>
           </p>
           <SiGmail style={{color:"grey",position:"absolute",top:"calc(53%)",left:"1.85%",fontSize:"20px"}}/>
@@ -174,7 +174,7 @@ function SignupForm() {
         </label>
         <div className="flex gap-x-4">
           <label className="relative" style={{position:"relative"}}>
-            <p className="mb-1 text-[0.875rem] leading-[1.375rem] text-richblack-5">
+            <p className="mb-1 text-[0.875rem] leading-[1.375rem] text-color2">
               Create Password <sup className="text-pink-200">*</sup>
             </p>
             <FaLock style={{color:"grey",position:"absolute",top:"calc(52%)",left:"4.85%",fontSize:"20px"}}/>
@@ -203,7 +203,7 @@ function SignupForm() {
             </span>
           </label>
           <label className="relative" style={{position:"relative"}}>
-            <p className="mb-1 text-[0.875rem] leading-[1.375rem] text-richblack-5">
+            <p className="mb-1 text-[0.875rem] leading-[1.375rem] text-color2">
               Confirm Password <sup className="text-pink-200">*</sup>
             </p>
             <FaLock style={{color:"grey",position:"absolute",top:"calc(52%)",left:"4.85%",fontSize:"20px"}}/>

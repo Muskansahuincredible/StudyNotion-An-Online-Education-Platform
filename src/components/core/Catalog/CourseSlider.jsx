@@ -1,13 +1,18 @@
-import React from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
+
+import React from 'react'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import 'swiper/css'
+import 'swiper/css/free-mode'
+import 'swiper/css/pagination'
+import { FreeMode, Pagination, Autoplay, Navigation } from 'swiper/modules'
+
 import 'swiper/css';
 import 'swiper/css/free-mode';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import 'swiper/css/autoplay';
-import { FreeMode, Pagination, Autoplay, Navigation } from 'swiper/modules';
-
 import CourseCard from './Course_Card';
+
 
 const CourseSlider = ({ Courses = [] }) => {
   return (
@@ -32,6 +37,7 @@ const CourseSlider = ({ Courses = [] }) => {
           {Courses.map((course, i) => (
             <SwiperSlide key={i}>
               <CourseCard course={course} Height="h-[250px]" />
+
             </SwiperSlide>
           ))}
         </Swiper>
@@ -40,6 +46,6 @@ const CourseSlider = ({ Courses = [] }) => {
       )}
     </>
   );
-};
+}};
 
-export default CourseSlider;
+export default CourseSlider

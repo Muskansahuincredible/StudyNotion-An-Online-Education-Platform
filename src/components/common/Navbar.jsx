@@ -1,3 +1,5 @@
+
+
 import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useSelector } from "react-redux";
@@ -9,8 +11,11 @@ import { apiConnector } from "../../services/apiconnector";
 import { categories } from "../../services/apis";
 import { ACCOUNT_TYPE } from "../../utils/constants";
 import ProfileDropdown from "../core/Auth/ProfileDropDown";
+import toggle_light from "../../assets/Images/night.png"; 
+import toggle_dark from "../../assets/Images/day.png"; 
+import "./Navbar.css";
 
-function Navbar() {
+const Navbar = ({ theme, setTheme }) => {
   const { token } = useSelector((state) => state.auth);
   const { user } = useSelector((state) => state.profile);
   const { totalItems } = useSelector((state) => state.cart);
@@ -46,9 +51,15 @@ function Navbar() {
     setMobileMenuOpen(false);
   };
 
+  const toggle_mode = () => {
+    theme === "light" ? setTheme("dark") : setTheme("light");
+  };
+
   return (
     <div className="navbarContainer">
-      <div className="flex items-center justify-center bg-black border-b-[1px] border-b-richblack-800" >
+
+      <div className="flex items-center justify-center bg-black border-b-[1px] border-b-richblack-800">
+
         <div className="flex flex-col md:flex-row w-full max-w-maxContent items-center justify-between px-4 py-2">
           <div className="flex items-center justify-between w-full md:w-auto px-1 py-1">
             <Link to="/" onClick={closeMobileMenu}>
@@ -64,7 +75,10 @@ function Navbar() {
           <nav className={`${mobileMenuOpen ? "block" : "hidden"} md:block mt-4 md:mt-0`}>
             <ul className="flex flex-col md:flex-row w-full max-w-maxContent items-center justify-between px-4 py-2 gap-y-4 md:gap-y-0 md:gap-x-6">
               {NavbarLinks.map(({ title, path }, index) => (
+
+
                 <li key={index} className="mb-2 md:mb-0"> {/* Add margin bottom for vertical spacing on mobile */}
+
                   {title === "Catalog" ? (
                     <>
                       <div className={`group relative flex cursor-pointer items-center gap-1 ${matchRoute("/catalog/:catalogName") ? "text-yellow-100" : "text-richblack-25"}`}>
@@ -74,6 +88,9 @@ function Navbar() {
                           <div className="absolute left-[50%] top-0 -z-10 h-6 w-6 translate-x-[80%] translate-y-[-40%] rotate-45 select-none rounded bg-richblack-5"></div>
                           {loading ? (
                             <p className="text-center">Loading...</p>
+
+               
+
                           ) : (subLinks && subLinks.length) ? (
                             <>
                               {subLinks.filter(subLink => subLink?.courses?.length > 0)?.map((subLink, i) => (
@@ -82,6 +99,7 @@ function Navbar() {
                                 </Link>
                               ))}
                             </>
+
                           ) : (
                             <p className="text-center">No Courses Found</p>
                           )}
@@ -95,12 +113,14 @@ function Navbar() {
                   )}
                 </li>
               ))}
+
               {/* Add Rate Us link */}
               <li>
               <Link to="/rateus" onClick={closeMobileMenu}>
   <p style={{ color: "white" }}>Rate Us</p>
 </Link>
               </li>
+
             </ul>
           </nav>
           <div className={`${mobileMenuOpen ? "block" : "hidden"} md:block mt-2 md:mt-0`}>
@@ -117,6 +137,7 @@ function Navbar() {
                 <div className="flex flex-col md:flex-row items-center md:items-start gap-y-4 md:gap-y-0 md:gap-x-4">
                   <Link to="/login" onClick={closeMobileMenu}>
                     <button className="rounded-[8px] px-4 py-2 bg-blue-500 text-white  transition duration-300 hover:bg-blue-700 hover:text-gray-200">Log in</button>
+
                   </Link>
                   <Link to="/signup" onClick={closeMobileMenu}>
                     <button className="rounded-[8px] px-4 py-2 bg-blue-500 text-white transition duration-300 hover:bg-blue-700 hover:text-gray-200">Sign up</button>
@@ -124,12 +145,21 @@ function Navbar() {
                 </div>
               )}
               {token && <ProfileDropdown />}
+
+              <img
+                onClick={toggle_mode}
+                src={theme === "light" ? toggle_light : toggle_dark}
+                alt="Theme Toggle"
+                className="toggle-icon cursor-pointer"
+              />
+
             </div>
           </div>
         </div>
       </div>
     </div>
   );
-}
+};
 
 export default Navbar;
+
