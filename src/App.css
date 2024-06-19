@@ -251,3 +251,46 @@ details > summary::-webkit-details-marker {
 .navbarContainer {	
   @apply fixed top-0 left-0 right-0 z-50 bg-richblack-800; 
 }
+
+/* BackToTop.css */
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  background-color: #fff;
+  color: #333;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s;
+  border-radius: 50%; /* Makes the button circular */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;  /* Adjust size as needed */
+  height: 40px; /* Adjust size as needed */
+}
+
+.back-to-top.show {
+  opacity: 1;
+}
+
+.back-to-top:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.back-to-top:focus {
+  outline: none;
+}
+
+.back-to-top:active {
+  transform: translateY(2px);
+}
+
+.back-to-top i {
+  font-size: 20px; /* Adjust size as needed */
+}

@@ -1,0 +1,84 @@
+.rate-us-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #1a1a1a; /* Dark gray background */
+  }
+  
+  .rate-us-container {
+    width: 70%;
+    max-width: 600px;
+    padding: 30px;
+    border-radius: 10px;
+    border: 2px solid transparent; /* Initially, the border is transparent */
+    background-color: #262626; /* Darker container background */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Transition for border-color and box-shadow */
+  }
+  
+  .rate-us-container:hover {
+    border-color: #fff; /* Border color changes on hover */
+    box-shadow: 0 0 40px rgba(255, 255, 255, 0.3); /* Lighting effect on hover */
+  }
+  
+  .rate-us-heading {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #f2f2f2; /* Light gray text */
+  }
+  
+  .star-rating {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .star {
+    font-size: 28px;
+    color: #f2f2f2; /* Light gray star color */
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .star:hover,
+  .star.filled {
+    color: #ffc107; /* Yellow star color on hover/selection */
+  }
+  
+  .feedback-textarea {
+    width: 100%;
+    height: 180px;
+    padding: 10px;
+    border: 1px solid #444; /* Dark border */
+    border-radius: 5px;
+    resize: none;
+    background-color: #333; /* Darker textarea background */
+    color: #f2f2f2; /* Light gray text color */
+    margin-bottom: 20px;
+  }
+  
+  .feedback-textarea::placeholder {
+    color: #888; /* Placeholder text color */
+  }
+  
+  .submit-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .submit-button {
+    width: 40%;
+    padding: 6px;
+    background-color: #4caf50; /* Green submit button */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit-button:hover {
+    background-color: #388e3c; /* Darker green on hover */
+  }
+  

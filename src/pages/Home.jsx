@@ -14,6 +14,7 @@ import HighlightText from "../components/core/HomePage/HighlightText"
 import InstructorSection from "../components/core/HomePage/InstructorSection"
 import LearningLanguageSection from "../components/core/HomePage/LearningLanguageSection"
 import TimelineSection from "../components/core/HomePage/TimelineSection"
+import FAQ from "../components/common/FAQ"
 
 function Home() {
   return (
@@ -177,7 +178,7 @@ function Home() {
       </div>
 
       {/* Section 3 */}
-      <div className="relative mx-auto my-20 flex w-11/12 max-w-maxContent flex-col items-center justify-between gap-8 bg-richblack-900 text-white">
+      <div className="relative mx-auto my-20 flex max-w-maxContent flex-col items-center justify-between gap-8 bg-richblack-900 text-white">
         {/* Become a instructor section */}
         <InstructorSection />
 
@@ -188,6 +189,7 @@ function Home() {
         <ReviewSlider />
       </div>
 
+      <FAQ />
       {/* Footer */}
       <Footer />
     </div>
