@@ -1,5 +1,11 @@
-import { useEffect, useState } from 'react';
-import Home from './pages/Home';
+
+
+
+
+import "./App.css";
+import React, { useState, useEffect } from "react";
+import { Route, Routes, useNavigate } from "react-router-dom";
+import Home from "./pages/Home";
 import Navbar from "./components/common/Navbar";
 import OpenRoute from './components/core/Auth/OpenRoute';
 import Login from './pages/Login';
@@ -27,17 +33,24 @@ import ViewCourse from './pages/ViewCourse';
 import VideoDetails from './components/core/ViewCourse/VideoDetails';
 import Instructor from './components/core/Dashboard/InstructorDashboard/Instructor';
 import BackToTop from "./components/common/BackToTop";
-import PrivacyPolicy from "./pages/privacypolicy";
-import TermsAndConditions from "./pages/terms and conditions";
+
+
+
 import Rateus from "./pages/Rateus";
 import { Route, Routes, useNavigate } from "react-router-dom";
 import './App.css';
+
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsAndConditions from "./pages/TermsAndConditions";
+import Loading from "./components/common/Loading"
+
 
 function App() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
   const { user } = useSelector((state) => state.profile);
+  const [loading, setLoading] = useState(true);
 
   const current_theme = localStorage.getItem("current_theme");
   const [theme, setTheme] = useState(current_theme ? current_theme : "light");
@@ -45,6 +58,21 @@ function App() {
   useEffect(() => {
     localStorage.setItem("current_theme", theme);
   }, [theme]);
+
+
+  useEffect(() => {
+    // Simulate a loading time for demonstration
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000); // Adjust the time as needed
+  }, []);
+  if(loading){
+     return (
+      <div>
+        <Loading />
+      </div>
+     )
+  }
 
   return (
     <div className={`w-screen min-h-screen flex flex-col font-inter ${theme === "light" ? "bg-white text-black" : "bg-richblack-900 text-white"}`}>
@@ -103,6 +131,7 @@ function App() {
       <BackToTop />
 
     </div>
+  
   );
 }
 
