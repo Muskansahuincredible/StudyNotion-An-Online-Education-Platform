@@ -27,6 +27,7 @@
     "react-scripts": "^5.0.1",
     "react-spinners": "^0.13.8",
     "react-super-responsive-table": "^5.2.1",
+    "react-toastify": "^10.0.5",
     "react-type-animation": "^3.0.1",
     "redux-toolkit": "^1.1.2",
     "styled-components": "^6.1.11",
