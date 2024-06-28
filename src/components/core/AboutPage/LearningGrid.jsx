@@ -22,53 +22,58 @@ const LearningGridArray = [
     order: 2,
     heading: "Our Learning Methods",
     description:
-      "Studynotion partners with more than 275+ leading universities and companies to bring",
+      "Our learning method combines flexible and practical approaches to ensure a comprehensive and engaging educational experience.",
   },
   {
     order: 3,
     heading: "Certification",
     description:
-      "Studynotion partners with more than 275+ leading universities and companies to bring",
+      "Studynotion provides industry-recognized certification to validate your new skills and enhance your career prospects.",
   },
   {
     order: 4,
     heading: `Rating "Auto-grading"`,
     description:
-      "Studynotion partners with more than 275+ leading universities and companies to bring",
+      "Studynotion’s auto-grading feature provides instant, objective feedback to help learners assess their understanding and progress efficiently.",
   },
   {
     order: 5,
     heading: "Ready to Work",
     description:
-      "Studynotion partners with more than 275+ leading universities and companies to bring",
+      "Studynotion equips learners with job-ready skills, preparing them to excel in the workforce.",
   },
 ];
 
 const LearningGrid = () => {
   return (
-    <div className="grid mx-auto w-[350px] xl:w-fit grid-cols-1 xl:grid-cols-4 mb-12">
+    <div className="grid mx-auto w-[400px] xl:w-fit grid-cols-1 xl:grid-cols-4 mb-12">
       {LearningGridArray.map((card, i) => {
+        const isHighlightCard = card.order < 0;
+        const cardBgClass =
+          card.order % 2 === 1
+            ? "bg-richblack-600"
+            : card.order % 2 === 0
+            ? "bg-richblack-800"
+            : "bg-transparent";
+        const cardHeightClass = "h-[320px]";
+        const colSpanClass = i === 0 ? "xl:col-span-2" : "";
+        const colStartClass = card.order === 3 ? "xl:col-start-2" : "";
+
         return (
           <div
             key={i}
-            className={`${i === 0 && "xl:col-span-2 xl:h-[294px]"}  ${
-              card.order % 2 === 1
-                ? "bg-richblack-700 h-[294px]"
-                : card.order % 2 === 0
-                ? "bg-richblack-800 h-[294px]"
-                : "bg-transparent"
-            } ${card.order === 3 && "xl:col-start-2"}  `}
+            className={`${colSpanClass} ${colStartClass} ${cardBgClass} ${cardHeightClass}`}
           >
-            {card.order < 0 ? (
-              <div className="xl:w-[90%] flex flex-col gap-3 pb-10 xl:pb-0">
-                <div className="text-4xl font-semibold ">
+            {isHighlightCard ? (
+              <div className="xl:w-[90%] flex flex-col gap-3 pb-10 xl:pb-0 sm:pb-20">
+                <div className="text-4xl font-semibold text-center">
                   {card.heading}
                   <HighlightText text={card.highlightText} />
                 </div>
                 <p className="text-richblack-300 font-medium">
                   {card.description}
                 </p>
-
+                
                 <div className="w-fit mt-2">
                   <CTAButton active={true} linkto={card.BtnLink}>
                     {card.BtnText}
@@ -76,10 +81,9 @@ const LearningGrid = () => {
                 </div>
               </div>
             ) : (
-              <div className="p-8 flex flex-col gap-8">
-                <h1 className="text-richblack-5 text-lg">{card.heading}</h1>
-
-                <p className="text-richblack-300 font-medium">
+              <div className="w-fit mt-2 p-3 flex flex-col gap-8">
+                <h1 className="text-richblack-5 text-lg text-center font-bold">{card.heading}</h1>
+                <p className="text-richblack-100 font-medium px-2">
                   {card.description}
                 </p>
               </div>
