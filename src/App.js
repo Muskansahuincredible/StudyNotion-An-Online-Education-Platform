@@ -1,9 +1,9 @@
 import "./App.css";
+
 import {Route, Routes, useNavigate } from "react-router-dom";
 import Home from "./pages/Home"
 import Navbar from "./components/common/Navbar"
 import OpenRoute from "./components/core/Auth/OpenRoute"
-
 import Login from "./pages/Login"
 import Signup from "./pages/Signup"
 import ForgotPassword from "./pages/ForgotPassword";
@@ -45,7 +45,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Home/>} />
       <Route path="catalog/:catalogName" element={<Catalog/>} />
-      <Route path="project/:projects" element={<Project/>} />
+      <Route path="project/" element={<Project/>} />
       <Route path="courses/:courseId" element={<CourseDetails/>} />
       
       <Route
@@ -92,14 +92,7 @@ function App() {
           }
         />  
 
-    <Route
-          path="/about"
-          element={
-            
-              <About />
-            
-          }
-        />
+    <Route path="/about" element={<About />}/>
     <Route path="/contact" element={<Contact />} />
 
     <Route 
