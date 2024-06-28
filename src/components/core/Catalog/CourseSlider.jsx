@@ -5,29 +5,23 @@ import 'swiper/css/free-mode';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import 'swiper/css/autoplay';
-import { Autoplay, FreeMode, Pagination, Navigation } from 'swiper/modules';
+import { FreeMode, Pagination, Autoplay, Navigation } from 'swiper/modules';
 
 import CourseCard from './Course_Card';
 
-
-const CourseSlider = ({ Courses }) => {
+const CourseSlider = ({ Courses = [] }) => {
   return (
     <>
-      {Courses?.length ? (
+      {Courses.length > 0 ? (
         <Swiper
           slidesPerView={1}
           spaceBetween={25}
           loop={true}
-          autoplay={{
-            delay: 2500,
-            disableOnInteraction: false,
-          }}
+          modules={[FreeMode, Pagination, Autoplay, Navigation]}
+          autoplay={{ delay: 2500, disableOnInteraction: false }}
+          navigation
+          pagination={{ clickable: true }}
           freeMode={true}
-          pagination={{
-            clickable: true,
-          }}
-          navigation={true} // Enable navigation
-          modules={[Autoplay, FreeMode, Pagination, Navigation]} // Include Navigation module
           breakpoints={{
             1024: {
               slidesPerView: 3,
@@ -35,9 +29,9 @@ const CourseSlider = ({ Courses }) => {
           }}
           className="max-h-[30rem]"
         >
-          {Courses?.map((course, i) => (
+          {Courses.map((course, i) => (
             <SwiperSlide key={i}>
-              <CourseCard course={course} Height={"h-[250px]"} />
+              <CourseCard course={course} Height="h-[250px]" />
             </SwiperSlide>
           ))}
         </Swiper>

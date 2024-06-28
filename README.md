@@ -381,40 +381,137 @@ Before you begin, ensure you have the following prerequisites installed:
 
 4. **Set Environment Variables:**
 
-   Create a `.env` file in the root directory and add the following environment variables:
-
-   ```plaintext
-   PORT=3000
-   MONGODB_URI=mongodb://localhost:27017/studynotion
-   JWT_SECRET=your_jwt_secret_key
+   ```bash
+   cd server
    ```
 
-5. **Start the Server:**
+   Create a `.env` file or rename it to `.env` if exists already in server for the following environment variables:
 
    ```bash
-   npm start
+   PORT = 4000
+   MONGODB_URL = 
+
+   # Nodemailer
+   MAIL_HOST = smtp.gmail.com
+   MAIL_USER = 
+   MAIL_PASS = 
+   #*Controllers
+   #login 
+   JWT_SECRET = 
+
+   #cloudinary
+   CLOUD_NAME = 
+   API_KEY =
+   API_SECRET = 
+   FOLDER_NAME = "StudyNotion"
+
+   #*Config
+   #Razorpay
+   RAZORPAY_KEY = 
+   RAZORPAY_SECRET = 
+
    ```
 
-6. **Access the Application:**
+   1] ***Keep the port number as it is.***
 
-   Open your web browser and visit `http://localhost:3000` to access the StudyNotion platform.
+   2] ***For MONGODB_URL follow below steps –***
+    - If you want to connect db locally replace MONGO_URI with `mongodb://localhost:27017/db_name `, Where db_name is the database name, you can give yours.
+    - If you want to connect using MONGO_ATLAS, then do the following steps
+      - Signup or login for Mongo DB atlas via https://account.mongodb.com/account/register?_ga=2.174802465.288724901.1646250007-570639881.1643975138
+      
+      - Once you login, click on create button
+       
+        ![Picture1](https://github.com/PratikMane0112/StudyNotion-An-Online-Education-Platform/assets/153143167/5f532e9f-7fae-4457-b154-086e301c635f)
 
-#### Additional Configuration
+      - Again, click on Create Cluster Button
+            
+        ![Picture2](https://github.com/PratikMane0112/StudyNotion-An-Online-Education-Platform/assets/153143167/9666ff59-cbd3-4767-a39a-3b5ef302c6dc)
 
-- Configure email SMTP settings for features like OTP verification and forgot password functionality. 📧
+      - Wait for few minutes, and then following dashboard will appear
+       
+        ![Picture3](https://github.com/PratikMane0112/StudyNotion-An-Online-Education-Platform/assets/153143167/e801e934-005f-4595-ac1f-2fb9930e6ff1)
 
-#### Database Setup
+      - Click on connect and choose your application.
+        
+        ![Picture4](https://github.com/PratikMane0112/StudyNotion-An-Online-Education-Platform/assets/153143167/0c60ab29-4497-4422-af84-45bacfa016a3)
 
-- Ensure MongoDB is running on your system. If not, start the MongoDB service using the appropriate command for your operating system. 🚀
+      - Copy the URL and add your name and password in url, which you have set when creating cluster, and put it .env file.
+        
+        ![Picture5](https://github.com/PratikMane0112/StudyNotion-An-Online-Education-Platform/assets/153143167/8566c9f2-4d07-44e7-91fb-d3608a6cd0b0)
 
-Follow these steps, and you'll have StudyNotion up and running on your local machine in no time! Adjust the instructions according to your specific setup and requirements.
 
+    3] ***For NodeMailer follow below steps –***
+
+    - By default, Gmail prevents bots from accessing emails hosted on Google servers. Gmail runs 
+      several checks to ensure that every email account is accessed by a recognized user at a 
+      recognized location.
+    - Google requires your account to have two-factor authentication (2FA) enabled to connect it to Nodemailer.
+    - We’ll also need to set up an app password. To do so, follow these steps:
+      - Make sure you’re logged in to your Gmail account
+      - Under How you sign in to Google, select 2-Step Verification
+      - You’ll be prompted to sign in to your email again
+      - Scroll down to App passwords and click the arrow, >
+      - In the Select app dropdown, select your app or enter a custom name, then do   the same 
+        for the Select device dropdown
+      - Click Generate, and a modal will pop up with your 16-digit app password.Copy it to 
+        somewhere secure
+
+     Now, Finally put your email in MAIL_USER & app password in MAIL_PASS in .env file. It is 
+     necessary, unless you will not receive OTP on  your mail.
+
+
+
+   4] ***For JWT_SECRET follow the below steps –***
+ 
+   - This is typically a secret key used for JWT (JSON Web Token) authentication in your 
+     application. 
+   - You can generate a random string using a tool like crypto in Node.js. For example:
+   ```bash
+   const crypto = require('crypto');
+   const jwtSecret = crypto.randomBytes(32).toString('hex');
+   console.log(jwtSecret);
+   ```
+   - Copy the generated string and paste it as the value for JWT_SECRET in your .env file.
+
+
+   5] ***For Cloudinary follow the below steps –***
+
+     - Sign Up for Cloudinary: Go to the Cloudinary website (https://cloudinary.com) and sign up 
+       for an account. You can choose the free plan to get started.
+     - Access Dashboard: After signing up and logging in, you'll be redirected to your Cloudinary 
+       dashboard.
+     - Find Your Cloud Name: Your Cloudinary cloud name is displayed on the dashboard. It's 
+       usually in the format [your_cloud_name]. Copy this value.
+     - Generate API Key and API Secret: In the Cloudinary dashboard, navigate to the "Account 
+       Details" or "Dashboard" section. Here, you'll find your API key and API secret. If you 
+       don't see them, you may need to generate them. Look for an option like "API Credentials" 
+       or "API Key & Secret". 
+     - If you need to generate API key and secret, click on the appropriate button/link and 
+       Cloudinary will provide you with the key and secret.   
+     - If they are already provided, simply copy them.
+     - Now that you have your Cloudinary “CLOUD_NAME”, “API_KEY”, and “API_SECRET”, you can set 
+       them up in your .env file as described earlier.
+       CLOUD_NAME=your_cloud_name
+       API_KEY=your_api_key
+       API_SECRET=your_api_secret
+
+   6] ***For Razorpay follow the below steps-***
+
+     - Log in to your Dashboard with appropriate credentials.
+     - Select the mode (Test or Live) for which you want to generate the API key.
+     - Select the `test mode` for project.
+     - Test Mode: The test mode is a simulation mode that you can use to test  your integration 
+       flow. Your customers will not be able to make payments in this mode.
+     - Navigate to Account & Settings → API Keys (under Website and app settings) → Generate Key 
+       to generate key for the selected mode.
+     - The “Key Id” and “Key Secret” appear on a pop-up page. you can set them up in your .env 
+       file as described earlier.
+       RAZORPAY_KEY = “your_razorpay_key”
+       RAZORPAY_SECRET = “your_razorpay_secret”
+      
 <hr>
 <p align="right">(<a href="#top">back to top</a>)</p>
 <!-- Open Source Programs -->
- 
-
-
 
 <!-- Code of conduct -->
 <div>

@@ -10,6 +10,7 @@ import "swiper/css/navigation";
 import "../../App.css";
 import { FaStar } from "react-icons/fa";
 
+
 function ReviewSlider() {
   const [reviews, setReviews] = useState([]);
   const truncateWords = 15;
@@ -75,8 +76,8 @@ function ReviewSlider() {
 
   return (
     <div className="text-white">
-      <div className="my-[50px] h-[184px]  max-w-maxContentTab lg:max-w-maxContent">
-        <Swiper 
+      <div className="my-[50px] h-[184px] max-w-maxContentTab lg:max-w-maxContent">
+        <Swiper
           slidesPerView={3}
           spaceBetween={30}
           loop={true}
