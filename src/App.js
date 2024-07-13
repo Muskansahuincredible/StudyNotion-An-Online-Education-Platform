@@ -32,7 +32,7 @@ import Instructor from "./components/core/Dashboard/InstructorDashboard/Instruct
 import BackToTop from "./components/common/BackToTop";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsAndConditions from "./pages/TermsAndConditions";
-import Loading from "./components/common/Loading"
+import Loading from "./components/common/Loading";
 
 function App() {
   const dispatch = useDispatch();
@@ -46,12 +46,12 @@ function App() {
       setLoading(false);
     }, 2000); // Adjust the time as needed
   }, []);
-  if(loading){
-     return (
+  if (loading) {
+    return (
       <div>
         <Loading />
       </div>
-     )
+    );
   }
   return (
     <div className="w-screen min-h-screen bg-richblack-900 flex flex-col font-inter">
@@ -117,7 +117,10 @@ function App() {
           {user?.accountType === ACCOUNT_TYPE.STUDENT && (
             <>
               <Route path="dashboard/cart" element={<Cart />} />
-              <Route path="dashboard/enrolled-courses" element={<EnrolledCourses />} />
+              <Route
+                path="dashboard/enrolled-courses"
+                element={<EnrolledCourses />}
+              />
             </>
           )}
           {user?.accountType === ACCOUNT_TYPE.INSTRUCTOR && (
@@ -125,7 +128,10 @@ function App() {
               <Route path="dashboard/instructor" element={<Instructor />} />
               <Route path="dashboard/add-course" element={<AddCourse />} />
               <Route path="dashboard/my-courses" element={<MyCourses />} />
-              <Route path="dashboard/edit-course/:courseId" element={<EditCourse />} />
+              <Route
+                path="dashboard/edit-course/:courseId"
+                element={<EditCourse />}
+              />
             </>
           )}
         </Route>
@@ -149,7 +155,6 @@ function App() {
       </Routes>
       <BackToTop />
     </div>
-  
   );
 }
 
