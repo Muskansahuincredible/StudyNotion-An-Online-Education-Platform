@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+// eslint-disable-next-line no-unused-vars
+import React, { Component, useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { AiOutlineMenu, AiOutlineShoppingCart } from "react-icons/ai";
@@ -46,8 +47,9 @@ function Navbar() {
     setMobileMenuOpen(false);
   };
 
+
   return (
-    <div className="navbarContainer">
+    <div className="navbarContainer fixed-top" >
       <div className="flex items-center justify-center bg-black border-b-[1px] border-b-richblack-800" >
         <div className="flex flex-col md:flex-row w-full max-w-maxContent items-center justify-between px-4 py-2">
           <div className="flex items-center justify-between w-full md:w-auto px-1 py-1">
