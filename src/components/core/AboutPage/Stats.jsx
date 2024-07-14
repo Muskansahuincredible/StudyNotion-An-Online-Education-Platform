@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import useIntersectionObserver from './useIntersectionObserver'; // Adjust the path as needed
 
-const countUp = (element, start, end, duration) => {
+const countUp = (element, start, end, duration, finalDisplay) => {
   let startTime = null;
 
   const animation = (currentTime) => {
@@ -14,6 +14,8 @@ const countUp = (element, start, end, duration) => {
 
     if (progress < 1) {
       requestAnimationFrame(animation);
+    } else {
+      element.textContent = finalDisplay; // Set final display value
     }
   };
 
@@ -25,6 +27,14 @@ const parseCountValue = (count) => {
     return parseFloat(count) * 1000;
   } else {
     return parseFloat(count);
+  }
+};
+
+const getFinalDisplay = (count) => {
+  if (count.endsWith('K')) {
+    return count;
+  } else {
+    return parseFloat(count).toLocaleString();
   }
 };
 
@@ -46,7 +56,8 @@ const StatsComponent = () => {
       elementsRef.current.forEach((element, index) => {
         const countValue = stats[index].count;
         const endValue = parseCountValue(countValue);
-        countUp(element, 0, endValue, 2000);
+        const finalDisplay = getFinalDisplay(countValue);
+        countUp(element, 0, endValue, 2000, finalDisplay);
       });
     }
   }, [isIntersecting]);
