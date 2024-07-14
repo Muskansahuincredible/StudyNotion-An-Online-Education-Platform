@@ -30,8 +30,9 @@ import ViewCourse from "./pages/ViewCourse";
 import VideoDetails from "./components/core/ViewCourse/VideoDetails";
 import Instructor from "./components/core/Dashboard/InstructorDashboard/Instructor";
 import BackToTop from "./components/common/BackToTop";
-import PrivacyPolicy from "./pages/PrivacyPolicy.jsx";
-import TermsAndConditions from "./pages/TermsAndConditions";
+import PrivacyPolicy from "./pages/privacypolicy";
+
+import TermsAndonditions from "./pages/TermsAndConditions";
 import Loading from "./components/common/Loading";
 
 function App() {
