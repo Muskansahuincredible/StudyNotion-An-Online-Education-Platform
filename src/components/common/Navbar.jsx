@@ -1,5 +1,4 @@
-// eslint-disable-next-line no-unused-vars
-import React, { Component, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { AiOutlineMenu, AiOutlineShoppingCart } from "react-icons/ai";
@@ -44,13 +43,13 @@ function Navbar() {
   };
 
   const closeMobileMenu = () => {
+    console.log("Closing mobile menu");
     setMobileMenuOpen(false);
   };
 
-
   return (
-    <div className="navbarContainer fixed-top" >
-      <div className="flex items-center justify-center bg-black border-b-[1px] border-b-richblack-800" >
+    <div className="navbarContainer fixed-top">
+      <div className="flex items-center justify-center bg-black border-b-[1px] border-b-richblack-800">
         <div className="flex flex-col md:flex-row w-full max-w-maxContent items-center justify-between px-4 py-2">
           <div className="flex items-center justify-between w-full md:w-auto px-1 py-1">
             <Link to="/" onClick={closeMobileMenu}>
@@ -77,49 +76,45 @@ function Navbar() {
             <ul className="flex flex-col md:flex-row w-full max-w-maxContent items-center justify-between px-4 py-2 gap-y-4 md:gap-y-0 md:gap-x-6">
               {NavbarLinks.map(({ title, path }, index) => (
                 <li key={index} className="mb-2 md:mb-0">
-                  {" "}
-                  {/* Add margin bottom for vertical spacing on mobile */}
                   {title === "Catalog" ? (
-                    <>
-                      <div
-                        className={`group relative flex cursor-pointer items-center gap-1 ${
-                          matchRoute("/catalog/:catalogName")
-                            ? "text-yellow-100 hover:text-yellow-200"
-                            : "text-richblack-25 hover:text-richblack-50"
-                        }`}
-                      >
-                        <p>{title}</p>
-                        <BsChevronDown />
-                        <div className="invisible absolute left-[50%] top-[50%] z-[1000] flex w-[200px] translate-x-[-50%] translate-y-[3em] flex-col rounded-lg bg-richblack-5 p-4 text-richblack-900 opacity-0 transition-all duration-150 group-hover:visible group-hover:translate-y-[1.65em] group-hover:opacity-100 lg:w-[300px]">
-                          <div className="absolute left-[50%] top-0 -z-10 h-6 w-6 translate-x-[80%] translate-y-[-40%] rotate-45 select-none rounded bg-richblack-5"></div>
-                          {loading ? (
-                            <p className="text-center">Loading...</p>
-                          ) : subLinks && subLinks.length ? (
-                            <>
-                              {subLinks
-                                .filter(
-                                  (subLink) => subLink?.courses?.length > 0
-                                )
-                                ?.map((subLink, i) => (
-                                  <Link
-                                    to={`/catalog/${subLink.name
-                                      .split(" ")
-                                      .join("-")
-                                      .toLowerCase()}`}
-                                    className="rounded-lg bg-transparent py-4 pl-4 hover:bg-richblack-500"
-                                    key={i}
-                                    onClick={closeMobileMenu}
-                                  >
-                                    <p>{subLink.name}</p>
-                                  </Link>
-                                ))}
-                            </>
-                          ) : (
-                            <p className="text-center">No Courses Found</p>
-                          )}
-                        </div>
+                    <div
+                      className={`group relative flex cursor-pointer items-center gap-1 ${
+                        matchRoute("/catalog/:catalogName")
+                          ? "text-yellow-100 hover:text-yellow-200"
+                          : "text-richblack-25 hover:text-richblack-50"
+                      }`}
+                    >
+                      <p>{title}</p>
+                      <BsChevronDown />
+                      <div className="invisible absolute left-[50%] top-[50%] z-[1000] flex w-[200px] translate-x-[-50%] translate-y-[3em] flex-col rounded-lg bg-richblack-5 p-4 text-richblack-900 opacity-0 transition-all duration-150 group-hover:visible group-hover:translate-y-[1.65em] group-hover:opacity-100 lg:w-[300px]">
+                        <div className="absolute left-[50%] top-0 -z-10 h-6 w-6 translate-x-[80%] translate-y-[-40%] rotate-45 select-none rounded bg-richblack-5"></div>
+                        {loading ? (
+                          <p className="text-center">Loading...</p>
+                        ) : subLinks && subLinks.length ? (
+                          <>
+                            {subLinks
+                              .filter((subLink) => subLink?.courses?.length > 0)
+                              .map((subLink, i) => (
+                                <Link
+                                  to={`/catalog/${subLink.name
+                                    .split(" ")
+                                    .join("-")
+                                    .toLowerCase()}`}
+                                  className="rounded-lg bg-transparent py-4 pl-4 hover:bg-richblack-500"
+                                  key={i}
+                                  onClick={closeMobileMenu} // Added onClick event here
+                                >
+                                  <p>{subLink.name}</p>
+                                </Link>
+                              ))}
+                          </>
+                        ) : (
+                          <p className="text-center" onClick={closeMobileMenu}>
+                            No Courses Found
+                          </p>
+                        )}
                       </div>
-                    </>
+                    </div>
                   ) : (
                     <Link to={path} onClick={closeMobileMenu}>
                       <p
