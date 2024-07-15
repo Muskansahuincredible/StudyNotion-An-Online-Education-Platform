@@ -50,7 +50,7 @@ function Navbar() {
 
   return (
     <div className="navbarContainer fixed-top" >
-      <div className="flex items-center justify-center bg-black border-b-[1px] border-b-richblack-800" >
+      <div className="flex items-center justify-center bg-black border-b-[1px] border-b-richblack-800" style={{position: "sticky", top: "0px"}} >
         <div className="flex flex-col md:flex-row w-full max-w-maxContent items-center justify-between px-4 py-2">
           <div className="flex items-center justify-between w-full md:w-auto px-1 py-1">
             <Link to="/" onClick={closeMobileMenu}>
