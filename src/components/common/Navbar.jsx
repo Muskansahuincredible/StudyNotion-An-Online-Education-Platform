@@ -136,13 +136,13 @@ function Navbar() {
                 </li>
               ))}
               {/* Add Rate Us link */}
-              <li>
+              {/* <li>
                 <Link to="/rateus" onClick={closeMobileMenu}>
                   <p className="text-richblack-25 hover:text-yellow-25">
                     Rate Us
                   </p>
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </nav>
           <div
