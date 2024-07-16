@@ -7,7 +7,7 @@ import { ImTree } from "react-icons/im";
 const CourseCard = ({cardData, currentCard, setCurrentCard}) => {
   return (
     <div
-      className={`w-[360px] lg:w-[30%] ${
+      className={`max-w-[300px] w-[360px] lg:w-[30%] ${
         currentCard === cardData?.heading
           ? "bg-white shadow-[12px_12px_0_0] shadow-yellow-50"
           : "bg-richblack-800"
@@ -23,12 +23,22 @@ const CourseCard = ({cardData, currentCard, setCurrentCard}) => {
           {cardData?.heading}
         </div>
 
-        <div className={`text-richblack-400  transition-all ease-linear ${ currentCard === cardData?.heading ? "hover:text-black" : "hover:text-white"}`}>{cardData?.description}</div>
+        <div
+          className={`text-richblack-400  transition-all ease-linear ${
+            currentCard === cardData?.heading
+              ? "hover:text-black"
+              : "hover:text-white"
+          }`}
+        >
+          {cardData?.description}
+        </div>
       </div>
 
       <div
         className={`flex justify-between  transition-all ease-linear ${
-          currentCard === cardData?.heading ? "text-blue-300 hover:text-blue-500" : "text-richblack-300 hover:text-white"
+          currentCard === cardData?.heading
+            ? "text-blue-300 hover:text-blue-500"
+            : "text-richblack-300 hover:text-white"
         } px-6 py-3 font-medium`}
       >
         {/* Level */}
