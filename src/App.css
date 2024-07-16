@@ -11,6 +11,11 @@ body {
   top:calc(25%);
 }
 
+
+*{
+  cursor: url('/src/assets/Images/ads_click_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24\ \(2\).svg'),auto;
+}
+
 /* ===== Scrollbar CSS ===== */
 /* Firefox */
 * {
