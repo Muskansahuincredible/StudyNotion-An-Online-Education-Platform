@@ -32,7 +32,8 @@ import Instructor from "./components/core/Dashboard/InstructorDashboard/Instruct
 import BackToTop from "./components/common/BackToTop";
 import PrivacyPolicy from "./pages/privacypolicy";
 import TermsAndConditions from "./pages/TermsAndConditions";
-import Loading from "./components/common/Loading";
+import Loading from "./components/common/Loading"
+import Project from "./pages/Project";
 
 function App() {
   const dispatch = useDispatch();
