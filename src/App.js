@@ -104,7 +104,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/rateus" element={<Rateus />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-        <Route path="/termsandconditions" element={<TermsAndConditions />} />
+        <Route path="/termsandconditions" element={<TermsAndonditions />} />
         <Route
           element={
             <PrivateRoute>
