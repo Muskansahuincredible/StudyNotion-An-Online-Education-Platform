@@ -49,8 +49,7 @@ function Navbar() {
 
   return (
     <div
-      className="navbarContainer fixed-top"
-      style={{ position: "sticky", top: "0px" }}
+      className="navbarContainer sticky top-0 left-0"
     >
       <div className="flex items-center justify-center bg-black border-b-[1px] border-b-richblack-800">
         <div className="flex flex-col md:flex-row w-full max-w-maxContent items-center justify-between px-4 py-2">
