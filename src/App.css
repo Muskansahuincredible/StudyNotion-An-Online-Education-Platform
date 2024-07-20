@@ -4,8 +4,9 @@
 
 html,
 body {
-  overflow-x: hidden;
-  margin-top: 50px;
+  overflow-x: auto;
+  /* margin-top: 50px; */
+  height: 100vh;
 }
 .icon{
   top:calc(25%);
@@ -254,7 +255,7 @@ details > summary::-webkit-details-marker {
   @apply text-2xl font-bold text-richblack-5 lg:text-4xl;
 }
 .navbarContainer {	
-  @apply fixed top-0 left-0 right-0 z-50 bg-richblack-800; 
+  @apply top-0 left-0 right-0 z-50 bg-richblack-800; 
 }
 
 /* BackToTop.css */
