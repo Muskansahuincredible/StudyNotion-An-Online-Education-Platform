@@ -174,13 +174,23 @@ function Navbar() {
               {!token && (
                 <div className="flex flex-col md:flex-row items-center md:items-start gap-y-4 md:gap-y-0 md:gap-x-4">
                   <Link to="/login" onClick={closeMobileMenu}>
-                    <button className="rounded-[8px] px-4 py-2 bg-blue-500 text-white  transition duration-300 hover:bg-blue-700 hover:text-gray-200">
-                      Log in
+                    <button className={`rounded-md px-4 py-2 transition duration-300 hover:scale-95 ${
+                          matchRoute("/login")
+                            ? "bg-richblack-800 text-white"
+                            : "bg-yellow-50 text-black hover:bg-richblack-800 hover:text-white "
+                        }`}>
+                     
+                      Log In
                     </button>
                   </Link>
                   <Link to="/signup" onClick={closeMobileMenu}>
-                    <button className="rounded-[8px] px-4 py-2 bg-blue-500 text-white transition duration-300 hover:bg-blue-700 hover:text-gray-200">
-                      Sign up
+                    {/* <button className="rounded-md px-4 py-2 transition duration-300  hover:scale-95"> */}
+                    <button className={`rounded-md px-4 py-2 transition duration-300 hover:scale-95 ${
+                          matchRoute("/signup")
+                            ? "bg-richblack-800 text-white"
+                            : "bg-blue-300 text-white hover:bg-richblack-800 hover:text-gray-200 "
+                        }`}>
+                      Sign Up
                     </button>
                   </Link>
                 </div>
