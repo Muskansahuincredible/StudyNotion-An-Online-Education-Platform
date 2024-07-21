@@ -233,10 +233,10 @@ details > summary::-webkit-details-marker {
   margin: 50px 0px;
 } */
 
-.swiper-slide {
+/* .swiper-slide {
   width: 100%;
   height: 100%;
-}
+} */
 /* .swiper-slide {
   @apply bg-richblack-800 text-richblack-25 p-3 text-[14px];
 } */
