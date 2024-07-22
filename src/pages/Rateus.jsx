@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./rateus.css";
 import ContactDetails from "../components/ContactPage/ContactDetails"
 import Footer from "../components/common/Footer"
+import ReviewSlider from "../components/common/ReviewSlider"
 
 function RateUsComponent({ previousContent }) {
   const [errorRating, setErrorRating] = useState(false);
@@ -84,6 +85,13 @@ function RateUsComponent({ previousContent }) {
      </div>
 
     </div>
+    <div className="relative mx-auto my-20 flex w-11/12 max-w-maxContent flex-col items-center justify-between gap-8 bg-richblack-900 text-white">
+        {/* Reviws from Other Learner */}
+        <h1 className="text-center text-4xl font-semibold mt-8">
+          Happy & Satisfied Learners!
+        </h1>
+        <ReviewSlider />
+      </div>
     <Footer/>
 </>
   );
