@@ -13,6 +13,21 @@ function RateUsComponent({ previousContent }) {
   const [feedback, setFeedback] = useState("");
   // const [showModal, setShowModal] = useState(false);
 
+  const [hoverRating, setHoverRating] = useState(0);
+
+  const handleMouseOver = (index) => {
+    setHoverRating(index);
+  };
+
+  const handleMouseOut = () => {
+    setHoverRating(0);
+  };
+
+  const handleClick = (index) => {
+    setRating(index);
+  };
+
+
   const handleStarClick = (star) => {
     setRating(star);
   };
@@ -47,15 +62,21 @@ function RateUsComponent({ previousContent }) {
         <p className="mt-5 text-richblack-300">Please take a moment to rate your experience with our service. Your feedback helps us improve and provide you with the best service possible.</p>
         <div className="star-rating">
           {/* Stars go here */}
-          {[1, 2, 3, 4, 5].map((star) => (
-            <span 
-                key={star}
-                className={star <= rating ? "star filled" : "star"}
-                onClick={() => handleStarClick(star)}
-                >
-                ★
-              </span>
-            ))}
+          
+           {[...Array(5)].map((star, index) => {
+        index += 1;
+        return (
+          <span
+            key={index}
+            className={`star ${index <= (hoverRating || rating) ? 'filled' : ''}`}
+            onMouseOver={() => handleMouseOver(index)}
+            onMouseOut={handleMouseOut}
+            onClick={() => handleClick(index)}
+          >
+            &#9733;
+          </span>
+        );
+      })}
         </div>
             {errorRating && (
             <span className="text-[12px] text-yellow-100 mb-30">
