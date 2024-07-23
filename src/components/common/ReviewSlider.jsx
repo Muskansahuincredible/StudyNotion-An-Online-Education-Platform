@@ -95,8 +95,8 @@ function ReviewSlider() {
   }, []);
 
   return (
-    <div className="text-white">
-      <div className="my-[50px] h-fitContent max-w-maxContentTab lg:max-w-maxContent">
+    <div className="text-lg">
+      <div className="my-[50px] border-2 border-white p-4 h-fitContent max-w-maxContentTab lg:max-w-maxContent">
         <Swiper
           slidesPerView={slidesPerView} 
           spaceBetween={30}
@@ -113,8 +113,8 @@ function ReviewSlider() {
           {reviews.map((review, i) => {
             return (
               <SwiperSlide key={i}>
-                <div className="flex flex-col gap-1 bg-richblack-800 rounded-xl p-3 text-[14px] text-richblack-25">
-                  <div className="flex items-center gap-10">
+                <div className="flex flex-col gap-1  bg-richblack-800 rounded-xl p-3 text-[14px] text-richblack-25 ">
+                  <div className="flex items-center gap-2 text-2xl">
                     <img 
                       src={
                         review?.user?.image

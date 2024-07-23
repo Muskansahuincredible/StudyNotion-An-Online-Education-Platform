@@ -60,23 +60,23 @@ const Footer = () => {
                   href="https://www.facebook.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="social-icon transition duration-300 hover:opacity-75"
+                  className="social-icon transition duration-300 hover:opacity-75 hover:bg-white"
                 >
                   <FaFacebook className="facebook" />
                 </a>
                 <a
-                  href="https://www.google.com"
+                  href=" https://projects.100xdevs.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="social-icon transition duration-300 hover:opacity-75"
+                  className="social-icon transition duration-300 hover:opacity-75 hover:bg-white"
                 >
-                  <FaGoogle className="google" />
+                  <FaGoogle className="" />
                 </a>
                 <a
                   href="https://www.twitter.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="social-icon transition duration-300 hover:opacity-75"
+                  className="social-icon transition duration-300 hover:opacity-75 hover:bg-white"
                 >
                   <FaXTwitter className="twitter" />
                 </a>
@@ -84,7 +84,7 @@ const Footer = () => {
                   href="https://www.youtube.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="social-icon transition duration-300 hover:opacity-75"
+                  className="social-icon transition duration-300 hover:opacity-75 hover:bg-white"
                 >
                   <FaYoutube className="youtube" />
                 </a>
@@ -92,7 +92,7 @@ const Footer = () => {
                   href="https://www.linkedin.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="social-icon transition duration-300 hover:opacity-75"
+                  className="social-icon transition duration-300 hover:opacity-75 hover:bg-white"
                 >
                   <FaLinkedin className="linkedin" />
                 </a>
@@ -100,7 +100,7 @@ const Footer = () => {
                   href="https://www.instagram.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="social-icon transition duration-300 hover:opacity-75"
+                  className="social-icon transition duration-300 hover:opacity-75 hover:bg-white "
                 >
                   <FaInstagram className="instagram" />
                 </a>
