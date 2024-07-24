@@ -1,6 +1,7 @@
 import React from "react";
 import { FooterLink2 } from "../../data/footer-links";
 import { Link } from "react-router-dom";
+import SendIcon from "@mui/icons-material/Send"; // Add this import
 import Logo from "../../assets/Logo/Logo-Full-Light.png";
 import {
   FaFacebook,
@@ -104,6 +105,50 @@ const Footer = () => {
                 >
                   <FaInstagram className="instagram" />
                 </a>
+              </div>
+              <div className="container" style={{ display: "block" }}>
+                <h4 style={{ marginLeft: "-7rem", marginBottom: "0.5rem" }}>
+                  Email Us
+                </h4>
+
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    marginLeft: "30rem",
+                    marginBottom: "28px",
+                  }}
+                >
+                  <input
+                    type="text"
+                    id="message-input"
+                    placeholder="Type your message here"
+                    style={{
+                      padding: "3px",
+                      marginLeft: "-30rem",
+                      borderRadius: "5px",
+                      width: "10rem",
+                      fontSize: "0.8rem",
+                      borderColor: "yellow",
+                      borderWidth: "3px",
+                    }}
+                  />
+                  <a
+                    href="mailto:abc@gmail.com"
+                    style={{ display: "flex", alignItems: "center" }}
+                  >
+                    <SendIcon
+                      style={{
+                        fontSize: "26px",
+                        color: "yellow",
+                        width: "30px",
+                        padding: "3px",
+                        cursor: "pointer",
+                        marginBottom: "-5px",
+                      }}
+                    />
+                  </a>
+                </div>
               </div>
             </div>
 
