@@ -114,6 +114,7 @@ function App() {
             </PrivateRoute>
           }
         >
+          
           <Route path="dashboard/my-profile" element={<MyProfile />} />
           <Route path="dashboard/settings" element={<Settings />} />
           {user?.accountType === ACCOUNT_TYPE.STUDENT && (
