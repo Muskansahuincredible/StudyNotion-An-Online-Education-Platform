@@ -4,7 +4,7 @@
   <h2> Online Education Platform for You </h2>
   <h3> Check out at https://studynotion-frontend.vercel.app/</h3>
 </div>
-
+//this is best project by love bhaiyaa  
 <br>
 
 ![s1](https://github.com/Muskansahuincredible/StudyNotion-An-Online-Education-Platform/assets/133582566/749ced9e-269c-4ab4-aae5-f7ba098da825)
