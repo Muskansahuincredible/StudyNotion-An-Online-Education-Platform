@@ -1,0 +1,16 @@
+.progress-container {
+  width: 100%;
+  height: 3px;
+  background-color:yellow;
+  position: fixed; /* Ensure the bar stays fixed at the top */
+  
+  z-index: 999;
+/* Smooth transition */
+}
+  
+.progress-bar {
+  height: 100%;
+  background-color: cyan;
+  width: 60%;
+  transition: width 0.2s ease-in-out;
+}

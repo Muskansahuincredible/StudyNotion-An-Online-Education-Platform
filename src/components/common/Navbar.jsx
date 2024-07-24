@@ -1,5 +1,4 @@
-// eslint-disable-next-line no-unused-vars
-import React, { Component, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { AiOutlineMenu, AiOutlineShoppingCart } from "react-icons/ai";
@@ -11,6 +10,8 @@ import { categories } from "../../services/apis";
 import { ACCOUNT_TYPE } from "../../utils/constants";
 import ProfileDropdown from "../core/Auth/ProfileDropDown";
 
+import ProgressBar from "./progressbar";
+  
 function Navbar() {
   const { token } = useSelector((state) => state.auth);
   const { user } = useSelector((state) => state.profile);
@@ -47,10 +48,9 @@ function Navbar() {
     setMobileMenuOpen(false);
   };
 
+
   return (
-    <div
-      className="navbarContainer sticky top-0 left-0"
-    >
+    <div className="navbarContainer sticky top-0 left-0 z-1000">
       <div className="flex items-center justify-center bg-black border-b-[1px] border-b-richblack-800">
         <div className="flex flex-col md:flex-row w-full max-w-maxContent items-center justify-between px-4 py-2">
           <div className="flex items-center justify-between w-full md:w-auto px-1 py-1">
@@ -82,8 +82,6 @@ function Navbar() {
                   className="mb-2 md:mb-0 transition duration-300 ease-in-out transform hover:text-yellow-25 hover:scale-105
                 relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-yellow-50 after:bottom-0 after:left-0 after:transition-all after:duration-700 after:ease-in-out hover:after:w-full"
                 >
-                  {" "}
-                  {/* Add margin bottom for vertical spacing on mobile */}
                   {title === "Catalog" ? (
                     <>
                       <div
@@ -140,14 +138,6 @@ function Navbar() {
                   )}
                 </li>
               ))}
-              {/* Add Rate Us link */}
-              {/* <li>
-                <Link to="/rateus" onClick={closeMobileMenu}>
-                  <p className="text-richblack-25 hover:text-yellow-25">
-                    Rate Us
-                  </p>
-                </Link>
-              </li> */}
             </ul>
           </nav>
           <div
@@ -173,22 +163,24 @@ function Navbar() {
               {!token && (
                 <div className="flex flex-col md:flex-row items-center md:items-start gap-y-4 md:gap-y-0 md:gap-x-4">
                   <Link to="/login" onClick={closeMobileMenu}>
-                    <button className={`rounded-md px-4 py-2 transition duration-300 hover:scale-95 ${
-                          matchRoute("/login")
-                            ? "bg-richblack-800 text-white"
-                            : "bg-yellow-50 text-black hover:bg-richblack-800 hover:text-white "
-                        }`}>
-                     
+                    <button
+                      className={`rounded-md px-4 py-2 transition duration-300 hover:scale-95 ${
+                        matchRoute("/login")
+                          ? "bg-richblack-800 text-white"
+                          : "bg-yellow-50 text-black hover:bg-richblack-800 hover:text-white "
+                      }`}
+                    >
                       Log In
                     </button>
                   </Link>
                   <Link to="/signup" onClick={closeMobileMenu}>
-                    {/* <button className="rounded-md px-4 py-2 transition duration-300  hover:scale-95"> */}
-                    <button className={`rounded-md px-4 py-2 transition duration-300 hover:scale-95 ${
-                          matchRoute("/signup")
-                            ? "bg-richblack-800 text-white"
-                            : "bg-blue-300 text-white hover:bg-richblack-800 hover:text-gray-200 "
-                        }`}>
+                    <button
+                      className={`rounded-md px-4 py-2 transition duration-300 hover:scale-95 ${
+                        matchRoute("/signup")
+                          ? "bg-richblack-800 text-white"
+                          : "bg-blue-300 text-white hover:bg-richblack-800 hover:text-gray-200 "
+                      }`}
+                    >
                       Sign Up
                     </button>
                   </Link>
@@ -199,6 +191,7 @@ function Navbar() {
           </div>
         </div>
       </div>
+      <ProgressBar/>
     </div>
   );
 }
