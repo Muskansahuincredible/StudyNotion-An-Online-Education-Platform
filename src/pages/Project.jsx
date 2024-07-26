@@ -79,6 +79,7 @@ const ProjectCard = ({ project }) => {
 
 const Projects = () => {
   return (
+    <>
     <div className="px-10 py-10">
       <h1 className="text-4xl font-semibold text-center mb-10 text-white">Our Learning Projects</h1>
 
@@ -108,8 +109,9 @@ const Projects = () => {
           </div>
         ))}
       </div>
-      <Footer />
     </div>
+  <Footer />
+  </>
   );
 };
 

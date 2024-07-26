@@ -55,7 +55,7 @@ function RateUsComponent({ previousContent }) {
 
   return (
     <>
-    <div className="rate-us-page bg-richblack-900 mx-auto flex w-11/12 max-w-maxContent flex-col justify-between gap-10 text-white lg:flex-row">
+    <div className="rate-us-page bg-richblack-900 mx-auto flex w-11/12 max-w-maxContent h-maxContent flex-col justify-between gap-4 text-white lg:flex-row">
       <div className="rate-us-container lg:w-[60%] border border-richblack-600 ">
         <h2 className="mt-4 text-3xl leading-6 font-semibold text-richblack-5 text-center mb-2">We Value Your Feedback!</h2>
         {/* <h2 className="rate-us-heading">Rate Our Website</h2> */}
@@ -108,7 +108,7 @@ function RateUsComponent({ previousContent }) {
     </div>
     <div className="relative mx-auto my-20 flex w-11/12 max-w-maxContent flex-col items-center justify-between gap-8 bg-richblack-900 text-white">
         {/* Reviws from Other Learner */}
-        <h1 className="text-center text-4xl font-semibold mt-8">
+        <h1 className="text-center text-4xl font-semibold mt-8 ">
           Happy & Satisfied Learners!
         </h1>
         <ReviewSlider />
