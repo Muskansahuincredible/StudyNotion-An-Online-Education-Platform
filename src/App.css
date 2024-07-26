@@ -300,3 +300,11 @@ details > summary::-webkit-details-marker {
 .back-to-top i {
   font-size: 20px; /* Adjust size as needed */
 }
+
+@media (max-width:600px) {
+  .text-white{
+      width:23rem;
+  }
+
+
+}
