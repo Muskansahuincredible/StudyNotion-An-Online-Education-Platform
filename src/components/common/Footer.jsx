@@ -125,6 +125,8 @@ const Footer = () => {
                     placeholder="Type your message here"
                     style={{
                       padding: "3px",
+                      paddingLeft: "7px",
+                      paddingRight: "2px",
                       marginLeft: "-30rem",
                       borderRadius: "5px",
                       width: "10rem",
