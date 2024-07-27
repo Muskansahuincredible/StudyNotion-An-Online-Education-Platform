@@ -32,7 +32,8 @@ import Instructor from "./components/core/Dashboard/InstructorDashboard/Instruct
 import BackToTop from "./components/common/BackToTop";
 import PrivacyPolicy from "./pages/privacypolicy";
 import TermsAndConditions from "./pages/TermsAndConditions";
-import Loading from "./components/common/Loading";
+import Loading from "./components/common/Loading"
+import Project from "./pages/Project";
 
 function App() {
   const dispatch = useDispatch();
@@ -102,6 +103,7 @@ function App() {
         />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/project" element={<Project />} />
         <Route path="/rateus" element={<Rateus />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/termsandconditions" element={<TermsAndConditions />} />
@@ -112,6 +114,7 @@ function App() {
             </PrivateRoute>
           }
         >
+          
           <Route path="dashboard/my-profile" element={<MyProfile />} />
           <Route path="dashboard/settings" element={<Settings />} />
           {user?.accountType === ACCOUNT_TYPE.STUDENT && (

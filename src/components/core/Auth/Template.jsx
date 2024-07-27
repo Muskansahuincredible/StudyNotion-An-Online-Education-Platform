@@ -9,7 +9,7 @@ function Template({ title, description1, description2, image, formType }) {
   const { loading } = useSelector((state) => state.auth)
 
   return (
-    <div className="grid h-screen overflow-hidden place-items-center">
+    <div className="grid place-items-center pt-10">
       {loading ? (
         <div className="spinner"></div>
       ) : (

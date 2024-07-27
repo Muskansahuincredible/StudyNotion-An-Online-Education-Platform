@@ -1,6 +1,7 @@
 import React from "react";
 import { FooterLink2 } from "../../data/footer-links";
 import { Link } from "react-router-dom";
+import SendIcon from "@mui/icons-material/Send"; // Add this import
 import Logo from "../../assets/Logo/Logo-Full-Light.png";
 import {
   FaFacebook,
@@ -60,23 +61,23 @@ const Footer = () => {
                   href="https://www.facebook.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="social-icon transition duration-300 hover:opacity-75"
+                  className="social-icon transition duration-300 hover:opacity-75 hover:bg-white"
                 >
                   <FaFacebook className="facebook" />
                 </a>
                 <a
-                  href="https://www.google.com"
+                  href=" https://projects.100xdevs.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="social-icon transition duration-300 hover:opacity-75"
+                  className="social-icon transition duration-300 hover:opacity-75 hover:bg-white"
                 >
-                  <FaGoogle className="google" />
+                  <FaGoogle className="" />
                 </a>
                 <a
                   href="https://www.twitter.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="social-icon transition duration-300 hover:opacity-75"
+                  className="social-icon transition duration-300 hover:opacity-75 hover:bg-white"
                 >
                   <FaXTwitter className="twitter" />
                 </a>
@@ -84,7 +85,7 @@ const Footer = () => {
                   href="https://www.youtube.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="social-icon transition duration-300 hover:opacity-75"
+                  className="social-icon transition duration-300 hover:opacity-75 hover:bg-white"
                 >
                   <FaYoutube className="youtube" />
                 </a>
@@ -92,7 +93,7 @@ const Footer = () => {
                   href="https://www.linkedin.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="social-icon transition duration-300 hover:opacity-75"
+                  className="social-icon transition duration-300 hover:opacity-75 hover:bg-white"
                 >
                   <FaLinkedin className="linkedin" />
                 </a>
@@ -100,10 +101,56 @@ const Footer = () => {
                   href="https://www.instagram.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="social-icon transition duration-300 hover:opacity-75"
+                  className="social-icon transition duration-300 hover:opacity-75 hover:bg-white "
                 >
                   <FaInstagram className="instagram" />
                 </a>
+              </div>
+              <div className="container" style={{ display: "block" }}>
+                <h4 style={{ marginLeft: "-7rem", marginBottom: "0.5rem" }}>
+                  Email Us
+                </h4>
+
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    marginLeft: "30rem",
+                    marginBottom: "28px",
+                  }}
+                >
+                  <input
+                    type="text"
+                    id="message-input"
+                    placeholder="Type your message here"
+                    style={{
+                      padding: "3px",
+                      paddingLeft: "7px",
+                      paddingRight: "2px",
+                      marginLeft: "-30rem",
+                      borderRadius: "5px",
+                      width: "10rem",
+                      fontSize: "0.8rem",
+                      borderColor: "yellow",
+                      borderWidth: "3px",
+                    }}
+                  />
+                  <a
+                    href="mailto:abc@gmail.com"
+                    style={{ display: "flex", alignItems: "center" }}
+                  >
+                    <SendIcon
+                      style={{
+                        fontSize: "26px",
+                        color: "yellow",
+                        width: "30px",
+                        padding: "3px",
+                        cursor: "pointer",
+                        marginBottom: "-5px",
+                      }}
+                    />
+                  </a>
+                </div>
               </div>
             </div>
 

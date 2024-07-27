@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-
+import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 const BackToTop = () => {
   const [showButton, setShowButton] = useState(false);
 
@@ -27,8 +27,9 @@ const BackToTop = () => {
     <button
       className={`back-to-top ${showButton ? "show" : ""}`}
       onClick={handleClick}
+      style={{opacity:1,backgroundColor:"yellow"}}
     >
-      <i className="fas fa-arrow-up"></i>
+      <KeyboardArrowUpIcon/>
     </button>
   );
 };

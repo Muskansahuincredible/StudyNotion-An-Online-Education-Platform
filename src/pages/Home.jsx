@@ -19,6 +19,7 @@ import FAQ from "../components/common/FAQ"
 function Home() {
   return (
     <div>
+      
       {/* Section 1 */}
       <div className="relative mx-auto flex w-11/12 max-w-maxContent flex-col items-center justify-between gap-8 text-white">
         {/* Become a Instructor Button */}
@@ -184,7 +185,7 @@ function Home() {
 
         {/* Reviws from Other Learner */}
         <h1 className="text-center text-4xl font-semibold mt-8">
-          Reviews from other learners
+          Happy & Satisfied Learners!
         </h1>
         <ReviewSlider />
       </div>
