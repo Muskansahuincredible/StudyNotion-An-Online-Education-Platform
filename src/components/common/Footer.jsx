@@ -11,6 +11,7 @@ import {
   FaLinkedin,
   FaInstagram,
 } from "react-icons/fa6";
+import "../../App.css";
 
 const BottomFooter = ["Privacy Policy", "Cookie Policy", "Terms"];
 const Resources = [
@@ -107,7 +108,7 @@ const Footer = () => {
                 </a>
               </div>
               <div className="container" style={{ display: "block" }}>
-                <h4 style={{ marginLeft: "-7rem", marginBottom: "0.5rem" }}>
+                <h4  className="email" style={{ marginLeft: "-7rem", marginBottom: "0.5rem" }}>
                   Email Us
                 </h4>
 
@@ -127,7 +128,7 @@ const Footer = () => {
                       padding: "3px",
                       marginLeft: "-30rem",
                       borderRadius: "5px",
-                      width: "10rem",
+                      width: "8.5rem",
                       fontSize: "0.8rem",
                       borderColor: "yellow",
                       borderWidth: "3px",
@@ -152,7 +153,7 @@ const Footer = () => {
               </div>
             </div>
 
-            <div className="w-[48%] lg:w-[30%] mb-7 lg:pl-0">
+            <div className="w-[40%] lg:w-[30%] mb-7 lg:pl-0">
               <h1 className="text-richblack-50 font-semibold text-[16px]">
                 Resources
               </h1>
@@ -272,6 +273,15 @@ const Footer = () => {
           </div>
         </div>
       </div>
+      <style>
+        {`
+          @media (max-width: 375px) {
+            .email {
+              margin-left: -2rem;
+            }
+          }
+        `}
+      </style>
     </div>
   );
 };
