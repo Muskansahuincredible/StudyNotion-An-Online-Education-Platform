@@ -411,4 +411,11 @@ details > summary::-webkit-details-marker {
   .bottom-links, .copyright {
     @apply text-center;
   }
+
+@media (max-width:600px) {
+  .text-white{
+      width:23rem;
+  }
+
+
 }
