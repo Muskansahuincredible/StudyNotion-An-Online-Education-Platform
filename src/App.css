@@ -301,7 +301,122 @@ details > summary::-webkit-details-marker {
   font-size: 20px; /* Adjust size as needed */
 }
 
+
 @media (max-width:375px) {
+
+/* Footer styles */
+.footer-content {
+  @apply flex flex-col lg:flex-row gap-8 items-start justify-between w-11/12 max-w-maxContent text-richblack-400 leading-6 mx-auto relative py-14;
+}
+
+.footer-section {
+  @apply w-full border-b lg:border-b-0 pb-5 border-richblack-700;
+}
+
+.footer-left {
+  @apply flex flex-col lg:flex-row justify-between gap-3;
+}
+
+.footer-company {
+  @apply flex flex-col gap-3 lg:w-[30%] mb-7;
+}
+
+.footer-logo {
+  @apply object-contain w-40;
+}
+
+.footer-heading {
+  @apply text-white font-semibold text-[16px] mb-2;
+}
+
+.footer-links {
+  @apply flex flex-col gap-2;
+}
+
+.footer-link {
+  @apply text-[14px] cursor-pointer hover:text-richblack-50 transition-all duration-200;
+}
+
+.footer-social {
+  @apply flex gap-3 text-lg;
+}
+
+.social-icon {
+  @apply transition duration-300 hover:opacity-75 hover:bg-white;
+}
+
+.footer-email {
+  @apply mt-3;
+}
+
+.email-input {
+  @apply flex items-center mt-2;
+}
+
+.email-input input {
+  @apply p-2 rounded-l-md w-full text-sm border-2 border-yellow-50 focus:outline-none;
+}
+
+.email-input a {
+  @apply bg-yellow-50 p-2 rounded-r-md;
+}
+
+.send-icon {
+  @apply text-black text-xl;
+}
+
+.footer-resources, .footer-plans {
+  @apply w-1/2 lg:w-[30%] mb-7;
+}
+
+.footer-right {
+  @apply flex flex-wrap justify-between lg:w-[40%];
+}
+
+.footer-column {
+  @apply w-full lg:w-1/2 mb-7;
+}
+
+.footer-bottom {
+  @apply w-11/12 max-w-maxContent mx-auto pb-14 text-sm;
+}
+
+.bottom-links {
+  @apply flex flex-wrap justify-center lg:justify-start gap-3 mb-3 lg:mb-0 text-white;
+}
+
+.bottom-link {
+  @apply cursor-pointer hover:text-richblack-50 transition-all duration-200;
+}
+
+.bottom-link:not(:last-child) {
+  @apply border-r border-richblack-700 pr-3;
+}
+
+.copyright {
+  @apply text-center lg:text-right text-white;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .footer-left, .footer-right {
+    @apply flex-col;
+  }
+
+  .footer-resources, .footer-plans {
+    @apply w-full;
+  }
+
+  .footer-column {
+    @apply w-full;
+  }
+
+  .bottom-links, .copyright {
+    @apply text-center;
+  }
+
+@media (max-width:600px) {
+
   .text-white{
       width:23rem;
   }
