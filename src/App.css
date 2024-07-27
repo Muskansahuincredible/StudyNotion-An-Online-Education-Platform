@@ -301,10 +301,12 @@ details > summary::-webkit-details-marker {
   font-size: 20px; /* Adjust size as needed */
 }
 
-@media (max-width:600px) {
+@media (max-width:375px) {
   .text-white{
       width:23rem;
   }
-
+  .heading{
+    margin-left: -2rem;
+  }
 
 }
