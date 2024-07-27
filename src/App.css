@@ -348,6 +348,8 @@ details > summary::-webkit-details-marker {
 
 .email-input {
   @apply flex items-center mt-2;
+  width: 214px;
+  height: 50px;
 }
 
 .email-input input {
