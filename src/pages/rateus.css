@@ -52,6 +52,34 @@
   .feedback-textarea::placeholder {
     color: #888; /* Placeholder text color */
   }
+  .feedback-textarea:focus,
+  .feedback-textarea:valid {
+    outline: none;
+    border: 1.5px solid #fff;
+  }
+
+  
+  .feedback-textarea {
+    transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  }
+  
+  .feedback-textarea:focus {
+    border-color: #F7DC6F; /* glowing yellow */
+    box-shadow: 0 0 0 2px #F7DC6F;
+  }
+  
+  .feedback-textarea::placeholder {
+    transition: transform 0.2s ease-in-out;
+    pointer-events: none; /* to prevent placeholder from being clickable */
+    z-index: 1; /* to ensure the placeholder is above the border */
+  }
+  
+  .feedback-textarea:focus::placeholder {
+    transform: translateY(-16px); /* move placeholder up to the border */
+    font-size: 12px; /* adjust font size to fit the border */
+    color: #F7DC6F; /* match the glowing yellow color */
+  }
+
   
 
   
