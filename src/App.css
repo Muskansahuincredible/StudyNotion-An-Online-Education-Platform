@@ -301,5 +301,79 @@ details > summary::-webkit-details-marker {
   font-size: 20px; /* Adjust size as needed */
 }
 
+@keyframes fillAnimation {
+  
+    0% {
+      fill: transparent;
+    }
+    20% {
+      fill: currentColor;
+      opacity: 0.2;
+    }
+    40% {
+      fill: currentColor;
+      opacity: 0.4;
+    }
+    60% {
+      fill: currentColor;
+      opacity: 0.6;
+    }
+    80% {
+      fill: currentColor;
+      opacity: 0.8;
+    }
+    100% {
+      fill: currentColor;
+      opacity: 1;
+    }
+}
+
+.social-icon {
+  transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: transparent;
+}
+
+.social-icon:hover {
+  background-color: transparent; /* Background color change on hover */
+}
+
+.social-icon {
+  fill: transparent; /* Initially, fill is transparent */
+  transition: fill 0.3s;
+}
+
+.social-icon:hover  {
+  animation: fillAnimation 0.3s forwards; /* Apply fill animation on hover */
+}
 
 
+
+.facebook:hover {
+  fill: #3b5998; /* Facebook blue */
+}
+
+.google:hover {
+  fill: #db4437; /* Google red */
+}
+
+.twitter:hover  {
+  fill: #1da1f2; /* Twitter blue */
+}
+
+.youtube:hover  {
+  fill: #ff0000; /* YouTube red */
+}
+
+.linkedin:hover {
+  fill: #0077b5; /* LinkedIn blue */
+}
+
+.instagram:hover  {
+  fill: #e4405f; /* Instagram gradient color, this is a simplified version */
+}
