@@ -300,6 +300,9 @@ details > summary::-webkit-details-marker {
   font-size: 20px; /* Adjust size as needed */
 }
 
+
+@media (max-width:375px) {
+
 /* Footer styles */
 .footer-content {
   @apply flex flex-col lg:flex-row gap-8 items-start justify-between w-11/12 max-w-maxContent text-richblack-400 leading-6 mx-auto relative py-14;
@@ -396,6 +399,34 @@ details > summary::-webkit-details-marker {
 }
 
 /* Responsive adjustments */
+
+@media (max-width:600px) {
+
+  .text-white{
+      width:23rem;
+    }
+  }
+
+  .heading{
+    margin-left: -2rem;
+  }
+
+}
+
+
+  @media (max-width: 768px) {
+    .footer-left, .footer-right {
+      @apply flex-col;
+    }
+    .footer-resources, .footer-plans, .footer-column {
+      @apply w-full;
+    }  
+    .bottom-links, .copyright {
+      @apply text-center;
+    }
+  }
+
+
 @media (max-width: 600px) {
   .text-white {
     width: 23rem;
@@ -415,3 +446,4 @@ details > summary::-webkit-details-marker {
     @apply text-center;
   }
 }
+
