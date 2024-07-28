@@ -398,30 +398,29 @@ details > summary::-webkit-details-marker {
 }
 
 /* Responsive adjustments */
-@media (max-width: 768px) {
-  .footer-left, .footer-right {
-    @apply flex-col;
-  }
-
-  .footer-resources, .footer-plans {
-    @apply w-full;
-  }
-
-  .footer-column {
-    @apply w-full;
-  }
-
-  .bottom-links, .copyright {
-    @apply text-center;
-  }
-
 @media (max-width:600px) {
 
   .text-white{
       width:23rem;
+    }
   }
+
   .heading{
     margin-left: -2rem;
   }
 
 }
+
+
+  @media (max-width: 768px) {
+    .footer-left, .footer-right {
+      @apply flex-col;
+    }
+    .footer-resources, .footer-plans, .footer-column {
+      @apply w-full;
+    }  
+    .bottom-links, .copyright {
+      @apply text-center;
+    }
+  }
+

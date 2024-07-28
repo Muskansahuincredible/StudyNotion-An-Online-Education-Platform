@@ -127,7 +127,7 @@ const ContactUsForm = () => {
           </div>
           <div className="flex w-[calc(100%-90px)] flex-col gap-2">
             <input
-              type="number"
+              type="tel"
               name="phonenumber"
               id="phonenumber"
               placeholder="12345 67890"
@@ -137,7 +137,7 @@ const ContactUsForm = () => {
                   value: true,
                   message: "Please enter your Phone Number.",
                 },
-                maxLength: { value: 12, message: "Invalid Phone Number" },
+                maxLength: { value: 10, message: "Invalid Phone Number" },
                 minLength: { value: 10, message: "Invalid Phone Number" },
               })}
             />
