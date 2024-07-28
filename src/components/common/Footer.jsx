@@ -1,7 +1,7 @@
 import React from "react";
 import { FooterLink2 } from "../../data/footer-links";
 import { Link } from "react-router-dom";
-import SendIcon from "@mui/icons-material/Send"; // Add this import
+import SendIcon from "@mui/icons-material/Send";
 import Logo from "../../assets/Logo/Logo-Full-Light.png";
 import {
   FaFacebook,
@@ -39,24 +39,20 @@ const Community = [
 const Footer = () => {
   return (
     <div className="bg-richblack-800">
-      <div className="flex lg:flex-row gap-8 items-center justify-between w-11/12 max-w-maxContent text-richblack-400 leading-6 mx-auto relative py-14">
-        <div className="border-b w-[100%] flex flex-col lg:flex-row pb-5 border-richblack-700">
-          <div className="lg:w-[50%] flex flex-wrap flex-row justify-between lg:border-r lg:border-richblack-700 pl-3 lg:pr-5 gap-3">
-            <div className="w-[30%] flex flex-col gap-3 lg:w-[30%] mb-7 lg:pl-0">
-              <img src={Logo} alt="" className="object-contain" />
-              <h1 className="text-richblack-50 font-semibold text-[16px]">
-                Company
-              </h1>
-              <div className="flex flex-col gap-2">
+      <div className="footer-content">
+        <div className="footer-section">
+          <div className="footer-left">
+            <div className="footer-company">
+              <img src={Logo} alt="" className="footer-logo" />
+              <h1 className="footer-heading">Company</h1>
+              <div className="footer-links">
                 {["About", "Careers", "Affiliates"].map((ele, i) => (
-                  <div
-                    key={i}
-                    className="text-[14px] cursor-pointer hover:text-richblack-50 transition-all duration-200"
-                  >
+                  <div key={i} className="footer-link">
                     <Link to={`/${ele.toLowerCase()}`}>{ele}</Link>
                   </div>
                 ))}
               </div>
+<<<<<<< HEAD
               <div className="flex gap-3 text-lg">
                 <a
                   href="https://www.facebook.com"
@@ -123,10 +119,36 @@ const Footer = () => {
                     marginBottom: "28px",
                   }}
                 >
+=======
+              <div className="footer-social">
+                <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="social-icon">
+                  <FaFacebook className="facebook" />
+                </a>
+                <a href="https://projects.100xdevs.com" target="_blank" rel="noopener noreferrer" className="social-icon">
+                  <FaGoogle className="" />
+                </a>
+                <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" className="social-icon">
+                  <FaXTwitter className="twitter" />
+                </a>
+                <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" className="social-icon">
+                  <FaYoutube className="youtube" />
+                </a>
+                <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="social-icon">
+                  <FaLinkedin className="linkedin" />
+                </a>
+                <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" className="social-icon">
+                  <FaInstagram className="instagram" />
+                </a>
+              </div>
+              <div className="footer-email">
+                <h4>Email Us</h4>
+                <div className="email-input">
+>>>>>>> 7b9392e8b124af560cfb6deff2ba56ea6974bfea
                   <input
                     type="text"
                     id="message-input"
                     placeholder="Type your message here"
+<<<<<<< HEAD
                     style={{
                       padding: "3px",
                       marginLeft: "-30rem",
@@ -136,81 +158,59 @@ const Footer = () => {
                       borderColor: "yellow",
                       borderWidth: "3px",
                     }}
+=======
+                    text-size="2"
+>>>>>>> 7b9392e8b124af560cfb6deff2ba56ea6974bfea
                   />
-                  <a
-                    href="mailto:abc@gmail.com"
-                    style={{ display: "flex", alignItems: "center" }}
-                  >
-                    <SendIcon
-                      style={{
-                        fontSize: "26px",
-                        color: "yellow",
-                        width: "30px",
-                        padding: "3px",
-                        cursor: "pointer",
-                        marginBottom: "-5px",
-                      }}
-                    />
+                  <a href="mailto:abc@gmail.com">
+                    <SendIcon className="send-icon" />
                   </a>
                 </div>
               </div>
             </div>
 
+<<<<<<< HEAD
             <div className="w-[40%] lg:w-[30%] mb-7 lg:pl-0">
               <h1 className="text-richblack-50 font-semibold text-[16px]">
                 Resources
               </h1>
               <div className="flex flex-col gap-2 mt-2">
+=======
+            <div className="footer-resources">
+              <h1 className="footer-heading">Resources</h1>
+              <div className="footer-links">
+>>>>>>> 7b9392e8b124af560cfb6deff2ba56ea6974bfea
                 {Resources.map((ele, index) => (
-                  <div
-                    key={index}
-                    className="text-[14px] cursor-pointer hover:text-richblack-50 transition-all duration-200"
-                  >
+                  <div key={index} className="footer-link">
                     <Link to={`/${ele.split(" ").join("-").toLowerCase()}`}>
                       {ele}
                     </Link>
                   </div>
                 ))}
               </div>
-              <h1 className="text-richblack-50 font-semibold text-[16px] mt-7">
-                Support
-              </h1>
-              <div className="text-[14px] cursor-pointer hover:text-richblack-50 transition-all duration-200 mt-2">
+              <h1 className="footer-heading">Support</h1>
+              <div className="footer-link">
                 <Link to="/help-center">Help Center</Link>
               </div>
             </div>
 
-            <div className="w-[48%] lg:w-[30%] mb-7 lg:pl-0">
-              <h1 className="text-richblack-50 font-semibold text-[16px]">
-                Plans
-              </h1>
-              <div className="flex flex-col gap-2 mt-2">
+            <div className="footer-plans">
+              <h1 className="footer-heading">Plans</h1>
+              <div className="footer-links">
                 {Plans.map((ele, index) => (
-                  <div
-                    key={index}
-                    className="text-[14px] cursor-pointer hover:text-richblack-50 transition-all duration-200"
-                  >
+                  <div key={index} className="footer-link">
                     <Link to={`/${ele.split(" ").join("-").toLowerCase()}`}>
                       {ele}
                     </Link>
                   </div>
                 ))}
               </div>
-              <h1 className="text-richblack-50 font-semibold text-[16px] mt-7">
-                Community
-              </h1>
-              <div className="flex flex-col gap-2 mt-2">
+              <h1 className="footer-heading">Community</h1>
+              <div className="footer-links">
                 {Community.map((ele, index) => (
-                  <div
-                    key={index}
-                    className="text-[14px] cursor-pointer hover:text-richblack-50 transition-all duration-200"
-                  >
+                  <div key={index} className="footer-link">
                     {ele.external ? (
-                      <a
-                        href={ele.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
+                      <a href={ele.link} target="_blank" rel="noopener noreferrer">
                         {ele.name}
                       </a>
                     ) : (
@@ -219,30 +219,16 @@ const Footer = () => {
                   </div>
                 ))}
               </div>
-              <h1 className="text-richblack-50 font-semibold text-[16px] mt-7">
-                Legal
-              </h1>
-              <div className="text-[14px] cursor-pointer hover:text-richblack-50 transition-all duration-200 mt-2">
-                <Link to="/privacy-policy">Privacy Policy</Link>
-              </div>
-              <div className="text-[14px] cursor-pointer hover:text-richblack-50 transition-all duration-200 mt-2">
-                <Link to="/termsandconditions">Terms and Conditions</Link>
-              </div>
             </div>
           </div>
 
-          <div className="lg:w-[50%] flex flex-wrap flex-row justify-between pl-3 lg:pl-5 gap-3">
+          <div className="footer-right">
             {FooterLink2.map((ele, i) => (
-              <div key={i} className="w-[48%] lg:w-[30%] mb-7 lg:pl-0">
-                <h1 className="text-richblack-50 font-semibold text-[16px]">
-                  {ele.title}
-                </h1>
-                <div className="flex flex-col gap-2 mt-2">
+              <div key={i} className="footer-column">
+                <h1 className="footer-heading">{ele.title}</h1>
+                <div className="footer-links">
                   {ele.links.map((link, index) => (
-                    <div
-                      key={index}
-                      className="text-[14px] cursor-pointer hover:text-richblack-50 transition-all duration-200"
-                    >
+                    <div key={index} className="footer-link">
                       <Link to={link.link}>{link.title}</Link>
                     </div>
                   ))}
@@ -253,27 +239,18 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="flex flex-row items-center justify-between w-11/12 max-w-maxContent text-richblack-400 mx-auto pb-14 text-sm">
-        <div className="flex justify-between lg:items-start items-center flex-col lg:flex-row gap-3 w-full">
-          <div className="flex flex-row">
-            {BottomFooter.map((ele, i) => (
-              <div
-                key={i}
-                className={`${
-                  BottomFooter.length - 1 === i
-                    ? ""
-                    : "border-r border-richblack-700 cursor-pointer hover:text-richblack-50 transition-all duration-200"
-                } px-3`}
-              >
-                <Link to={`/${ele.split(" ").join("-").toLocaleLowerCase()}`}>
-                  {ele}
-                </Link>
-              </div>
-            ))}
-          </div>
-          <div className="text-center">
-            Made with ❤️ © {new Date().getFullYear()} Studynotion
-          </div>
+      <div className="footer-bottom">
+        <div className="bottom-links">
+          {BottomFooter.map((ele, i) => (
+            <div key={i} className="bottom-link">
+              <Link to={`/${ele.split(" ").join("-").toLocaleLowerCase()}`}>
+                {ele}
+              </Link>
+            </div>
+          ))}
+        </div>
+        <div className="copyright">
+          Made with ❤️ © {new Date().getFullYear()} Studynotion
         </div>
       </div>
       <style>
