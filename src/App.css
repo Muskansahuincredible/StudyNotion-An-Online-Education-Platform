@@ -9,12 +9,11 @@ body {
   height: 100vh;
 }
 .icon{
-  top:calc(25%);
+  top: calc(25%);
 }
 
-
-*{
-  cursor: url('/src/assets/Images/ads_click_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24\ \(2\).svg'),auto;
+* {
+  cursor: url('/src/assets/Images/ads_click_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24\ \(2\).svg'), auto;
 }
 
 /* ===== Scrollbar CSS ===== */
@@ -348,6 +347,8 @@ details > summary::-webkit-details-marker {
 
 .email-input {
   @apply flex items-center mt-2;
+  width: 214px;
+  height: 50px;
 }
 
 .email-input input {
@@ -395,20 +396,22 @@ details > summary::-webkit-details-marker {
 }
 
 /* Responsive adjustments */
-@media (max-width:600px) {
-  .text-white{
-      width:23rem;
-    }
+@media (max-width: 600px) {
+  .text-white {
+    width: 23rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-left, .footer-right {
+    @apply flex-col;
   }
 
-  @media (max-width: 768px) {
-    .footer-left, .footer-right {
-      @apply flex-col;
-    }
-    .footer-resources, .footer-plans, .footer-column {
-      @apply w-full;
-    }  
-    .bottom-links, .copyright {
-      @apply text-center;
-    }
+  .footer-resources, .footer-plans, .footer-column {
+    @apply w-full;
+  }  
+
+  .bottom-links, .copyright {
+    @apply text-center;
   }
+}

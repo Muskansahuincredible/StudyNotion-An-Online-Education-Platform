@@ -78,6 +78,7 @@ const Footer = () => {
                     type="text"
                     id="message-input"
                     placeholder="Type your message here"
+                    text-size="2"
                   />
                   <a href="mailto:abc@gmail.com">
                     <SendIcon className="send-icon" />
