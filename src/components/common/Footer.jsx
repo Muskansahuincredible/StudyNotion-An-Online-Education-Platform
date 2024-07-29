@@ -39,263 +39,151 @@ const Community = [
 const Footer = () => {
   return (
     <div className="bg-richblack-800">
-      <div className="footer-content">
-        <div className="footer-section">
-          <div className="footer-left">
-            <div className="footer-company">
-              <img src={Logo} alt="" className="footer-logo" />
-              <h1 className="footer-heading">Company</h1>
-              <div className="footer-links">
+      <div className="flex lg:flex-row gap-8 items-center justify-between w-11/12 max-w-maxContent text-richblack-400 leading-6 mx-auto py-14">
+        <div className="border-b w-full flex flex-col lg:flex-row pb-5 border-richblack-700">
+          <div className="lg:w-[50%] flex flex-wrap lg:flex-row justify-between lg:border-r lg:border-richblack-700 pl-3 lg:pr-5 gap-3">
+            <div className="w-[30%] flex flex-col gap-3 lg:w-[30%] mb-7 lg:pl-0">
+              <img src={Logo} alt="" className="object-contain" />
+              <h1 className="text-richblack-50 font-semibold text-[16px]">Company</h1>
+              <div className="flex flex-col gap-2">
                 {["About", "Careers", "Affiliates"].map((ele, i) => (
-                  <div key={i} className="footer-link">
+                  <div
+                    key={i}
+                    className="text-[14px] cursor-pointer hover:text-richblack-50 transition-all duration-200"
+                  >
                     <Link to={`/${ele.toLowerCase()}`}>{ele}</Link>
                   </div>
                 ))}
               </div>
-
               <div className="flex gap-3 text-lg">
-                <a
-                  href="https://www.facebook.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="social-icon transition duration-300"
-                >
-                  <FaFacebook className="facebook" />
-                </a>
-                <a
-                  href="https://projects.100xdevs.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="social-icon transition duration-300"
-                >
-                  <FaGoogle className="google" />
-                </a>
-                <a
-                  href="https://www.twitter.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="social-icon transition duration-300"
-                >
-                  <FaXTwitter className="twitter" />
-                </a>
-                <a
-                  href="https://www.youtube.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="social-icon transition duration-300"
-                >
-                  <FaYoutube className="youtube" />
-                </a>
-                <a
-                  href="https://www.linkedin.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="social-icon transition duration-300"
-                >
-                  <FaLinkedin className="linkedin" />
-                </a>
-                <a
-                  href="https://www.instagram.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="social-icon transition duration-300"
-                >
-                  <FaInstagram className="instagram" />
-                </a>
+                {[
+                  { icon: <FaFacebook />, link: "https://www.facebook.com" },
+                  { icon: <FaGoogle />, link: "https://projects.100xdevs.com" },
+                  { icon: <FaXTwitter />, link: "https://www.twitter.com" },
+                  { icon: <FaYoutube />, link: "https://www.youtube.com" },
+                  { icon: <FaLinkedin />, link: "https://www.linkedin.com" },
+                  { icon: <FaInstagram />, link: "https://www.instagram.com" },
+                ].map(({ icon, link }, i) => (
+                  <a
+                    key={i}
+                    href={link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="social-icon transition duration-300 hover:opacity-75 hover:bg-white"
+                  >
+                    {icon}
+                  </a>
+                ))}
               </div>
-              <div className="container" style={{ display: "block" }}>
-                <h4
-                  className="email"
-                  style={{ marginLeft: "-7rem", marginBottom: "0.5rem" }}
-                >
-                  Email Us
-                </h4>
-
-                <div
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    marginLeft: "30rem",
-                    marginBottom: "28px",
-                  }}
-                >
-                  <div className="footer-social">
-                    <a
-                      href="https://www.facebook.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="social-icon"
-                    >
-                      <FaFacebook className="facebook" />
-                    </a>
-                    <a
-                      href="https://projects.100xdevs.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="social-icon"
-                    >
-                      <FaGoogle className="" />
-                    </a>
-                    <a
-                      href="https://www.twitter.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="social-icon"
-                    >
-                      <FaXTwitter className="twitter" />
-                    </a>
-                    <a
-                      href="https://www.youtube.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="social-icon"
-                    >
-                      <FaYoutube className="youtube" />
-                    </a>
-                    <a
-                      href="https://www.linkedin.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="social-icon"
-                    >
-                      <FaLinkedin className="linkedin" />
-                    </a>
-                    <a
-                      href="https://www.instagram.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="social-icon"
-                    >
-                      <FaInstagram className="instagram" />
-                    </a>
-                  </div>
-                  <div className="footer-email">
-                    <h4>Email Us</h4>
-                    <div className="email-input">
-                      <input
-                        type="text"
-                        id="message-input"
-                        placeholder="Type your message here"
-                        style={{
-                          padding: "3px",
-                          marginLeft: "-30rem",
-                          borderRadius: "5px",
-                          width: "8.5rem",
-                          fontSize: "0.8rem",
-                          borderColor: "yellow",
-                          borderWidth: "3px",
-                        }}
-                        text-size="2"
-                      />
-                      <a href="mailto:abc@gmail.com">
-                        <SendIcon className="send-icon" />
-                      </a>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="w-[40%] lg:w-[30%] mb-7 lg:pl-0">
-                  <h1 className="text-richblack-50 font-semibold text-[16px]">
-                    Resources
-                  </h1>
-                  <div className="flex flex-col gap-2 mt-2">
-                    <div className="footer-resources">
-                      <h1 className="footer-heading">Resources</h1>
-                      <div className="footer-links">
-                        {Resources.map((ele, index) => (
-                          <div key={index} className="footer-link">
-                            <Link
-                              to={`/${ele.split(" ").join("-").toLowerCase()}`}
-                            >
-                              {ele}
-                            </Link>
-                          </div>
-                        ))}
-                      </div>
-                      <h1 className="footer-heading">Support</h1>
-                      <div className="footer-link">
-                        <Link to="/help-center">Help Center</Link>
-                      </div>
-                    </div>
-
-                    <div className="footer-plans">
-                      <h1 className="footer-heading">Plans</h1>
-                      <div className="footer-links">
-                        {Plans.map((ele, index) => (
-                          <div key={index} className="footer-link">
-                            <Link
-                              to={`/${ele.split(" ").join("-").toLowerCase()}`}
-                            >
-                              {ele}
-                            </Link>
-                          </div>
-                        ))}
-                      </div>
-                      <h1 className="footer-heading">Community</h1>
-                      <div className="footer-links">
-                        {Community.map((ele, index) => (
-                          <div key={index} className="footer-link">
-                            {ele.external ? (
-                              <a
-                                href={ele.link}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                              >
-                                {ele.name}
-                              </a>
-                            ) : (
-                              <Link to={ele.link}>{ele.name}</Link>
-                            )}
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="footer-right">
-                    {FooterLink2.map((ele, i) => (
-                      <div key={i} className="footer-column">
-                        <h1 className="footer-heading">{ele.title}</h1>
-                        <div className="footer-links">
-                          {ele.links.map((link, index) => (
-                            <div key={index} className="footer-link">
-                              <Link to={link.link}>{link.title}</Link>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
+              <div className="container">
+                <h4 className="text-richblack-50" style={{ marginBottom: "0.5rem" }}>Email Us</h4>
+                <div className="flex items-center">
+                  <input
+                    type="text"
+                    id="message-input"
+                    placeholder="Type your message here"
+                    className="border-2 border-yellow-500 rounded px-2 py-1 w-40"
+                  />
+                  <a href="mailto:abc@gmail.com" className="flex items-center">
+                    <SendIcon className="text-yellow-500" style={{ fontSize: "26px", cursor: "pointer" }} />
+                  </a>
                 </div>
               </div>
             </div>
+
+            <div className="w-[48%] lg:w-[30%] mb-7 lg:pl-0">
+              <h1 className="text-richblack-50 font-semibold text-[16px]">Resources</h1>
+              <div className="flex flex-col gap-2 mt-2">
+                {Resources.map((ele, index) => (
+                  <div
+                    key={index}
+                    className="text-[14px] cursor-pointer hover:text-richblack-50 transition-all duration-200"
+                  >
+                    <Link to={`/${ele.split(" ").join("-").toLowerCase()}`}>{ele}</Link>
+                  </div>
+                ))}
+              </div>
+              <h1 className="text-richblack-50 font-semibold text-[16px] mt-7">Support</h1>
+              <div className="text-[14px] cursor-pointer hover:text-richblack-50 transition-all duration-200 mt-2">
+                <Link to="/help-center">Help Center</Link>
+              </div>
+            </div>
+
+            <div className="w-[48%] lg:w-[30%] mb-7 lg:pl-0">
+              <h1 className="text-richblack-50 font-semibold text-[16px]">Plans</h1>
+              <div className="flex flex-col gap-2 mt-2">
+                {Plans.map((ele, index) => (
+                  <div
+                    key={index}
+                    className="text-[14px] cursor-pointer hover:text-richblack-50 transition-all duration-200"
+                  >
+                    <Link to={`/${ele.split(" ").join("-").toLowerCase()}`}>{ele}</Link>
+                  </div>
+                ))}
+              </div>
+              <h1 className="text-richblack-50 font-semibold text-[16px] mt-7">Community</h1>
+              <div className="flex flex-col gap-2 mt-2">
+                {Community.map((ele, index) => (
+                  <div
+                    key={index}
+                    className="text-[14px] cursor-pointer hover:text-richblack-50 transition-all duration-200"
+                  >
+                    {ele.external ? (
+                      <a href={ele.link} target="_blank" rel="noopener noreferrer">
+                        {ele.name}
+                      </a>
+                    ) : (
+                      <Link to={ele.link}>{ele.name}</Link>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <div className="lg:w-[50%] flex flex-wrap flex-row justify-between pl-3 lg:pl-5 gap-3">
+            {FooterLink2.map((ele, i) => (
+              <div key={i} className="w-[48%] lg:w-[30%] mb-7 lg:pl-0">
+                <h1 className="text-richblack-50 font-semibold text-[16px]">{ele.title}</h1>
+                <div className="flex flex-col gap-2 mt-2">
+                  {ele.links.map((link, index) => (
+                    <div
+                      key={index}
+                      className="text-[14px] cursor-pointer hover:text-richblack-50 transition-all duration-200"
+                    >
+                      <Link to={link.link}>{link.title}</Link>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
 
-      <div className="footer-bottom">
-        <div className="bottom-links">
-          {BottomFooter.map((ele, i) => (
-            <div key={i} className="bottom-link">
-              <Link to={`/${ele.split(" ").join("-").toLocaleLowerCase()}`}>
-                {ele}
-              </Link>
-            </div>
-          ))}
-        </div>
-        <div className="copyright">
-          Made with ❤️ © {new Date().getFullYear()} Studynotion
+      <div className="flex flex-row items-center justify-between w-11/12 max-w-maxContent text-richblack-400 mx-auto pb-14 text-sm">
+        <div className="flex justify-between lg:items-start items-center flex-col lg:flex-row gap-3 w-full">
+          <div className="flex flex-row">
+            {BottomFooter.map((ele, i) => (
+              <div
+                key={i}
+                className={`${
+                  BottomFooter.length - 1 === i
+                    ? ""
+                    : "border-r border-richblack-700 cursor-pointer hover:text-richblack-50 transition-all duration-200"
+                } px-3`}
+              >
+                <Link to={`/${ele.split(" ").join("-").toLocaleLowerCase()}`}>
+                  {ele}
+                </Link>
+              </div>
+            ))}
+          </div>
+          <div className="text-center">
+            Made with ❤️ © {new Date().getFullYear()} Studynotion
+          </div>
         </div>
       </div>
-      <style>
-        {`
-          @media (max-width: 375px) {
-            .email {
-              margin-left: -2rem;
-            }
-          }
-        `}
-      </style>
     </div>
   );
 };
