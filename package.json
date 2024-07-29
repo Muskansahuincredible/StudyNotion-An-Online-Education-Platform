@@ -15,6 +15,7 @@
     "concurrently": "^8.0.1",
     "copy-to-clipboard": "^3.3.3",
     "dotenv": "^16.4.5",
+    "framer-motion": "^11.3.19",
     "json-server": "^1.0.0-beta.0",
     "react": "^18.2.0",
     "react-chartjs-2": "^5.2.0",
