@@ -15,8 +15,8 @@ const InstructorSection = () => {
               className="shadow-white shadow-[-20px_-20px_0_0]"
             />
           </div>
-          <div className="lg:w-[50%] flex gap-10 flex-col">
-            <h1 className="lg:w-[50%] text-4xl font-semibold ">
+          <div className="lg:w-[50%] px-10 flex gap-10 flex-col">
+            <h1 className="lg:w-[50%] text-4xl font-semibold">
               Become an
               <HighlightText text={"instructor"} />
             </h1>
