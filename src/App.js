@@ -35,6 +35,7 @@ import TermsAndConditions from "./pages/TermsAndConditions";
 import Loading from "./components/common/Loading"
 import Project from "./pages/Project";
 
+
 function App() {
   const dispatch = useDispatch();
   const navigate = useNavigate();

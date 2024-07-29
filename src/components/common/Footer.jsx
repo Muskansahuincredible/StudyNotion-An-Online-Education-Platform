@@ -11,6 +11,7 @@ import {
   FaLinkedin,
   FaInstagram,
 } from "react-icons/fa6";
+import "../../App.css";
 
 const BottomFooter = ["Privacy Policy", "Cookie Policy", "Terms"];
 const Resources = [
@@ -51,6 +52,74 @@ const Footer = () => {
                   </div>
                 ))}
               </div>
+<<<<<<< HEAD
+              <div className="flex gap-3 text-lg">
+                <a
+                  href="https://www.facebook.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="social-icon transition duration-300"
+                >
+                  <FaFacebook className="facebook" />
+                </a>
+                <a
+                  href="https://projects.100xdevs.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="social-icon transition duration-300"
+                >
+                  <FaGoogle className="google" />
+                </a>
+                <a
+                  href="https://www.twitter.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="social-icon transition duration-300"
+                >
+                  <FaXTwitter className="twitter" />
+                </a>
+                <a
+                  href="https://www.youtube.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="social-icon transition duration-300"
+                >
+                  <FaYoutube className="youtube" />
+                </a>
+                <a
+                  href="https://www.linkedin.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="social-icon transition duration-300"
+                >
+                  <FaLinkedin className="linkedin" />
+                </a>
+                <a
+                  href="https://www.instagram.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="social-icon transition duration-300"
+                >
+                  <FaInstagram className="instagram" />
+                </a>
+              </div>
+              <div className="container" style={{ display: "block" }}>
+                <h4
+                  className="email"
+                  style={{ marginLeft: "-7rem", marginBottom: "0.5rem" }}
+                >
+                  Email Us
+                </h4>
+
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    marginLeft: "30rem",
+                    marginBottom: "28px",
+                  }}
+                >
+=======
               <div className="footer-social">
                 <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="social-icon">
                   <FaFacebook className="facebook" />
@@ -74,11 +143,24 @@ const Footer = () => {
               <div className="footer-email">
                 <h4>Email Us</h4>
                 <div className="email-input">
+>>>>>>> 7b9392e8b124af560cfb6deff2ba56ea6974bfea
                   <input
                     type="text"
                     id="message-input"
                     placeholder="Type your message here"
+<<<<<<< HEAD
+                    style={{
+                      padding: "3px",
+                      marginLeft: "-30rem",
+                      borderRadius: "5px",
+                      width: "8.5rem",
+                      fontSize: "0.8rem",
+                      borderColor: "yellow",
+                      borderWidth: "3px",
+                    }}
+=======
                     text-size="2"
+>>>>>>> 7b9392e8b124af560cfb6deff2ba56ea6974bfea
                   />
                   <a href="mailto:abc@gmail.com">
                     <SendIcon className="send-icon" />
@@ -87,9 +169,17 @@ const Footer = () => {
               </div>
             </div>
 
+<<<<<<< HEAD
+            <div className="w-[40%] lg:w-[30%] mb-7 lg:pl-0">
+              <h1 className="text-richblack-50 font-semibold text-[16px]">
+                Resources
+              </h1>
+              <div className="flex flex-col gap-2 mt-2">
+=======
             <div className="footer-resources">
               <h1 className="footer-heading">Resources</h1>
               <div className="footer-links">
+>>>>>>> 7b9392e8b124af560cfb6deff2ba56ea6974bfea
                 {Resources.map((ele, index) => (
                   <div key={index} className="footer-link">
                     <Link to={`/${ele.split(" ").join("-").toLowerCase()}`}>
@@ -163,6 +253,15 @@ const Footer = () => {
           Made with ❤️ © {new Date().getFullYear()} Studynotion
         </div>
       </div>
+      <style>
+        {`
+          @media (max-width: 375px) {
+            .email {
+              margin-left: -2rem;
+            }
+          }
+        `}
+      </style>
     </div>
   );
 };
