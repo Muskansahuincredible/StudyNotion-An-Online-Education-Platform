@@ -262,30 +262,29 @@ details > summary::-webkit-details-marker {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  z-index: 99;
-  background-color: #fff;
-  color: #333;
+  z-index: 9999;
+  background-color: #FFD60A;
+  color: #000814;
   border: none;
   padding: 10px;
   font-size: 16px;
   cursor: pointer;
-  opacity: 0;
-  transition: opacity 0.3s;
-  border-radius: 50%; /* Makes the button circular */
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;  /* Adjust size as needed */
-  height: 40px; /* Adjust size as needed */
+  width: 40px;
+  height: 40px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 .back-to-top.show {
   opacity: 1;
+  visibility: visible;
 }
 
 .back-to-top:hover {
-  background-color: #333;
-  color: #fff;
+  background-color: #FFE566;  /* Lighter yellow on hover */
 }
 
 .back-to-top:focus {
@@ -296,8 +295,8 @@ details > summary::-webkit-details-marker {
   transform: translateY(2px);
 }
 
-.back-to-top i {
-  font-size: 20px; /* Adjust size as needed */
+.back-to-top svg {
+  font-size: 24px;
 }
 
 
