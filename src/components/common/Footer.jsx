@@ -76,13 +76,13 @@ const Footer = () => {
                 ))}
               </div>
               <div className="container">
-                <h4 className="text-richblack-50" style={{ marginBottom: "0.5rem" }}>Email Us</h4>
+                <h4 className="text-richblack-50" style={{ marginBottom: "0.1rem" }}>Email Us</h4>
                 <div className="flex items-center">
                   <input
                     type="text"
                     id="message-input"
                     placeholder="Type your message here"
-                    className="border-2 border-yellow-500 rounded px-2 py-1 w-40"
+                    className="border-2 border-yellow-500 rounded px-2 py-1 w-40 fontSize:26px "
                   />
                   <a href="mailto:abc@gmail.com" className="flex items-center">
                     <SendIcon className="text-yellow-500" style={{ fontSize: "26px", cursor: "pointer" }} />

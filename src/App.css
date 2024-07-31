@@ -515,4 +515,13 @@ details > summary::-webkit-details-marker {
   }
 }
 
+.container {
+  display: flex;
+  flex-direction: column; /* Ensure items are stacked vertically */
+  align-items: flex-start; /* Align items to the start (left) */
+}
 
+.text-richblack-50 {
+  margin-bottom: 0.5rem; /* Keep the margin as specified */
+  text-align: left; /* Ensure text alignment to the left */
+}
