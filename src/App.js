@@ -32,8 +32,9 @@ import Instructor from "./components/core/Dashboard/InstructorDashboard/Instruct
 import BackToTop from "./components/common/BackToTop";
 import PrivacyPolicy from "./pages/privacypolicy";
 import TermsAndConditions from "./pages/TermsAndConditions";
-import Loading from "./components/common/Loading"
+import Loading from "./components/common/Loading";
 import Project from "./pages/Project";
+
 
 function App() {
   const dispatch = useDispatch();
@@ -47,6 +48,7 @@ function App() {
       setLoading(false);
     }, 2000); // Adjust the time as needed
   }, []);
+
   if (loading) {
     return (
       <div>
@@ -54,8 +56,9 @@ function App() {
       </div>
     );
   }
+
   return (
-    <div className="w-screen min-h-screen bg-richblack-900 flex flex-col font-inter">
+    <div className="flex-1 w-screen bg-richblack-900 flex flex-col font-inter">
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -114,7 +117,6 @@ function App() {
             </PrivateRoute>
           }
         >
-          
           <Route path="dashboard/my-profile" element={<MyProfile />} />
           <Route path="dashboard/settings" element={<Settings />} />
           {user?.accountType === ACCOUNT_TYPE.STUDENT && (

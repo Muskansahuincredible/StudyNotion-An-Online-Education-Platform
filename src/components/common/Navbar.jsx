@@ -87,14 +87,14 @@ function Navbar() {
               mobileMenuOpen ? "block" : "hidden"
             } md:block mt-4 md:mt-0`}
           >
-            <ul className="flex flex-col md:flex-row w-full max-w-maxContent items-center justify-between px-4 py-2 gap-y-4 md:gap-y-0 md:gap-x-6">
+            <ul className="flex flex-col md:flex-row w-full max-w-maxContent items-center justify-between px-4 py-2 gap-y-4 md:gap-y-0 md:gap-x-14">
               {NavbarLinks.map(({ title, path }, index) => (
                 <li
                   key={index}
-                  className="mb-2 md:mb-0"
                   onMouseEnter={handleMouseEnter}
                   onMouseLeave={handleMouseLeave}
-                >
+                  className="mb-2 md:mb-0 transition duration-300 ease-in-out transform hover:text-yellow-25 hover:scale-105
+                relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-yellow-50 after:bottom-0 after:left-0 after:transition-all after:duration-700 after:ease-in-out hover:after:w-full " 
                   {title === "Catalog" ? (
                     <div
                       className={`group relative flex cursor-pointer items-center gap-1 ${
@@ -189,12 +189,14 @@ function Navbar() {
                   </Link>
                   <Link to="/signup" onClick={closeMobileMenu}>
                     <button
-                      className={`rounded-md px-4 w-90 py-2 transition duration-300 hover:scale-95 ${
+                      
+                      className={`rounded-md px-4 w-[90px] py-2 transition duration-300 hover:scale-95 ${
                         matchRoute("/signup")
                           ? "bg-richblack-800 text-white"
-                          : "bg-blue-300 text-white hover:bg-richblack-800 hover:text-gray-200 "
+                          : "bg-blue-50 text-white hover:bg-richblack-800 hover:text-gray-200 "
                       }`}
                     >
+
                       Sign Up
                     </button>
                   </Link>
