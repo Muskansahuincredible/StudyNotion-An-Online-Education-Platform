@@ -9,7 +9,10 @@ const Chatbot = () => {
 
   const faqData = {
     "What is your return policy?": "Our return policy is 30 days with a receipt.",
-    "What are your hours of operation?": "We are open from 9am to 9pm, Monday to Saturday.",
+      "What are your hours of operation?": "We are open from 9am to 9pm, Monday to Saturday.",
+      "Where can I find the courses?": "You can find them all on landing page of website.",
+      "Where can I find projects to learn?": "You can find them all at Project section collectively.",
+     "Will this be really beneficial for me?":"Yes,of course, if you are a true learner."
     // Add more FAQs here
   };
 
