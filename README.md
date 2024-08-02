@@ -1,8 +1,8 @@
 <div id="top"></div>
 <div align="center">
-  <h1>StudyNotion</h1>
-  <h2> Online Education Platform for You </h2>
-  <h3> Check out at https://studynotion-frontend.vercel.app/</h3>
+  <h1>[Study Notion]</h1>
+  <h2>..... Online Education Platform for You..... </h2>
+  <h3> Check it out at https://studynotion-frontend.vercel.app/</h3>
 </div>
 
 <br>
@@ -54,7 +54,7 @@
 <hr>
 
 
-<h2>Table of Contents</h2>
+<h2> Contents Table </h2>
 
 - [Project Description](#project-description)
 - [Technology Used](#tech-stack)
