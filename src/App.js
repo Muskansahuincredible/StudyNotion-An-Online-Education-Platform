@@ -34,7 +34,7 @@ import PrivacyPolicy from "./pages/privacypolicy";
 import TermsAndConditions from "./pages/TermsAndConditions";
 import Loading from "./components/common/Loading";
 import Project from "./pages/Project";
-
+import Chatbot from "./pages/Chatbot";
 
 function App() {
   const dispatch = useDispatch();
@@ -159,6 +159,7 @@ function App() {
         <Route path="*" element={<Error />} />
       </Routes>
       <BackToTop />
+      <Chatbot/>
     </div>
   );
 }
