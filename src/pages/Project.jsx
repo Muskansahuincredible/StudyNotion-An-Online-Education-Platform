@@ -86,7 +86,7 @@ const Projects = () => {
       <h2 className="text-3xl font-semibold my-10 text-white">1. Python Projects</h2>
       <div className="flex flex-wrap -mx-5 justify-center px-10 ">
         {pythonProjects.map((project, index) => (
-          <div key={index} className="w-full sm:w-1/2 lg:w-1/3 p-5">
+          <div key={index} className="w-full sm:w-1/2 lg:w-1/3 p-9">
             <ProjectCard project={project} />
           </div>
         ))}
@@ -95,7 +95,7 @@ const Projects = () => {
       <h2 className="text-3xl font-semibold  my-10 text-white">2. JavaScript/React Projects</h2>
       <div className="flex flex-wrap -mx-5 justify-center px-10 py-10">
         {jsProjects.map((project, index) => (
-          <div key={index} className="w-full sm:w-1/2 lg:w-1/3 p-5">
+          <div key={index} className="w-full sm:w-1/2 lg:w-1/3 p-9">
             <ProjectCard project={project} />
           </div>
         ))}
@@ -104,7 +104,7 @@ const Projects = () => {
       <h2 className="text-3xl font-semibold  my-10 text-white">3. Java Projects</h2>
       <div className="flex flex-wrap -mx-5 justify-center px-10 py-10">
         {javaProjects.map((project, index) => (
-          <div key={index} className="w-full sm:w-1/2 lg:w-1/3 p-5">
+          <div key={index} className="w-full sm:w-1/2 lg:w-1/3 p-9">
             <ProjectCard project={project} />
           </div>
         ))}
