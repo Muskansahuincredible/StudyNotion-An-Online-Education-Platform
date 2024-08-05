@@ -525,3 +525,12 @@ details > summary::-webkit-details-marker {
   margin-bottom: 0.5rem; /* Keep the margin as specified */
   text-align: left; /* Ensure text alignment to the left */
 }
+
+@media (max-width: 340px) {
+  .form{
+    width: 16rem;
+  }
+  #phonenumber{
+    margin-left: -13px;
+  }
+}
