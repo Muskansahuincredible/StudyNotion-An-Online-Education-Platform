@@ -46,7 +46,7 @@ const LearningGridArray = [
 
 const LearningGrid = () => {
   return (
-    <div className="grid mx-auto w-[400px] xl:w-fit grid-cols-1 xl:grid-cols-4 mb-12">
+    <div className="grid mx-auto w-full max-w-screen-xl grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 mb-12 p-4">
       {LearningGridArray.map((card, i) => {
         const isHighlightCard = card.order < 0;
         const cardBgClass =
@@ -62,18 +62,17 @@ const LearningGrid = () => {
         return (
           <div
             key={i}
-            className={`${colSpanClass} ${colStartClass} ${cardBgClass} ${cardHeightClass}`}
+            className={`${colSpanClass} ${colStartClass} ${cardBgClass} ${cardHeightClass} p-4 rounded-md`}
           >
             {isHighlightCard ? (
-              <div className="xl:w-[90%] flex flex-col gap-3 pb-10 xl:pb-0 sm:pb-20">
-                <div className="text-4xl font-semibold text-center">
+              <div className="flex flex-col gap-3 pb-10 xl:pb-0 sm:pb-20">
+                <div className="text-2xl sm:text-4xl font-semibold text-center">
                   {card.heading}
                   <HighlightText text={card.highlightText} />
                 </div>
-                <p className="text-richblack-300 font-medium">
+                <p className="text-richblack-300 font-medium text-sm sm:text-base">
                   {card.description}
                 </p>
-                
                 <div className="w-fit mt-2">
                   <CTAButton active={true} linkto={card.BtnLink}>
                     {card.BtnText}
@@ -81,9 +80,11 @@ const LearningGrid = () => {
                 </div>
               </div>
             ) : (
-              <div className="w-fit mt-2 p-3 flex flex-col gap-8">
-                <h1 className="text-richblack-5 text-lg text-center font-bold">{card.heading}</h1>
-                <p className="text-richblack-100 font-medium px-2">
+              <div className="p-3 flex flex-col gap-4 sm:gap-8">
+                <h1 className="text-richblack-5 text-lg sm:text-xl text-center font-bold">
+                  {card.heading}
+                </h1>
+                <p className="text-richblack-100 font-medium text-sm sm:text-base px-2">
                   {card.description}
                 </p>
               </div>
