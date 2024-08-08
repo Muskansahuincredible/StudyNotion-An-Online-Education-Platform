@@ -1,15 +1,14 @@
 import React from 'react';
-import Footer from "../components/common/Footer"
-import image1 from "../assets/Images/image1.png"
-import image2 from "../assets/Images/image2.jpg"
-import image3 from "../assets/Images/image3.webp"
-import image4 from "../assets/Images/image4.jpg"
-import image5 from "../assets/Images/image5.jpg"
-import image6 from "../assets/Images/image6.jpg"
-import image7 from "../assets/Images/image7.jpeg"
-import image8 from "../assets/Images/image8.webp"
-import image9 from "../assets/Images/image9.webp"
-
+import Footer from "../components/common/Footer";
+import image1 from "../assets/Images/image1.png";
+import image2 from "../assets/Images/image2.jpg";
+import image3 from "../assets/Images/image3.webp";
+import image4 from "../assets/Images/image4.jpg";
+import image5 from "../assets/Images/image5.jpg";
+import image6 from "../assets/Images/image6.jpg";
+import image7 from "../assets/Images/image7.jpeg";
+import image8 from "../assets/Images/image8.webp";
+import image9 from "../assets/Images/image9.webp";
 
 const pythonProjects = [
   {
@@ -68,9 +67,9 @@ const javaProjects = [
 const ProjectCard = ({ project }) => {
   return (
     <div className="bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:-translate-y-2">
-      <img src={project.image} alt={project.title} className="w-full h-52 object-cover" />
+      <img src={project.image} alt={project.title} className="w-full h-48 sm:h-52 object-cover" />
       <div className="p-4">
-        <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
+        <h3 className="text-lg sm:text-xl font-semibold mb-2">{project.title}</h3>
         <p className="text-gray-700">{project.description}</p>
       </div>
     </div>
@@ -80,38 +79,38 @@ const ProjectCard = ({ project }) => {
 const Projects = () => {
   return (
     <>
-    <div className="px-10 py-10">
-      <h1 className="text-4xl font-semibold text-center mb-10 text-white">Our Learning Projects</h1>
+      <div className="px-4 sm:px-10 py-10">
+        <h1 className="text-2xl sm:text-4xl font-semibold text-center mb-8 sm:mb-10 text-white">Our Learning Projects</h1>
 
-      <h2 className="text-3xl font-semibold my-10 text-white">1. Python Projects</h2>
-      <div className="flex flex-wrap -mx-5 justify-center px-10 ">
-        {pythonProjects.map((project, index) => (
-          <div key={index} className="w-full sm:w-1/2 lg:w-1/3 p-9">
-            <ProjectCard project={project} />
-          </div>
-        ))}
-      </div>
+        <h2 className="text-xl sm:text-3xl font-semibold my-8 sm:my-10 text-white">1. Python Projects</h2>
+        <div className="flex flex-wrap -mx-4 sm:-mx-5 justify-center">
+          {pythonProjects.map((project, index) => (
+            <div key={index} className="w-full sm:w-1/2 lg:w-1/3 px-4 sm:px-5 py-5">
+              <ProjectCard project={project} />
+            </div>
+          ))}
+        </div>
 
-      <h2 className="text-3xl font-semibold  my-10 text-white">2. JavaScript/React Projects</h2>
-      <div className="flex flex-wrap -mx-5 justify-center px-10 py-10">
-        {jsProjects.map((project, index) => (
-          <div key={index} className="w-full sm:w-1/2 lg:w-1/3 p-9">
-            <ProjectCard project={project} />
-          </div>
-        ))}
-      </div>
+        <h2 className="text-xl sm:text-3xl font-semibold my-8 sm:my-10 text-white">2. JavaScript/React Projects</h2>
+        <div className="flex flex-wrap -mx-4 sm:-mx-5 justify-center">
+          {jsProjects.map((project, index) => (
+            <div key={index} className="w-full sm:w-1/2 lg:w-1/3 px-4 sm:px-5 py-5">
+              <ProjectCard project={project} />
+            </div>
+          ))}
+        </div>
 
-      <h2 className="text-3xl font-semibold  my-10 text-white">3. Java Projects</h2>
-      <div className="flex flex-wrap -mx-5 justify-center px-10 py-10">
-        {javaProjects.map((project, index) => (
-          <div key={index} className="w-full sm:w-1/2 lg:w-1/3 p-9">
-            <ProjectCard project={project} />
-          </div>
-        ))}
+        <h2 className="text-xl sm:text-3xl font-semibold my-8 sm:my-10 text-white">3. Java Projects</h2>
+        <div className="flex flex-wrap -mx-4 sm:-mx-5 justify-center">
+          {javaProjects.map((project, index) => (
+            <div key={index} className="w-full sm:w-1/2 lg:w-1/3 px-4 sm:px-5 py-5">
+              <ProjectCard project={project} />
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
-  <Footer />
-  </>
+      <Footer />
+    </>
   );
 };
 
