@@ -14,6 +14,7 @@ const Chatbot = () => {
     "Where can I find projects to learn?": "You can find them all at the Projects section collectively.",
     "Will this be really beneficial for me?": "Yes, of course, if you are a true learner."
     // Add more FAQs here
+     
   };
 
   useEffect(() => {
@@ -27,12 +28,14 @@ const Chatbot = () => {
       const botResponse = faqData[input.trim()] || "Sorry, I can able to answer for courses, projects & return policy.";
 
       setMessages([...messages, userMessage, { text: botResponse, sender: 'bot' }]);
+
       setInput('');
     }
   };
 
   const handleKeyPress = (e) => {
     if (e.key === 'Enter') {
+      
       handleSend();
     }
   };
