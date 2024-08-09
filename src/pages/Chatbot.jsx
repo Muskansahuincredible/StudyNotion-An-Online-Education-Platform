@@ -1,5 +1,5 @@
 // src/components/Chatbot.js
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Rating.css';
 
 const Chatbot = () => {
@@ -9,17 +9,22 @@ const Chatbot = () => {
 
   const faqData = {
     "What is your return policy?": "Our return policy is 30 days with a receipt.",
-      "What are your hours of operation?": "We are open from 9am to 9pm, Monday to Saturday.",
-      "Where can I find the courses?": "You can find them all on landing page of website.",
-      "Where can I find projects to learn?": "You can find them all at Project section collectively.",
-     "Will this be really beneficial for me?":"Yes,of course, if you are a true learner."
+    "What are your hours of operation?": "We are open from 9am to 9pm, Monday to Saturday.",
+    "Where can I find the courses?": "You can find them all on the landing page of the website.",
+    "Where can I find projects to learn?": "You can find them all at the Projects section collectively.",
+    "Will this be really beneficial for me?": "Yes, of course, if you are a true learner."
     // Add more FAQs here
   };
+
+  useEffect(() => {
+    // Add initial message on component mount
+    setMessages([{ text: "Hello, How can I help you?", sender: 'bot' }]);
+  }, []);
 
   const handleSend = () => {
     if (input.trim()) {
       const userMessage = { text: input, sender: 'user' };
-      const botResponse = faqData[input.trim()] || "Hello,How can I help you?";
+      const botResponse = faqData[input.trim()] || "Sorry, I can able to answer for courses, projects & return policy.";
 
       setMessages([...messages, userMessage, { text: botResponse, sender: 'bot' }]);
       setInput('');
