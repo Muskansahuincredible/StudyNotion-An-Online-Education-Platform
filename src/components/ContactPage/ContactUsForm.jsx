@@ -47,6 +47,7 @@ const ContactUsForm = () => {
     <form
       className="flex flex-col gap-7"
       onSubmit={handleSubmit(submitContactForm)}
+      style={{marginTop: "30px"}}
     >
       <div className="flex flex-col gap-5 lg:flex-row">
         <div className="flex flex-col gap-2 lg:w-[48%]">

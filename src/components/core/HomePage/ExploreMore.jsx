@@ -30,9 +30,9 @@ const ExploreMore = () => {
       {/* Explore more section */}
       <div>
         <div className="text-4xl font-semibold text-center my-10">
-          <div className="container">
-            <span>Unlock the</span>
-            <HighlightText text={"Power of Code"} />
+          <div className="container" style={{display: "block"}}>
+            Unlock the
+            <HighlightText style={{display:"inline"}} text={"Power of Code"} />
           </div>
           <p className="text-center text-richblack-300 text-sm font-semibold mt-1">
             Learn to Build Anything You Can Imagine

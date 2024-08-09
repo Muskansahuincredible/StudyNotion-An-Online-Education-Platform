@@ -495,7 +495,13 @@ details > summary::-webkit-details-marker {
   }
 
 
-@media (max-width: 600px) {
+@media (max-width: 325px) {
+  .text-white {
+    width: 18rem;
+  }
+}
+
+@media (max-width: 600px) and (min-width: 325px){
   .text-white {
     width: 23rem;
   }
@@ -524,4 +530,13 @@ details > summary::-webkit-details-marker {
 .text-richblack-50 {
   margin-bottom: 0.5rem; /* Keep the margin as specified */
   text-align: left; /* Ensure text alignment to the left */
+}
+
+@media (max-width: 340px) {
+  .form{
+    width: 16rem;
+  }
+  #phonenumber{
+    margin-left: -13px;
+  }
 }
