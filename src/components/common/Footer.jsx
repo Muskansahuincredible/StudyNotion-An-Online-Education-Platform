@@ -39,13 +39,13 @@ const Community = [
 const Footer = () => {
   return (
     <div className="bg-richblack-800">
-      <div className="flex lg:flex-row gap-8 items-center justify-between w-11/12 max-w-maxContent text-richblack-400 leading-6 mx-auto py-14">
-        <div className="border-b w-full flex flex-col lg:flex-row pb-5 border-richblack-700">
-          <div className="lg:w-[50%] flex flex-wrap lg:flex-row justify-between lg:border-r lg:border-richblack-700 pl-3 lg:pr-5 gap-3">
-            <div className="w-[30%] flex flex-col gap-3 lg:w-[30%] mb-7 lg:pl-0">
+      <div className="flex flex-col lg:flex-row gap-8 items-center justify-between w-11/12 max-w-maxContent text-richblack-400 leading-6 mx-auto py-14">
+        <div className="w-full flex flex-col lg:flex-row pb-5 border-b border-richblack-700">
+          <div className="w-full lg:w-[50%] flex flex-wrap lg:flex-row justify-between lg:border-r lg:border-richblack-700 pl-3 lg:pr-5 gap-3">
+            <div className="w-full lg:w-[30%] mb-7 lg:pl-0">
               <img src={Logo} alt="" className="object-contain" />
-              <h1 className="text-richblack-50 font-semibold text-[16px]">Company</h1>
-              <div className="flex flex-col gap-2">
+              <h1 className="text-richblack-50 font-semibold text-[16px] mt-4">Company</h1>
+              <div className="flex flex-col gap-2 mt-2">
                 {["About", "Careers", "Affiliates"].map((ele, i) => (
                   <div
                     key={i}
@@ -55,7 +55,7 @@ const Footer = () => {
                   </div>
                 ))}
               </div>
-              <div className="flex gap-3 text-lg">
+              <div className="flex gap-3 mt-4 text-lg">
                 {[
                   { icon: <FaFacebook />, link: "https://www.facebook.com" },
                   { icon: <FaGoogle />, link: "https://projects.100xdevs.com" },
@@ -75,23 +75,23 @@ const Footer = () => {
                   </a>
                 ))}
               </div>
-              <div className="container">
+              <div className="container mt-4">
                 <h4 className="text-richblack-50" style={{ marginBottom: "0.1rem" }}>Email Us</h4>
                 <div className="flex items-center">
                   <input
                     type="text"
                     id="message-input"
                     placeholder="Type your message here"
-                    className="border-2 border-yellow-500 rounded px-2 py-1 w-40 fontSize:26px "
+                    className="border-2 border-yellow-500 rounded px-2 py-1 w-40"
                   />
-                  <a href="mailto:abc@gmail.com" className="flex items-center">
+                  <a href="mailto:abc@gmail.com" className="flex items-center ml-2">
                     <SendIcon className="text-yellow-500" style={{ fontSize: "26px", cursor: "pointer" }} />
                   </a>
                 </div>
               </div>
             </div>
 
-            <div className="w-[48%] lg:w-[30%] mb-7 lg:pl-0">
+            <div className="w-full lg:w-[30%] mb-7 lg:pl-0">
               <h1 className="text-richblack-50 font-semibold text-[16px]">Resources</h1>
               <div className="flex flex-col gap-2 mt-2">
                 {Resources.map((ele, index) => (
@@ -109,7 +109,7 @@ const Footer = () => {
               </div>
             </div>
 
-            <div className="w-[48%] lg:w-[30%] mb-7 lg:pl-0">
+            <div className="w-full lg:w-[30%] mb-7 lg:pl-0">
               <h1 className="text-richblack-50 font-semibold text-[16px]">Plans</h1>
               <div className="flex flex-col gap-2 mt-2">
                 {Plans.map((ele, index) => (
@@ -141,9 +141,9 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="lg:w-[50%] flex flex-wrap flex-row justify-between pl-3 lg:pl-5 gap-3">
+          <div className="w-full lg:w-[50%] flex flex-wrap flex-row justify-between pl-3 lg:pl-5 gap-3">
             {FooterLink2.map((ele, i) => (
-              <div key={i} className="w-[48%] lg:w-[30%] mb-7 lg:pl-0">
+              <div key={i} className="w-full lg:w-[30%] mb-7 lg:pl-0">
                 <h1 className="text-richblack-50 font-semibold text-[16px]">{ele.title}</h1>
                 <div className="flex flex-col gap-2 mt-2">
                   {ele.links.map((link, index) => (
@@ -161,9 +161,9 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="flex flex-row items-center justify-between w-11/12 max-w-maxContent text-richblack-400 mx-auto pb-14 text-sm">
+      <div className="flex flex-col lg:flex-row items-center justify-between w-11/12 max-w-maxContent text-richblack-400 mx-auto pb-14 text-sm">
         <div className="flex justify-between lg:items-start items-center flex-col lg:flex-row gap-3 w-full">
-          <div className="flex flex-row">
+          <div className="flex flex-row flex-wrap">
             {BottomFooter.map((ele, i) => (
               <div
                 key={i}
@@ -179,7 +179,7 @@ const Footer = () => {
               </div>
             ))}
           </div>
-          <div className="text-center">
+          <div className="text-center mt-4 lg:mt-0">
             Made with ❤️ © {new Date().getFullYear()} Studynotion
           </div>
         </div>
