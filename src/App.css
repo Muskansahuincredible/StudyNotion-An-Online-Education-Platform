@@ -495,7 +495,13 @@ details > summary::-webkit-details-marker {
   }
 
 
-@media (max-width: 600px) {
+@media (max-width: 325px) {
+  .text-white {
+    width: 18rem;
+  }
+}
+
+@media (max-width: 600px) and (min-width: 325px){
   .text-white {
     width: 23rem;
   }
