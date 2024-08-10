@@ -20,6 +20,7 @@ function Navbar() {
   const [subLinks, setSubLinks] = useState([]);
   const [loading, setLoading] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false); // Initially false
 
   useEffect(() => {
     const fetchCategories = async () => {
@@ -48,6 +49,17 @@ function Navbar() {
     setMobileMenuOpen(false);
   };
 
+  const toggleDropdown = () => {
+    setDropdownOpen(!dropdownOpen);
+  };
+
+  const handleMouseEnter = () => {
+    setDropdownOpen(true);
+  };
+
+  const handleMouseLeave = () => {
+    setDropdownOpen(false);
+  };
 
   return (
     <div className="navbarContainer sticky top-0 left-0 z-1000">
@@ -79,21 +91,23 @@ function Navbar() {
               {NavbarLinks.map(({ title, path }, index) => (
                 <li
                   key={index}
+                  onMouseEnter={handleMouseEnter}
+                  onMouseLeave={handleMouseLeave}
                   className="mb-2 md:mb-0 transition duration-300 ease-in-out transform hover:text-yellow-25 hover:scale-105
                 relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-yellow-50 after:bottom-0 after:left-0 after:transition-all after:duration-700 after:ease-in-out hover:after:w-full " 
-                >
                   {title === "Catalog" ? (
-                    <>
-                      <div
-                        className={`group relative flex cursor-pointer items-center gap-1 ${
-                          matchRoute("/catalog/:catalogName")
-                            ? "text-yellow-100 hover:text-yellow-25"
-                            : "text-richblack-25 hover:text-yellow-25"
-                        }`}
-                      >
-                        <p>{title}</p>
-                        <BsChevronDown />
-                        <div className="invisible absolute left-[50%] top-[50%] z-[1000] flex w-[200px] translate-x-[-50%] translate-y-[3em] flex-col rounded-lg bg-richblack-5 p-4 text-richblack-900 opacity-0 transition-all duration-150 group-hover:visible group-hover:translate-y-[1.65em] group-hover:opacity-100 lg:w-[300px]">
+                    <div
+                      className={`group relative flex cursor-pointer items-center gap-1 ${
+                        matchRoute("/catalog/:catalogName")
+                          ? "text-yellow-100 hover:text-yellow-200"
+                          : "text-richblack-25 hover:text-richblack-50"
+                      }`}
+                      onClick={toggleDropdown}
+                    >
+                      <p>{title}</p>
+                      <BsChevronDown />
+                      {dropdownOpen && (
+                        <div className="visible absolute left-[50%] top-[50%] z-[1000] flex w-[200px] translate-x-[-50%] translate-y-[3em] flex-col rounded-lg bg-richblack-5 p-4 text-richblack-900 opacity-100 transition-all duration-150 group-hover:translate-y-[1.65em] lg:w-[300px]">
                           <div className="absolute left-[50%] top-0 -z-10 h-6 w-6 translate-x-[80%] translate-y-[-40%] rotate-45 select-none rounded bg-richblack-5"></div>
                           {loading ? (
                             <p className="text-center">Loading...</p>
@@ -103,7 +117,7 @@ function Navbar() {
                                 .filter(
                                   (subLink) => subLink?.courses?.length > 0
                                 )
-                                ?.map((subLink, i) => (
+                                .map((subLink, i) => (
                                   <Link
                                     to={`/catalog/${subLink.name
                                       .split(" ")
@@ -111,7 +125,7 @@ function Navbar() {
                                       .toLowerCase()}`}
                                     className="rounded-lg bg-transparent py-4 pl-4 hover:bg-richblack-500"
                                     key={i}
-                                    onClick={closeMobileMenu}
+                                    onClick={toggleDropdown}
                                   >
                                     <p>{subLink.name}</p>
                                   </Link>
@@ -121,8 +135,8 @@ function Navbar() {
                             <p className="text-center">No Courses Found</p>
                           )}
                         </div>
-                      </div>
-                    </>
+                      )}
+                    </div>
                   ) : (
                     <Link to={path} onClick={closeMobileMenu}>
                       <p
